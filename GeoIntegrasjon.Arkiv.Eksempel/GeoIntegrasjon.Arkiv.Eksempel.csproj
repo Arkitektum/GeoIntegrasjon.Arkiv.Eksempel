@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1732296A-8BCE-4EE2-8B23-F3274BE37383}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GeoIntegrasjon.Arkiv.Eksempel</RootNamespace>
+    <AssemblyName>GeoIntegrasjon.Arkiv.Eksempel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ArkivInnsyn\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ArkivOppdatering\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivInnsyn\ArkivInnsyn.wsdl" />
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumentListe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumenttypeListe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Fil.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyperResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodelisteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.JournalpostListe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KodeListe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SaksmappeListe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivInnsyn\giArkivDokument20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivInnsyn\giArkivFelles20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivInnsyn\giArkivKjerne20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivInnsyn\giFellesAdresse20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivInnsyn\giFellesFilter20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivInnsyn\giFellesGeometri20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivInnsyn\giFellesKodeliste20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivInnsyn\giFellesKontakt20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivInnsyn\giFellesTeknisk20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivInnsyn\giMatrikkelFelles20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivInnsyn\giPlanFelles20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivOppdatering\ArkivOppdatering.wsdl" />
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.Dokument.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.FinnJournalposterUnderArbeidResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.FinnJournalpostRestanserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.Journalpost.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.JournalpostListe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyAvskrivningResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyBygningResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyDokumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyJournalpostMerknadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyJournalpostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyJournalpostTilleggsinformasjonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyKorrespondansepartResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyMatrikkelnummerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyPunktResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NySaksmappeMerknadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NySaksmappeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NySaksmappeTilleggsinformasjonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NySakspartResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterJournalpostAnsvarligResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterJournalpostEksternNoekkelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterJournalpostStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterMappeAnsvarligResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterMappeEksternNoekkelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterMappeStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.Saksmappe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.SlettAvskrivningResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.SlettBygningResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.SlettJournalpostMerknadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.SlettJournalpostTilleggsinformasjonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.SlettKorrespondansepartResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.SlettMatrikkelnummerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.SlettPunktResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.SlettSaksmappeMerknadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.SlettSaksmappeTilleggsinformasjonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.SlettSakspartResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ArkivOppdatering\giArkivDokument20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivOppdatering\giArkivFelles20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivOppdatering\giArkivKjerne20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivOppdatering\giFellesAdresse20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivOppdatering\giFellesFilter20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivOppdatering\giFellesGeometri20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivOppdatering\giFellesKodeliste20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivOppdatering\giFellesKontakt20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivOppdatering\giFellesTeknisk20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivOppdatering\giMatrikkelFelles20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArkivOppdatering\giPlanFelles20120131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ArkivInnsyn\" />
+    <WCFMetadataStorage Include="Service References\ArkivOppdatering\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ArkivInnsyn\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ArkivInnsyn\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ArkivInnsyn\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ArkivOppdatering\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ArkivOppdatering\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ArkivOppdatering\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

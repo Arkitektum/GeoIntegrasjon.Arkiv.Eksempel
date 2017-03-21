@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:matrikkelutvidetns="http://rep.geointegrasjon.no/Matrikkel/Utvidet/xml.schema/2012.01.31" xmlns:fellesadressens="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31" xmlns:tns="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31" xmlns:sakfaserns="http://rep.geointegrasjon.no/Sak/Faser/xml.schema/2012.01.31" xmlns:sakskjemans="http://rep.geointegrasjon.no/Sak/Skjema/xml.schema/2012.01.31" xmlns:arkivfellesns="http://rep.geointegrasjon.no/Arkiv/Felles/xml.schema/2012.01.31" xmlns:planfellesns="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31" xmlns:felleskontaktns="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31" xmlns:felleskodelistens="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31" xmlns:matrikkelfellesns="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31" xmlns:fellesfilterns="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31" xmlns:matrikkelbasisns="http://rep.geointegrasjon.no/Matrikkel/Basis/xml.schema/2012.01.31" xmlns:fellestekniskns="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31" xmlns:arkivkjernens="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31" xmlns:planutvidetns="http://rep.geointegrasjon.no/Plan/Utvidet/xml.schema/2012.01.31" xmlns:kartbasisns="http://rep.geointegrasjon.no/Kart/Basis/xml.schema/2012.01.31" xmlns:arkivdokumentns="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31" xmlns:planbasisns="http://rep.geointegrasjon.no/Plan/Basis/xml.schema/2012.01.31" xmlns:skjemabyggesakns="http://rep.geointegrasjon.no/Skjema/Byggesak/xml.schema/2012.01.31" xmlns:fellesgeometrins="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31" elementFormDefault="qualified" targetNamespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31" version="2012.01.31 - GeoIntegrasjon v1.1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31/giFellesKodeliste20120131.xsd" namespace="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31" />
+  <xs:element name="KoordinatsystemKodeListe" type="fellesgeometrins:KoordinatsystemKodeListe" />
+  <xs:complexType name="KoordinatsystemKodeListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="fellesgeometrins:KoordinatsystemKode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KoordinatsystemKode" type="fellesgeometrins:KoordinatsystemKode" />
+  <xs:complexType name="KoordinatsystemKode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FlateListe" type="fellesgeometrins:FlateListe" />
+  <xs:complexType name="FlateListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="fellesgeometrins:Flate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Flate" type="fellesgeometrins:Flate" />
+  <xs:complexType name="Flate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="fellesgeometrins:Geometri">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="indreAvgrensning" type="fellesgeometrins:RingListe" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ytreAvgrensning" type="fellesgeometrins:Ring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Geometri" type="fellesgeometrins:Geometri" />
+  <xs:complexType name="Geometri">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="koordinatsystem" type="fellesgeometrins:KoordinatsystemKode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KoordinatListe" type="fellesgeometrins:KoordinatListe" />
+  <xs:complexType name="KoordinatListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="fellesgeometrins:Koordinat" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Koordinat" type="fellesgeometrins:Koordinat" />
+  <xs:complexType name="Koordinat">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="x" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="y" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="1" name="z" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Kurve" type="fellesgeometrins:Kurve" />
+  <xs:complexType name="Kurve">
+    <xs:complexContent mixed="false">
+      <xs:extension base="fellesgeometrins:Geometri">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="linje" type="fellesgeometrins:KoordinatListe" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PunktListe" type="fellesgeometrins:PunktListe" />
+  <xs:complexType name="PunktListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="fellesgeometrins:Punkt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Punkt" type="fellesgeometrins:Punkt" />
+  <xs:complexType name="Punkt">
+    <xs:complexContent mixed="false">
+      <xs:extension base="fellesgeometrins:Geometri">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="posisjon" type="fellesgeometrins:Koordinat" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RingListe" type="fellesgeometrins:RingListe" />
+  <xs:complexType name="RingListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="fellesgeometrins:Ring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ring" type="fellesgeometrins:Ring" />
+  <xs:complexType name="Ring">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="lukketKurve" type="fellesgeometrins:KoordinatListe" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BboxListe" type="fellesgeometrins:BboxListe" />
+  <xs:complexType name="BboxListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="fellesgeometrins:Bbox" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bbox" type="fellesgeometrins:Bbox" />
+  <xs:complexType name="Bbox">
+    <xs:complexContent mixed="false">
+      <xs:extension base="fellesgeometrins:Geometri">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="nedreVenstre" type="fellesgeometrins:Koordinat" />
+          <xs:element minOccurs="1" maxOccurs="1" name="oevreHoeyre" type="fellesgeometrins:Koordinat" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OmraadeListe" type="fellesgeometrins:OmraadeListe" />
+  <xs:complexType name="OmraadeListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="fellesgeometrins:Omraade" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Omraade" type="fellesgeometrins:Omraade" />
+  <xs:complexType name="Omraade">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="punkt" type="fellesgeometrins:Punkt" />
+      <xs:element minOccurs="0" maxOccurs="1" name="flate" type="fellesgeometrins:Flate" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

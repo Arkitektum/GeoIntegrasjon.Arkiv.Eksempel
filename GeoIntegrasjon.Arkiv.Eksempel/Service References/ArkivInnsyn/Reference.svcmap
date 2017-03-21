@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ded5efd1-a8bd-45c6-9aa6-f0d7690d1856" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/giArkivInnsyn20120131.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="giFellesTeknisk20120131.xsd" MetadataType="Schema" ID="0a471d92-e520-4bb9-81b6-0dd1eb0f378d" SourceId="1" SourceUrl="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31/giFellesTeknisk20120131.xsd" />
+    <MetadataFile FileName="giFellesGeometri20120131.xsd" MetadataType="Schema" ID="f2f8a122-8636-4347-9840-8380d1c03a9c" SourceId="1" SourceUrl="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31/giFellesGeometri20120131.xsd" />
+    <MetadataFile FileName="giFellesAdresse20120131.xsd" MetadataType="Schema" ID="925b5691-b4bc-4d55-b2c4-fd391f973cd4" SourceId="1" SourceUrl="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31/giFellesAdresse20120131.xsd" />
+    <MetadataFile FileName="giArkivFelles20120131.xsd" MetadataType="Schema" ID="9f488bcb-b6b6-4c5a-883e-5fca1aedc326" SourceId="1" SourceUrl="http://rep.geointegrasjon.no/Arkiv/Felles/xml.schema/2012.01.31/giArkivFelles20120131.xsd" />
+    <MetadataFile FileName="giArkivKjerne20120131.xsd" MetadataType="Schema" ID="ae26db85-de94-42e1-a940-41afb354d039" SourceId="1" SourceUrl="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31/giArkivKjerne20120131.xsd" />
+    <MetadataFile FileName="giPlanFelles20120131.xsd" MetadataType="Schema" ID="28605c0c-1c2a-4d05-be90-d6abd98aa78f" SourceId="1" SourceUrl="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31/giPlanFelles20120131.xsd" />
+    <MetadataFile FileName="giFellesKodeliste20120131.xsd" MetadataType="Schema" ID="34ca41e8-ccc3-496e-bbfe-57ba5092a310" SourceId="1" SourceUrl="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31/giFellesKodeliste20120131.xsd" />
+    <MetadataFile FileName="giMatrikkelFelles20120131.xsd" MetadataType="Schema" ID="e810c048-bb62-43dc-b981-c88a9772ab64" SourceId="1" SourceUrl="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31/giMatrikkelFelles20120131.xsd" />
+    <MetadataFile FileName="giFellesKontakt20120131.xsd" MetadataType="Schema" ID="3492a812-b9b7-4c88-a492-cbd694bf6d0a" SourceId="1" SourceUrl="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31/giFellesKontakt20120131.xsd" />
+    <MetadataFile FileName="giArkivDokument20120131.xsd" MetadataType="Schema" ID="dfc5ef49-d624-4219-bfcf-992a4a18fea5" SourceId="1" SourceUrl="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31/giArkivDokument20120131.xsd" />
+    <MetadataFile FileName="giFellesFilter20120131.xsd" MetadataType="Schema" ID="7f101c09-d8e4-4165-a4d1-734053bf5769" SourceId="1" SourceUrl="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31/giFellesFilter20120131.xsd" />
+    <MetadataFile FileName="ArkivInnsyn.wsdl" MetadataType="Wsdl" ID="4975e299-4de3-4d5d-a1a2-197414127a5e" SourceId="1" SourceUrl="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/giArkivInnsyn20120131.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:matrikkelutvidetns="http://rep.geointegrasjon.no/Matrikkel/Utvidet/xml.schema/2012.01.31" xmlns:fellesadressens="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31" xmlns:tns="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31" xmlns:sakfaserns="http://rep.geointegrasjon.no/Sak/Faser/xml.schema/2012.01.31" xmlns:sakskjemans="http://rep.geointegrasjon.no/Sak/Skjema/xml.schema/2012.01.31" xmlns:arkivfellesns="http://rep.geointegrasjon.no/Arkiv/Felles/xml.schema/2012.01.31" xmlns:planfellesns="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31" xmlns:felleskontaktns="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31" xmlns:felleskodelistens="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31" xmlns:matrikkelfellesns="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31" xmlns:fellesfilterns="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31" xmlns:matrikkelbasisns="http://rep.geointegrasjon.no/Matrikkel/Basis/xml.schema/2012.01.31" xmlns:fellestekniskns="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31" xmlns:arkivkjernens="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31" xmlns:planutvidetns="http://rep.geointegrasjon.no/Plan/Utvidet/xml.schema/2012.01.31" xmlns:kartbasisns="http://rep.geointegrasjon.no/Kart/Basis/xml.schema/2012.01.31" xmlns:planbasisns="http://rep.geointegrasjon.no/Plan/Basis/xml.schema/2012.01.31" xmlns:skjemabyggesakns="http://rep.geointegrasjon.no/Skjema/Byggesak/xml.schema/2012.01.31" xmlns:fellesgeometrins="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31" xmlns:arkivdokumentns="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31" elementFormDefault="qualified" targetNamespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31" version="2012.01.31 - GeoIntegrasjon v1.1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31/giFellesKodeliste20120131.xsd" namespace="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31" />
+  <xs:element name="DokumentListe" type="arkivdokumentns:DokumentListe" />
+  <xs:complexType name="DokumentListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivdokumentns:Dokument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Dokument" type="arkivdokumentns:Dokument" />
+  <xs:complexType name="Dokument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="systemID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dokumentnummer" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="tilknyttetRegistreringSom" type="arkivdokumentns:TilknyttetRegistreringSom" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dokumenttype" type="arkivdokumentns:Dokumenttype" />
+      <xs:element minOccurs="0" maxOccurs="1" name="tittel" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dokumentstatus" type="arkivdokumentns:Dokumentstatus" />
+      <xs:element minOccurs="0" maxOccurs="1" name="variantformat" type="arkivdokumentns:Variantformat" />
+      <xs:element minOccurs="0" maxOccurs="1" name="format" type="arkivdokumentns:Format" />
+      <xs:element minOccurs="0" maxOccurs="1" name="referanseJournalpostSystemID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Fil" type="arkivdokumentns:Fil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DokumenttypeListe" type="arkivdokumentns:DokumenttypeListe" />
+  <xs:complexType name="DokumenttypeListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivdokumentns:Dokumenttype" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Dokumenttype" type="arkivdokumentns:Dokumenttype" />
+  <xs:complexType name="Dokumenttype">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Filinnhold" type="arkivdokumentns:Filinnhold" />
+  <xs:complexType name="Filinnhold">
+    <xs:complexContent mixed="false">
+      <xs:extension base="arkivdokumentns:Fil">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="base64" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Filreferanse" type="arkivdokumentns:Filreferanse" />
+  <xs:complexType name="Filreferanse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="arkivdokumentns:Fil">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="uri" type="xs:anyURI" />
+          <xs:element minOccurs="0" maxOccurs="1" name="kvitteringUri" type="xs:anyURI" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DokumentstatusListe" type="arkivdokumentns:DokumentstatusListe" />
+  <xs:complexType name="DokumentstatusListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivdokumentns:Dokumentstatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Dokumentstatus" type="arkivdokumentns:Dokumentstatus" />
+  <xs:complexType name="Dokumentstatus">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FilListe" type="arkivdokumentns:FilListe" />
+  <xs:complexType name="FilListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivdokumentns:Fil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Fil" type="arkivdokumentns:Fil" />
+  <xs:complexType name="Fil">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="filnavn" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="mimeType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FormatListe" type="arkivdokumentns:FormatListe" />
+  <xs:complexType name="FormatListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivdokumentns:Format" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Format" type="arkivdokumentns:Format" />
+  <xs:complexType name="Format">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TilknyttetRegistreringSomListe" type="arkivdokumentns:TilknyttetRegistreringSomListe" />
+  <xs:complexType name="TilknyttetRegistreringSomListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivdokumentns:TilknyttetRegistreringSom" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TilknyttetRegistreringSom" type="arkivdokumentns:TilknyttetRegistreringSom" />
+  <xs:complexType name="TilknyttetRegistreringSom">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VariantformatListe" type="arkivdokumentns:VariantformatListe" />
+  <xs:complexType name="VariantformatListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivdokumentns:Variantformat" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Variantformat" type="arkivdokumentns:Variantformat" />
+  <xs:complexType name="Variantformat">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

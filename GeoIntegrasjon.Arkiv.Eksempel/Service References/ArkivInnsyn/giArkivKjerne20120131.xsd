@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:matrikkelutvidetns="http://rep.geointegrasjon.no/Matrikkel/Utvidet/xml.schema/2012.01.31" xmlns:fellesadressens="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31" xmlns:tns="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31" xmlns:sakfaserns="http://rep.geointegrasjon.no/Sak/Faser/xml.schema/2012.01.31" xmlns:sakskjemans="http://rep.geointegrasjon.no/Sak/Skjema/xml.schema/2012.01.31" xmlns:arkivfellesns="http://rep.geointegrasjon.no/Arkiv/Felles/xml.schema/2012.01.31" xmlns:planfellesns="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31" xmlns:felleskontaktns="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31" xmlns:felleskodelistens="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31" xmlns:matrikkelfellesns="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31" xmlns:fellesfilterns="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31" xmlns:matrikkelbasisns="http://rep.geointegrasjon.no/Matrikkel/Basis/xml.schema/2012.01.31" xmlns:fellestekniskns="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31" xmlns:planutvidetns="http://rep.geointegrasjon.no/Plan/Utvidet/xml.schema/2012.01.31" xmlns:kartbasisns="http://rep.geointegrasjon.no/Kart/Basis/xml.schema/2012.01.31" xmlns:arkivdokumentns="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31" xmlns:planbasisns="http://rep.geointegrasjon.no/Plan/Basis/xml.schema/2012.01.31" xmlns:skjemabyggesakns="http://rep.geointegrasjon.no/Skjema/Byggesak/xml.schema/2012.01.31" xmlns:fellesgeometrins="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31" xmlns:arkivkjernens="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31" elementFormDefault="qualified" targetNamespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31" version="2012.01.31 - GeoIntegrasjon v1.1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31/giPlanFelles20120131.xsd" namespace="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31" />
+  <xs:import schemaLocation="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31/giMatrikkelFelles20120131.xsd" namespace="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31" />
+  <xs:import schemaLocation="http://rep.geointegrasjon.no/Arkiv/Felles/xml.schema/2012.01.31/giArkivFelles20120131.xsd" namespace="http://rep.geointegrasjon.no/Arkiv/Felles/xml.schema/2012.01.31" />
+  <xs:import schemaLocation="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31/giFellesKontakt20120131.xsd" namespace="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31" />
+  <xs:import schemaLocation="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31/giFellesGeometri20120131.xsd" namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31" />
+  <xs:import schemaLocation="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31/giFellesKodeliste20120131.xsd" namespace="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31" />
+  <xs:element name="KorrespondansepartListe" type="arkivkjernens:KorrespondansepartListe" />
+  <xs:complexType name="KorrespondansepartListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Korrespondansepart" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Korrespondansepart" type="arkivkjernens:Korrespondansepart" />
+  <xs:complexType name="Korrespondansepart">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="systemID" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="korrespondanseparttype" type="arkivkjernens:Korrespondanseparttype" />
+      <xs:element minOccurs="0" maxOccurs="1" name="behandlingsansvarlig" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="skjermetKorrespondansepart" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="kortnavn" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="deresReferanse" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="journalenhet" type="arkivkjernens:Journalenhet" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fristBesvarelse" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="forsendelsesmaate" type="arkivkjernens:Forsendelsesmaate" />
+      <xs:element minOccurs="0" maxOccurs="1" name="administrativEnhetInit" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="administrativEnhet" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="saksbehandlerInit" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="saksbehandler" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Kontakt" type="felleskontaktns:Kontakt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaksmappeListe" type="arkivkjernens:SaksmappeListe" />
+  <xs:complexType name="SaksmappeListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Saksmappe" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Saksmappe" type="arkivkjernens:Saksmappe" />
+  <xs:complexType name="Saksmappe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="systemID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="saksnr" type="arkivfellesns:Saksnummer" />
+      <xs:element minOccurs="0" maxOccurs="1" name="mappetype" type="arkivkjernens:Mappetype" />
+      <xs:element minOccurs="0" maxOccurs="1" name="saksdato" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="tittel" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="offentligTittel" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="skjermetTittel" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="skjerming" type="arkivkjernens:Skjerming" />
+      <xs:element minOccurs="0" maxOccurs="1" name="saksstatus" type="arkivkjernens:Saksstatus" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dokumentmedium" type="arkivkjernens:Dokumentmedium" />
+      <xs:element minOccurs="0" maxOccurs="1" name="referanseArkivdel" type="arkivkjernens:Arkivdel" />
+      <xs:element minOccurs="0" maxOccurs="1" name="journalenhet" type="arkivkjernens:Journalenhet" />
+      <xs:element minOccurs="0" maxOccurs="1" name="bevaringstid" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="kassasjonsvedtak" type="arkivkjernens:Kassasjonsvedtak" />
+      <xs:element minOccurs="0" maxOccurs="1" name="kassasjonsdato" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="prosjekt" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="administrativEnhetInit" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="administrativEnhet" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="saksansvarligInit" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="saksansvarlig" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="tilgangsgruppeNavn" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Matrikkelnummer" type="matrikkelfellesns:MatrikkelnummerListe" />
+      <xs:element minOccurs="0" maxOccurs="1" name="klasse" type="arkivkjernens:KlasseListe" />
+      <xs:element minOccurs="0" maxOccurs="1" name="sakspart" type="arkivkjernens:SakspartListe" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Punkt" type="fellesgeometrins:PunktListe" />
+      <xs:element minOccurs="0" maxOccurs="1" name="tilleggsinformasjon" type="arkivkjernens:TilleggsinformasjonListe" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ByggIdent" type="matrikkelfellesns:ByggIdentListe" />
+      <xs:element minOccurs="0" maxOccurs="1" name="referanseEksternNoekkel" type="arkivkjernens:EksternNoekkel" />
+      <xs:element minOccurs="0" maxOccurs="1" name="merknader" type="arkivkjernens:MerknadListe" />
+      <xs:element minOccurs="0" maxOccurs="1" name="planIdent" type="planfellesns:NasjonalArealplanId" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Dokumentnummer" type="arkivkjernens:Dokumentnummer" />
+  <xs:complexType name="Dokumentnummer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="arkivkjernens:Journpostnoekkel">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="saksaar" type="xs:integer" />
+          <xs:element minOccurs="1" maxOccurs="1" name="sakssekvensnummer" type="xs:integer" />
+          <xs:element minOccurs="0" maxOccurs="1" name="journalpostnummer" type="xs:integer" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EksternNoekkelListe" type="arkivkjernens:EksternNoekkelListe" />
+  <xs:complexType name="EksternNoekkelListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:EksternNoekkel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EksternNoekkel" type="arkivkjernens:EksternNoekkel" />
+  <xs:complexType name="EksternNoekkel">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="fagsystem" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="noekkel" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JournalpostListe" type="arkivkjernens:JournalpostListe" />
+  <xs:complexType name="JournalpostListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Journalpost" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Journalpost" type="arkivkjernens:Journalpost" />
+  <xs:complexType name="Journalpost">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="systemID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="journalnummer" type="arkivkjernens:Journalnummer" />
+      <xs:element minOccurs="0" maxOccurs="1" name="journalpostnummer" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="journaldato" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="journalposttype" type="arkivkjernens:Journalposttype" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dokumentetsDato" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="journalstatus" type="arkivkjernens:Journalstatus" />
+      <xs:element minOccurs="1" maxOccurs="1" name="tittel" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="skjermetTittel" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="forfallsdato" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="skjerming" type="arkivkjernens:Skjerming" />
+      <xs:element minOccurs="0" maxOccurs="1" name="referanseArkivdel" type="arkivkjernens:Arkivdel" />
+      <xs:element minOccurs="0" maxOccurs="1" name="tilleggskode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="antallVedlegg" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="offentligTittel" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="saksnr" type="arkivfellesns:Saksnummer" />
+      <xs:element minOccurs="0" maxOccurs="1" name="tilgangsgruppeNavn" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="referanseSakSystemID" type="arkivkjernens:SakSystemId" />
+      <xs:element minOccurs="0" maxOccurs="1" name="korrespondansepart" type="arkivkjernens:KorrespondansepartListe" />
+      <xs:element minOccurs="0" maxOccurs="1" name="referanseEksternNoekkel" type="arkivkjernens:EksternNoekkel" />
+      <xs:element minOccurs="0" maxOccurs="1" name="referanseMappeEksternNoekkel" type="arkivkjernens:EksternNoekkel" />
+      <xs:element minOccurs="0" maxOccurs="1" name="referanseAvskrivninger" type="arkivkjernens:AvskrivningListe" />
+      <xs:element minOccurs="0" maxOccurs="1" name="merknader" type="arkivkjernens:MerknadListe" />
+      <xs:element minOccurs="0" maxOccurs="1" name="tilleggsinformasjon" type="arkivkjernens:TilleggsinformasjonListe" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Journpostnoekkel" type="arkivkjernens:Journpostnoekkel" />
+  <xs:complexType name="Journpostnoekkel">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="KlasseListe" type="arkivkjernens:KlasseListe" />
+  <xs:complexType name="KlasseListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Klasse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Klasse" type="arkivkjernens:Klasse" />
+  <xs:complexType name="Klasse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="rekkefoelge" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="klassifikasjonssystem" type="arkivkjernens:Klassifikasjonssystem" />
+      <xs:element minOccurs="1" maxOccurs="1" name="klasseID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="skjermetKlasse" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ledetekst" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="tittel" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JournalnummerListe" type="arkivkjernens:JournalnummerListe" />
+  <xs:complexType name="JournalnummerListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Journalnummer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Journalnummer" type="arkivkjernens:Journalnummer" />
+  <xs:complexType name="Journalnummer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="arkivkjernens:Journpostnoekkel">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="journalaar" type="xs:integer" />
+          <xs:element minOccurs="1" maxOccurs="1" name="journalsekvensnummer" type="xs:integer" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SakspartListe" type="arkivkjernens:SakspartListe" />
+  <xs:complexType name="SakspartListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Sakspart" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sakspart" type="arkivkjernens:Sakspart" />
+  <xs:complexType name="Sakspart">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="systemID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="skjermetSakspart" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="kortnavn" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="kontaktperson" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="sakspartRolle" type="arkivkjernens:SakspartRolle" />
+      <xs:element minOccurs="0" maxOccurs="1" name="merknad" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Kontakt" type="felleskontaktns:Kontakt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SakspartRolleListe" type="arkivkjernens:SakspartRolleListe" />
+  <xs:complexType name="SakspartRolleListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:SakspartRolle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SakspartRolle" type="arkivkjernens:SakspartRolle" />
+  <xs:complexType name="SakspartRolle">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TilleggsinformasjonListe" type="arkivkjernens:TilleggsinformasjonListe" />
+  <xs:complexType name="TilleggsinformasjonListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Tilleggsinformasjon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tilleggsinformasjon" type="arkivkjernens:Tilleggsinformasjon" />
+  <xs:complexType name="Tilleggsinformasjon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="systemID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="rekkefoelge" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="informasjonstype" type="arkivkjernens:Informasjonstype" />
+      <xs:element minOccurs="0" maxOccurs="1" name="tilgangsrestriksjon" type="arkivkjernens:Tilgangsrestriksjon" />
+      <xs:element minOccurs="0" maxOccurs="1" name="oppbevaresTilDato" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="informasjon" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="tilgangsgruppeNavn" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="registrertDato" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="registrertAv" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="registrertAvInit" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArkivdelListe" type="arkivkjernens:ArkivdelListe" />
+  <xs:complexType name="ArkivdelListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Arkivdel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Arkivdel" type="arkivkjernens:Arkivdel" />
+  <xs:complexType name="Arkivdel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AvskrivningListe" type="arkivkjernens:AvskrivningListe" />
+  <xs:complexType name="AvskrivningListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Avskrivning" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Avskrivning" type="arkivkjernens:Avskrivning" />
+  <xs:complexType name="Avskrivning">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="systemID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="avskrivningsdato" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="avskrevetAv" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="avskrivningsmaate" type="arkivkjernens:Avskrivningsmaate" />
+      <xs:element minOccurs="0" maxOccurs="1" name="referanseAvskriverJournalnummer" type="arkivkjernens:Journalnummer" />
+      <xs:element minOccurs="0" maxOccurs="1" name="referanseAvskrivesAvJournalnummer" type="arkivkjernens:Journalnummer" />
+      <xs:element minOccurs="0" maxOccurs="1" name="referanseAvskriverEksternNoekkel" type="arkivkjernens:EksternNoekkel" />
+      <xs:element minOccurs="0" maxOccurs="1" name="referanseAvskrivesAvEksternNoekkel" type="arkivkjernens:EksternNoekkel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AvskrivningsmaateListe" type="arkivkjernens:AvskrivningsmaateListe" />
+  <xs:complexType name="AvskrivningsmaateListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Avskrivningsmaate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Avskrivningsmaate" type="arkivkjernens:Avskrivningsmaate" />
+  <xs:complexType name="Avskrivningsmaate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DokumentmediumListe" type="arkivkjernens:DokumentmediumListe" />
+  <xs:complexType name="DokumentmediumListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Dokumentmedium" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Dokumentmedium" type="arkivkjernens:Dokumentmedium" />
+  <xs:complexType name="Dokumentmedium">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ForsendelsesmaateListe" type="arkivkjernens:ForsendelsesmaateListe" />
+  <xs:complexType name="ForsendelsesmaateListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Forsendelsesmaate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Forsendelsesmaate" type="arkivkjernens:Forsendelsesmaate" />
+  <xs:complexType name="Forsendelsesmaate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InformasjonstypeListe" type="arkivkjernens:InformasjonstypeListe" />
+  <xs:complexType name="InformasjonstypeListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Informasjonstype" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Informasjonstype" type="arkivkjernens:Informasjonstype" />
+  <xs:complexType name="Informasjonstype">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JournalenhetListe" type="arkivkjernens:JournalenhetListe" />
+  <xs:complexType name="JournalenhetListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Journalenhet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Journalenhet" type="arkivkjernens:Journalenhet" />
+  <xs:complexType name="Journalenhet">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JournalposttypeListe" type="arkivkjernens:JournalposttypeListe" />
+  <xs:complexType name="JournalposttypeListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Journalposttype" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Journalposttype" type="arkivkjernens:Journalposttype" />
+  <xs:complexType name="Journalposttype">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JournalstatusListe" type="arkivkjernens:JournalstatusListe" />
+  <xs:complexType name="JournalstatusListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Journalstatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Journalstatus" type="arkivkjernens:Journalstatus" />
+  <xs:complexType name="Journalstatus">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JournpostEksternNoekkel" type="arkivkjernens:JournpostEksternNoekkel" />
+  <xs:complexType name="JournpostEksternNoekkel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="arkivkjernens:Journpostnoekkel">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="eksternnoekkel" type="arkivkjernens:EksternNoekkel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JournpostSystemID" type="arkivkjernens:JournpostSystemID" />
+  <xs:complexType name="JournpostSystemID">
+    <xs:complexContent mixed="false">
+      <xs:extension base="arkivkjernens:Journpostnoekkel">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="systemID" type="arkivkjernens:SystemID" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="KassasjonsvedtakListe" type="arkivkjernens:KassasjonsvedtakListe" />
+  <xs:complexType name="KassasjonsvedtakListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Kassasjonsvedtak" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Kassasjonsvedtak" type="arkivkjernens:Kassasjonsvedtak" />
+  <xs:complexType name="Kassasjonsvedtak">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="KlassifikasjonssystemListe" type="arkivkjernens:KlassifikasjonssystemListe" />
+  <xs:complexType name="KlassifikasjonssystemListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Klassifikasjonssystem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Klassifikasjonssystem" type="arkivkjernens:Klassifikasjonssystem" />
+  <xs:complexType name="Klassifikasjonssystem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="KorrespondanseparttypeListe" type="arkivkjernens:KorrespondanseparttypeListe" />
+  <xs:complexType name="KorrespondanseparttypeListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Korrespondanseparttype" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Korrespondanseparttype" type="arkivkjernens:Korrespondanseparttype" />
+  <xs:complexType name="Korrespondanseparttype">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MappetypeListe" type="arkivkjernens:MappetypeListe" />
+  <xs:complexType name="MappetypeListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Mappetype" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Mappetype" type="arkivkjernens:Mappetype" />
+  <xs:complexType name="Mappetype">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MerknadListe" type="arkivkjernens:MerknadListe" />
+  <xs:complexType name="MerknadListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Merknad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Merknad" type="arkivkjernens:Merknad" />
+  <xs:complexType name="Merknad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="systemID" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="merknadstekst" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="merknadstype" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="merknadsdato" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="merknadRegistrertAv" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="merknadRegistrertAvInit" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SakEksternNoekkel" type="arkivkjernens:SakEksternNoekkel" />
+  <xs:complexType name="SakEksternNoekkel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="arkivfellesns:Saksnoekkel">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="eksternnoekkel" type="arkivkjernens:EksternNoekkel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaksstatusListe" type="arkivkjernens:SaksstatusListe" />
+  <xs:complexType name="SaksstatusListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Saksstatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Saksstatus" type="arkivkjernens:Saksstatus" />
+  <xs:complexType name="Saksstatus">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SakSystemIdListe" type="arkivkjernens:SakSystemIdListe" />
+  <xs:complexType name="SakSystemIdListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:SakSystemId" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SakSystemId" type="arkivkjernens:SakSystemId" />
+  <xs:complexType name="SakSystemId">
+    <xs:complexContent mixed="false">
+      <xs:extension base="arkivfellesns:Saksnoekkel">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="systemID" type="arkivkjernens:SystemID" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SkjermingListe" type="arkivkjernens:SkjermingListe" />
+  <xs:complexType name="SkjermingListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Skjerming" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Skjerming" type="arkivkjernens:Skjerming" />
+  <xs:complexType name="Skjerming">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="tilgangsrestriksjon" type="arkivkjernens:Tilgangsrestriksjon" />
+      <xs:element minOccurs="0" maxOccurs="1" name="skjermingshjemmel" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="skjermingOpphoererDato" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="skjermingOpphoererAksjon" type="arkivkjernens:SkjermingOpphorerAksjon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SkjermingOpphorerAksjonListe" type="arkivkjernens:SkjermingOpphorerAksjonListe" />
+  <xs:complexType name="SkjermingOpphorerAksjonListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:SkjermingOpphorerAksjon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SkjermingOpphorerAksjon" type="arkivkjernens:SkjermingOpphorerAksjon" />
+  <xs:complexType name="SkjermingOpphorerAksjon">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SkjermingsHjemmel" type="arkivkjernens:SkjermingsHjemmel" />
+  <xs:complexType name="SkjermingsHjemmel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemIDListe" type="arkivkjernens:SystemIDListe" />
+  <xs:complexType name="SystemIDListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:SystemID" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SystemID" type="arkivkjernens:SystemID" />
+  <xs:complexType name="SystemID">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TilgangsrestriksjonListe" type="arkivkjernens:TilgangsrestriksjonListe" />
+  <xs:complexType name="TilgangsrestriksjonListe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="liste" type="arkivkjernens:Tilgangsrestriksjon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tilgangsrestriksjon" type="arkivkjernens:Tilgangsrestriksjon" />
+  <xs:complexType name="Tilgangsrestriksjon">
+    <xs:complexContent mixed="false">
+      <xs:extension base="felleskodelistens:Kode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
