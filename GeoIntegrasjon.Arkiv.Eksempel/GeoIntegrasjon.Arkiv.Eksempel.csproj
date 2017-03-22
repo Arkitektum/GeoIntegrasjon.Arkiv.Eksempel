@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -45,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArkivInnsynEksempler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\ArkivInnsyn\Reference.cs">
@@ -62,11 +64,14 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Arkiverbart_brev.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Service References\ArkivInnsyn\ArkivInnsyn.wsdl" />
-    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumentListe.datasource">
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokument.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumenttypeListe.datasource">
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumenttype.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Fil.datasource">
@@ -99,19 +104,16 @@
     <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodelisteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.JournalpostListe.datasource">
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalpost.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KodeListe.datasource">
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SaksmappeListe.datasource">
+    <None Include="Service References\ArkivInnsyn\GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksmappe.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ArkivInnsyn\giArkivDokument20120131.xsd">
@@ -160,22 +162,13 @@
     <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.Journalpost.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.JournalpostListe.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyAvskrivningResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyBygningResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyDokumentResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyJournalpostMerknadResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyJournalpostResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NyJournalpostTilleggsinformasjonResponse.datasource">
@@ -193,34 +186,10 @@
     <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NySaksmappeMerknadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NySaksmappeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NySaksmappeTilleggsinformasjonResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.NySakspartResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterJournalpostAnsvarligResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterJournalpostEksternNoekkelResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterJournalpostStatusResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterMappeAnsvarligResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterMappeEksternNoekkelResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterMappeStatusResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.OppdaterPlanResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ArkivOppdatering\GeoIntegrasjon.Arkiv.Eksempel.ArkivOppdatering.Saksmappe.datasource">
@@ -289,6 +258,10 @@
     <None Include="Service References\ArkivOppdatering\giPlanFelles20120131.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="settings.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="settings.default.config" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

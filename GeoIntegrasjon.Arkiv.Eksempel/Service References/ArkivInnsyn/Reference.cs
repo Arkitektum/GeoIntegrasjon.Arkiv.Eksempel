@@ -9,551 +9,73 @@
 //------------------------------------------------------------------------------
 
 namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
-    using System.Runtime.Serialization;
-    using System;
     
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Kontekst", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OperationalFault))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ImplementationFault))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.MatrikkelKontekst))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.PlanKontekst))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst))]
-    public partial class Kontekst : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string spraakField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string klientnavnField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string klientversjonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string systemversjonField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string spraak {
-            get {
-                return this.spraakField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.spraakField, value) != true)) {
-                    this.spraakField = value;
-                    this.RaisePropertyChanged("spraak");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string klientnavn {
-            get {
-                return this.klientnavnField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.klientnavnField, value) != true)) {
-                    this.klientnavnField = value;
-                    this.RaisePropertyChanged("klientnavn");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string klientversjon {
-            get {
-                return this.klientversjonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.klientversjonField, value) != true)) {
-                    this.klientversjonField = value;
-                    this.RaisePropertyChanged("klientversjon");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string systemversjon {
-            get {
-                return this.systemversjonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.systemversjonField, value) != true)) {
-                    this.systemversjonField = value;
-                    this.RaisePropertyChanged("systemversjon");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    public partial class SystemFault : GeointegrasjonFault {
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MatrikkelKontekst", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SystemFault))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OperationalFault))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ImplementationFault))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ApplicationFault))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ValidationFault))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FinderFault))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
     [System.SerializableAttribute()]
-    public partial class MatrikkelKontekst : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kontekst {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KoordinatsystemKode koordinatsystemField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KoordinatsystemKode koordinatsystem {
-            get {
-                return this.koordinatsystemField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.koordinatsystemField, value) != true)) {
-                    this.koordinatsystemField = value;
-                    this.RaisePropertyChanged("koordinatsystem");
-                }
-            }
-        }
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PlanKontekst", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class PlanKontekst : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kontekst {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KoordinatsystemKode koordinatsystemField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KoordinatsystemKode koordinatsystem {
-            get {
-                return this.koordinatsystemField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.koordinatsystemField, value) != true)) {
-                    this.koordinatsystemField = value;
-                    this.RaisePropertyChanged("koordinatsystem");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ArkivKontekst", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class ArkivKontekst : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kontekst {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KoordinatsystemKode koordinatsystemField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string referanseoppsettField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KoordinatsystemKode koordinatsystem {
-            get {
-                return this.koordinatsystemField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.koordinatsystemField, value) != true)) {
-                    this.koordinatsystemField = value;
-                    this.RaisePropertyChanged("koordinatsystem");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string referanseoppsett {
-            get {
-                return this.referanseoppsettField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.referanseoppsettField, value) != true)) {
-                    this.referanseoppsettField = value;
-                    this.RaisePropertyChanged("referanseoppsett");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="KoordinatsystemKode", Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class KoordinatsystemKode : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Kode", Namespace="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EnkelAdressetype))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Landkode))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SakspartRolle))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Arkivdel))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Avskrivningsmaate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumentmedium))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Forsendelsesmaate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Informasjonstype))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalenhet))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalposttype))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalstatus))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kassasjonsvedtak))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Klassifikasjonssystem))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Korrespondanseparttype))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Mappetype))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksstatus))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SkjermingOpphorerAksjon))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SkjermingsHjemmel))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Tilgangsrestriksjon))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.PersonidentifikatorType))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumenttype))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumentstatus))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Format))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.TilknyttetRegistreringSom))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Variantformat))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KoordinatsystemKode))]
-    public partial class Kode : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private string kodeverdiField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string kodebeskrivelseField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool erGyldigField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string kodeverdi {
-            get {
-                return this.kodeverdiField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.kodeverdiField, value) != true)) {
-                    this.kodeverdiField = value;
-                    this.RaisePropertyChanged("kodeverdi");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string kodebeskrivelse {
-            get {
-                return this.kodebeskrivelseField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.kodebeskrivelseField, value) != true)) {
-                    this.kodebeskrivelseField = value;
-                    this.RaisePropertyChanged("kodebeskrivelse");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public bool erGyldig {
-            get {
-                return this.erGyldigField;
-            }
-            set {
-                if ((this.erGyldigField.Equals(value) != true)) {
-                    this.erGyldigField = value;
-                    this.RaisePropertyChanged("erGyldig");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EnkelAdressetype", Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class EnkelAdressetype : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Landkode", Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Landkode : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SakspartRolle", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class SakspartRolle : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Arkivdel", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Arkivdel : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Avskrivningsmaate", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Avskrivningsmaate : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Dokumentmedium", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Dokumentmedium : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Forsendelsesmaate", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Forsendelsesmaate : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Informasjonstype", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Informasjonstype : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Journalenhet", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Journalenhet : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Journalposttype", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Journalposttype : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Journalstatus", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Journalstatus : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Kassasjonsvedtak", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Kassasjonsvedtak : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Klassifikasjonssystem", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Klassifikasjonssystem : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Korrespondanseparttype", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Korrespondanseparttype : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Mappetype", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Mappetype : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Saksstatus", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Saksstatus : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SkjermingOpphorerAksjon", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class SkjermingOpphorerAksjon : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SkjermingsHjemmel", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class SkjermingsHjemmel : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Tilgangsrestriksjon", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Tilgangsrestriksjon : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PersonidentifikatorType", Namespace="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class PersonidentifikatorType : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Dokumenttype", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Dokumenttype : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Dokumentstatus", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Dokumentstatus : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Format", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Format : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="TilknyttetRegistreringSom", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class TilknyttetRegistreringSom : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Variantformat", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Variantformat : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="KodeListe", Namespace="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class KodeListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GeointegrasjonFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ApplicationFault))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinderFault))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ValidationFault))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ImplementationFault))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.OperationalFault))]
-    public partial class GeointegrasjonFault : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    public partial class GeointegrasjonFault : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string feilKodeField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string feilBeskrivelseField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.StringListe feilDetaljerField;
+        private string[] feilDetaljerField;
         
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string feilKode {
             get {
                 return this.feilKodeField;
             }
             set {
-                if ((object.ReferenceEquals(this.feilKodeField, value) != true)) {
-                    this.feilKodeField = value;
-                    this.RaisePropertyChanged("feilKode");
-                }
+                this.feilKodeField = value;
+                this.RaisePropertyChanged("feilKode");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string feilBeskrivelse {
             get {
                 return this.feilBeskrivelseField;
             }
             set {
-                if ((object.ReferenceEquals(this.feilBeskrivelseField, value) != true)) {
-                    this.feilBeskrivelseField = value;
-                    this.RaisePropertyChanged("feilBeskrivelse");
-                }
+                this.feilBeskrivelseField = value;
+                this.RaisePropertyChanged("feilBeskrivelse");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.StringListe feilDetaljer {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", IsNullable=false)]
+        public string[] feilDetaljer {
             get {
                 return this.feilDetaljerField;
             }
             set {
-                if ((object.ReferenceEquals(this.feilDetaljerField, value) != true)) {
-                    this.feilDetaljerField = value;
-                    this.RaisePropertyChanged("feilDetaljer");
-                }
+                this.feilDetaljerField = value;
+                this.RaisePropertyChanged("feilDetaljer");
             }
         }
         
@@ -567,90 +89,93 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ApplicationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Tilgangsrestriksjon))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SkjermingsHjemmel))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SkjermingOpphorerAksjon))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Saksstatus))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Mappetype))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Korrespondanseparttype))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Klassifikasjonssystem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Kassasjonsvedtak))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Journalstatus))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Journalposttype))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Journalenhet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Informasjonstype))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Forsendelsesmaate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Dokumentmedium))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Avskrivningsmaate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Arkivdel))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SakspartRolle))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PersonidentifikatorType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Landkode))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EnkelAdressetype))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(KoordinatsystemKode))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Variantformat))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TilknyttetRegistreringSom))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Format))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Dokumentstatus))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Dokumenttype))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinderFault))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ValidationFault))]
-    public partial class ApplicationFault : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.GeointegrasjonFault {
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FinderFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class FinderFault : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ApplicationFault {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ValidationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class ValidationFault : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ApplicationFault {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SystemFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ImplementationFault))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.OperationalFault))]
-    public partial class SystemFault : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.GeointegrasjonFault {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ImplementationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class ImplementationFault : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="OperationalFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class OperationalFault : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="StringListe", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class StringListe : System.Collections.Generic.List<string> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SystemID", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class SystemID : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31")]
+    public partial class Kode : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        private string kodeverdiField;
         
-        private string idField;
+        private string kodebeskrivelseField;
         
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+        private bool erGyldigField;
+        
+        private bool erGyldigFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string kodeverdi {
             get {
-                return this.extensionDataField;
+                return this.kodeverdiField;
             }
             set {
-                this.extensionDataField = value;
+                this.kodeverdiField = value;
+                this.RaisePropertyChanged("kodeverdi");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string id {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string kodebeskrivelse {
             get {
-                return this.idField;
+                return this.kodebeskrivelseField;
             }
             set {
-                if ((object.ReferenceEquals(this.idField, value) != true)) {
-                    this.idField = value;
-                    this.RaisePropertyChanged("id");
-                }
+                this.kodebeskrivelseField = value;
+                this.RaisePropertyChanged("kodebeskrivelse");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool erGyldig {
+            get {
+                return this.erGyldigField;
+            }
+            set {
+                this.erGyldigField = value;
+                this.RaisePropertyChanged("erGyldig");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool erGyldigSpecified {
+            get {
+                return this.erGyldigFieldSpecified;
+            }
+            set {
+                this.erGyldigFieldSpecified = value;
+                this.RaisePropertyChanged("erGyldigSpecified");
             }
         }
         
@@ -664,54 +189,304 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Fil", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Filinnhold))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Filreferanse))]
-    public partial class Fil : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Tilgangsrestriksjon : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class SkjermingsHjemmel : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class SkjermingOpphorerAksjon : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Saksstatus : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Mappetype : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Korrespondanseparttype : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Klassifikasjonssystem : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Kassasjonsvedtak : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Journalstatus : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Journalposttype : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Journalenhet : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Informasjonstype : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Forsendelsesmaate : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Dokumentmedium : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Avskrivningsmaate : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Arkivdel : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class SakspartRolle : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31")]
+    public partial class PersonidentifikatorType : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
+    public partial class Landkode : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
+    public partial class EnkelAdressetype : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
+    public partial class KoordinatsystemKode : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
+    public partial class Variantformat : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
+    public partial class TilknyttetRegistreringSom : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
+    public partial class Format : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
+    public partial class Dokumentstatus : Kode {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
+    public partial class Dokumenttype : Kode {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlanKontekst))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MatrikkelKontekst))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ArkivKontekst))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    public partial class Kontekst : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        private string spraakField;
         
-        private string filnavnField;
+        private string klientnavnField;
         
-        private string mimeTypeField;
+        private string klientversjonField;
         
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+        private string systemversjonField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string spraak {
             get {
-                return this.extensionDataField;
+                return this.spraakField;
             }
             set {
-                this.extensionDataField = value;
+                this.spraakField = value;
+                this.RaisePropertyChanged("spraak");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string filnavn {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string klientnavn {
             get {
-                return this.filnavnField;
+                return this.klientnavnField;
             }
             set {
-                if ((object.ReferenceEquals(this.filnavnField, value) != true)) {
-                    this.filnavnField = value;
-                    this.RaisePropertyChanged("filnavn");
-                }
+                this.klientnavnField = value;
+                this.RaisePropertyChanged("klientnavn");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string mimeType {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string klientversjon {
             get {
-                return this.mimeTypeField;
+                return this.klientversjonField;
             }
             set {
-                if ((object.ReferenceEquals(this.mimeTypeField, value) != true)) {
-                    this.mimeTypeField = value;
-                    this.RaisePropertyChanged("mimeType");
-                }
+                this.klientversjonField = value;
+                this.RaisePropertyChanged("klientversjon");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string systemversjon {
+            get {
+                return this.systemversjonField;
+            }
+            set {
+                this.systemversjonField = value;
+                this.RaisePropertyChanged("systemversjon");
             }
         }
         
@@ -725,4057 +500,141 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Filinnhold", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
     [System.SerializableAttribute()]
-    public partial class Filinnhold : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Fil {
-        
-        private byte[] base64Field;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public byte[] base64 {
-            get {
-                return this.base64Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.base64Field, value) != true)) {
-                    this.base64Field = value;
-                    this.RaisePropertyChanged("base64");
-                }
-            }
-        }
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Filreferanse", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Filreferanse : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Fil {
-        
-        private System.Uri uriField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Uri kvitteringUriField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public System.Uri uri {
-            get {
-                return this.uriField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.uriField, value) != true)) {
-                    this.uriField = value;
-                    this.RaisePropertyChanged("uri");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Uri kvitteringUri {
-            get {
-                return this.kvitteringUriField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.kvitteringUriField, value) != true)) {
-                    this.kvitteringUriField = value;
-                    this.RaisePropertyChanged("kvitteringUri");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Saksnoekkel", Namespace="http://rep.geointegrasjon.no/Arkiv/Felles/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnummer))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SakEksternNoekkel))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SakSystemId))]
-    public partial class Saksnoekkel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Saksnummer", Namespace="http://rep.geointegrasjon.no/Arkiv/Felles/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Saksnummer : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel {
-        
-        private long saksaarField;
-        
-        private long sakssekvensnummerField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public long saksaar {
-            get {
-                return this.saksaarField;
-            }
-            set {
-                if ((this.saksaarField.Equals(value) != true)) {
-                    this.saksaarField = value;
-                    this.RaisePropertyChanged("saksaar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public long sakssekvensnummer {
-            get {
-                return this.sakssekvensnummerField;
-            }
-            set {
-                if ((this.sakssekvensnummerField.Equals(value) != true)) {
-                    this.sakssekvensnummerField = value;
-                    this.RaisePropertyChanged("sakssekvensnummer");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SakEksternNoekkel", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class SakEksternNoekkel : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel {
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel eksternnoekkelField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel eksternnoekkel {
-            get {
-                return this.eksternnoekkelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.eksternnoekkelField, value) != true)) {
-                    this.eksternnoekkelField = value;
-                    this.RaisePropertyChanged("eksternnoekkel");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SakSystemId", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class SakSystemId : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel {
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemID systemIDField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemID systemID {
-            get {
-                return this.systemIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.systemIDField, value) != true)) {
-                    this.systemIDField = value;
-                    this.RaisePropertyChanged("systemID");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EksternNoekkel", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class EksternNoekkel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private string fagsystemField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string noekkelField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string fagsystem {
-            get {
-                return this.fagsystemField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.fagsystemField, value) != true)) {
-                    this.fagsystemField = value;
-                    this.RaisePropertyChanged("fagsystem");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string noekkel {
-            get {
-                return this.noekkelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.noekkelField, value) != true)) {
-                    this.noekkelField = value;
-                    this.RaisePropertyChanged("noekkel");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="DokumenttypeListe", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class DokumenttypeListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumenttype> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Journpostnoekkel", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumentnummer))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalnummer))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.JournpostEksternNoekkel))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.JournpostSystemID))]
-    public partial class Journpostnoekkel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Dokumentnummer", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Dokumentnummer : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel {
-        
-        private long saksaarField;
-        
-        private long sakssekvensnummerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long journalpostnummerField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public long saksaar {
-            get {
-                return this.saksaarField;
-            }
-            set {
-                if ((this.saksaarField.Equals(value) != true)) {
-                    this.saksaarField = value;
-                    this.RaisePropertyChanged("saksaar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public long sakssekvensnummer {
-            get {
-                return this.sakssekvensnummerField;
-            }
-            set {
-                if ((this.sakssekvensnummerField.Equals(value) != true)) {
-                    this.sakssekvensnummerField = value;
-                    this.RaisePropertyChanged("sakssekvensnummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public long journalpostnummer {
-            get {
-                return this.journalpostnummerField;
-            }
-            set {
-                if ((this.journalpostnummerField.Equals(value) != true)) {
-                    this.journalpostnummerField = value;
-                    this.RaisePropertyChanged("journalpostnummer");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Journalnummer", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Journalnummer : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel {
-        
-        private long journalaarField;
-        
-        private long journalsekvensnummerField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public long journalaar {
-            get {
-                return this.journalaarField;
-            }
-            set {
-                if ((this.journalaarField.Equals(value) != true)) {
-                    this.journalaarField = value;
-                    this.RaisePropertyChanged("journalaar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public long journalsekvensnummer {
-            get {
-                return this.journalsekvensnummerField;
-            }
-            set {
-                if ((this.journalsekvensnummerField.Equals(value) != true)) {
-                    this.journalsekvensnummerField = value;
-                    this.RaisePropertyChanged("journalsekvensnummer");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="JournpostEksternNoekkel", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class JournpostEksternNoekkel : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel {
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel eksternnoekkelField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel eksternnoekkel {
-            get {
-                return this.eksternnoekkelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.eksternnoekkelField, value) != true)) {
-                    this.eksternnoekkelField = value;
-                    this.RaisePropertyChanged("eksternnoekkel");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="JournpostSystemID", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class JournpostSystemID : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel {
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemID systemIDField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemID systemID {
-            get {
-                return this.systemIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.systemIDField, value) != true)) {
-                    this.systemIDField = value;
-                    this.RaisePropertyChanged("systemID");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="JournalpostListe", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class JournalpostListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalpost> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Journalpost", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Journalpost : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string systemIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalnummer journalnummerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string journalpostnummerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime journaldatoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalposttype journalposttypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime dokumentetsDatoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalstatus journalstatusField;
-        
-        private string tittelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool skjermetTittelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime forfallsdatoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Skjerming skjermingField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Arkivdel referanseArkivdelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string tilleggskodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string antallVedleggField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string offentligTittelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnummer saksnrField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string tilgangsgruppeNavnField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SakSystemId referanseSakSystemIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KorrespondansepartListe korrespondansepartField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel referanseEksternNoekkelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel referanseMappeEksternNoekkelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.AvskrivningListe referanseAvskrivningerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.MerknadListe merknaderField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.TilleggsinformasjonListe tilleggsinformasjonField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string systemID {
-            get {
-                return this.systemIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.systemIDField, value) != true)) {
-                    this.systemIDField = value;
-                    this.RaisePropertyChanged("systemID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalnummer journalnummer {
-            get {
-                return this.journalnummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.journalnummerField, value) != true)) {
-                    this.journalnummerField = value;
-                    this.RaisePropertyChanged("journalnummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string journalpostnummer {
-            get {
-                return this.journalpostnummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.journalpostnummerField, value) != true)) {
-                    this.journalpostnummerField = value;
-                    this.RaisePropertyChanged("journalpostnummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public System.DateTime journaldato {
-            get {
-                return this.journaldatoField;
-            }
-            set {
-                if ((this.journaldatoField.Equals(value) != true)) {
-                    this.journaldatoField = value;
-                    this.RaisePropertyChanged("journaldato");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalposttype journalposttype {
-            get {
-                return this.journalposttypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.journalposttypeField, value) != true)) {
-                    this.journalposttypeField = value;
-                    this.RaisePropertyChanged("journalposttype");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=5)]
-        public System.DateTime dokumentetsDato {
-            get {
-                return this.dokumentetsDatoField;
-            }
-            set {
-                if ((this.dokumentetsDatoField.Equals(value) != true)) {
-                    this.dokumentetsDatoField = value;
-                    this.RaisePropertyChanged("dokumentetsDato");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalstatus journalstatus {
-            get {
-                return this.journalstatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.journalstatusField, value) != true)) {
-                    this.journalstatusField = value;
-                    this.RaisePropertyChanged("journalstatus");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=7)]
-        public string tittel {
-            get {
-                return this.tittelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tittelField, value) != true)) {
-                    this.tittelField = value;
-                    this.RaisePropertyChanged("tittel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=8)]
-        public bool skjermetTittel {
-            get {
-                return this.skjermetTittelField;
-            }
-            set {
-                if ((this.skjermetTittelField.Equals(value) != true)) {
-                    this.skjermetTittelField = value;
-                    this.RaisePropertyChanged("skjermetTittel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=9)]
-        public System.DateTime forfallsdato {
-            get {
-                return this.forfallsdatoField;
-            }
-            set {
-                if ((this.forfallsdatoField.Equals(value) != true)) {
-                    this.forfallsdatoField = value;
-                    this.RaisePropertyChanged("forfallsdato");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Skjerming skjerming {
-            get {
-                return this.skjermingField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.skjermingField, value) != true)) {
-                    this.skjermingField = value;
-                    this.RaisePropertyChanged("skjerming");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=11)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Arkivdel referanseArkivdel {
-            get {
-                return this.referanseArkivdelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.referanseArkivdelField, value) != true)) {
-                    this.referanseArkivdelField = value;
-                    this.RaisePropertyChanged("referanseArkivdel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=12)]
-        public string tilleggskode {
-            get {
-                return this.tilleggskodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tilleggskodeField, value) != true)) {
-                    this.tilleggskodeField = value;
-                    this.RaisePropertyChanged("tilleggskode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=13)]
-        public string antallVedlegg {
-            get {
-                return this.antallVedleggField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.antallVedleggField, value) != true)) {
-                    this.antallVedleggField = value;
-                    this.RaisePropertyChanged("antallVedlegg");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=14)]
-        public string offentligTittel {
-            get {
-                return this.offentligTittelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.offentligTittelField, value) != true)) {
-                    this.offentligTittelField = value;
-                    this.RaisePropertyChanged("offentligTittel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=15)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnummer saksnr {
-            get {
-                return this.saksnrField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.saksnrField, value) != true)) {
-                    this.saksnrField = value;
-                    this.RaisePropertyChanged("saksnr");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=16)]
-        public string tilgangsgruppeNavn {
-            get {
-                return this.tilgangsgruppeNavnField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tilgangsgruppeNavnField, value) != true)) {
-                    this.tilgangsgruppeNavnField = value;
-                    this.RaisePropertyChanged("tilgangsgruppeNavn");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=17)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SakSystemId referanseSakSystemID {
-            get {
-                return this.referanseSakSystemIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.referanseSakSystemIDField, value) != true)) {
-                    this.referanseSakSystemIDField = value;
-                    this.RaisePropertyChanged("referanseSakSystemID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=18)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KorrespondansepartListe korrespondansepart {
-            get {
-                return this.korrespondansepartField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.korrespondansepartField, value) != true)) {
-                    this.korrespondansepartField = value;
-                    this.RaisePropertyChanged("korrespondansepart");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=19)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel referanseEksternNoekkel {
-            get {
-                return this.referanseEksternNoekkelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.referanseEksternNoekkelField, value) != true)) {
-                    this.referanseEksternNoekkelField = value;
-                    this.RaisePropertyChanged("referanseEksternNoekkel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=20)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel referanseMappeEksternNoekkel {
-            get {
-                return this.referanseMappeEksternNoekkelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.referanseMappeEksternNoekkelField, value) != true)) {
-                    this.referanseMappeEksternNoekkelField = value;
-                    this.RaisePropertyChanged("referanseMappeEksternNoekkel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=21)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.AvskrivningListe referanseAvskrivninger {
-            get {
-                return this.referanseAvskrivningerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.referanseAvskrivningerField, value) != true)) {
-                    this.referanseAvskrivningerField = value;
-                    this.RaisePropertyChanged("referanseAvskrivninger");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=22)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.MerknadListe merknader {
-            get {
-                return this.merknaderField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.merknaderField, value) != true)) {
-                    this.merknaderField = value;
-                    this.RaisePropertyChanged("merknader");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=23)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.TilleggsinformasjonListe tilleggsinformasjon {
-            get {
-                return this.tilleggsinformasjonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tilleggsinformasjonField, value) != true)) {
-                    this.tilleggsinformasjonField = value;
-                    this.RaisePropertyChanged("tilleggsinformasjon");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Skjerming", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Skjerming : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Tilgangsrestriksjon tilgangsrestriksjonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string skjermingshjemmelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime skjermingOpphoererDatoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SkjermingOpphorerAksjon skjermingOpphoererAksjonField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Tilgangsrestriksjon tilgangsrestriksjon {
-            get {
-                return this.tilgangsrestriksjonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tilgangsrestriksjonField, value) != true)) {
-                    this.tilgangsrestriksjonField = value;
-                    this.RaisePropertyChanged("tilgangsrestriksjon");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string skjermingshjemmel {
-            get {
-                return this.skjermingshjemmelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.skjermingshjemmelField, value) != true)) {
-                    this.skjermingshjemmelField = value;
-                    this.RaisePropertyChanged("skjermingshjemmel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public System.DateTime skjermingOpphoererDato {
-            get {
-                return this.skjermingOpphoererDatoField;
-            }
-            set {
-                if ((this.skjermingOpphoererDatoField.Equals(value) != true)) {
-                    this.skjermingOpphoererDatoField = value;
-                    this.RaisePropertyChanged("skjermingOpphoererDato");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SkjermingOpphorerAksjon skjermingOpphoererAksjon {
-            get {
-                return this.skjermingOpphoererAksjonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.skjermingOpphoererAksjonField, value) != true)) {
-                    this.skjermingOpphoererAksjonField = value;
-                    this.RaisePropertyChanged("skjermingOpphoererAksjon");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="KorrespondansepartListe", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class KorrespondansepartListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Korrespondansepart> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="AvskrivningListe", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class AvskrivningListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Avskrivning> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="MerknadListe", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class MerknadListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Merknad> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="TilleggsinformasjonListe", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class TilleggsinformasjonListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Tilleggsinformasjon> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Korrespondansepart", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Korrespondansepart : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string systemIDField;
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Korrespondanseparttype korrespondanseparttypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string behandlingsansvarligField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool skjermetKorrespondansepartField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string kortnavnField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string deresReferanseField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalenhet journalenhetField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime fristBesvarelseField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Forsendelsesmaate forsendelsesmaateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string administrativEnhetInitField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string administrativEnhetField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string saksbehandlerInitField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string saksbehandlerField;
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kontakt KontaktField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string systemID {
-            get {
-                return this.systemIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.systemIDField, value) != true)) {
-                    this.systemIDField = value;
-                    this.RaisePropertyChanged("systemID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=1)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Korrespondanseparttype korrespondanseparttype {
-            get {
-                return this.korrespondanseparttypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.korrespondanseparttypeField, value) != true)) {
-                    this.korrespondanseparttypeField = value;
-                    this.RaisePropertyChanged("korrespondanseparttype");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string behandlingsansvarlig {
-            get {
-                return this.behandlingsansvarligField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.behandlingsansvarligField, value) != true)) {
-                    this.behandlingsansvarligField = value;
-                    this.RaisePropertyChanged("behandlingsansvarlig");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public bool skjermetKorrespondansepart {
-            get {
-                return this.skjermetKorrespondansepartField;
-            }
-            set {
-                if ((this.skjermetKorrespondansepartField.Equals(value) != true)) {
-                    this.skjermetKorrespondansepartField = value;
-                    this.RaisePropertyChanged("skjermetKorrespondansepart");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string kortnavn {
-            get {
-                return this.kortnavnField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.kortnavnField, value) != true)) {
-                    this.kortnavnField = value;
-                    this.RaisePropertyChanged("kortnavn");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string deresReferanse {
-            get {
-                return this.deresReferanseField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.deresReferanseField, value) != true)) {
-                    this.deresReferanseField = value;
-                    this.RaisePropertyChanged("deresReferanse");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalenhet journalenhet {
-            get {
-                return this.journalenhetField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.journalenhetField, value) != true)) {
-                    this.journalenhetField = value;
-                    this.RaisePropertyChanged("journalenhet");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=7)]
-        public System.DateTime fristBesvarelse {
-            get {
-                return this.fristBesvarelseField;
-            }
-            set {
-                if ((this.fristBesvarelseField.Equals(value) != true)) {
-                    this.fristBesvarelseField = value;
-                    this.RaisePropertyChanged("fristBesvarelse");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Forsendelsesmaate forsendelsesmaate {
-            get {
-                return this.forsendelsesmaateField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.forsendelsesmaateField, value) != true)) {
-                    this.forsendelsesmaateField = value;
-                    this.RaisePropertyChanged("forsendelsesmaate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
-        public string administrativEnhetInit {
-            get {
-                return this.administrativEnhetInitField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.administrativEnhetInitField, value) != true)) {
-                    this.administrativEnhetInitField = value;
-                    this.RaisePropertyChanged("administrativEnhetInit");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
-        public string administrativEnhet {
-            get {
-                return this.administrativEnhetField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.administrativEnhetField, value) != true)) {
-                    this.administrativEnhetField = value;
-                    this.RaisePropertyChanged("administrativEnhet");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=11)]
-        public string saksbehandlerInit {
-            get {
-                return this.saksbehandlerInitField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.saksbehandlerInitField, value) != true)) {
-                    this.saksbehandlerInitField = value;
-                    this.RaisePropertyChanged("saksbehandlerInit");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=12)]
-        public string saksbehandler {
-            get {
-                return this.saksbehandlerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.saksbehandlerField, value) != true)) {
-                    this.saksbehandlerField = value;
-                    this.RaisePropertyChanged("saksbehandler");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=13)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kontakt Kontakt {
-            get {
-                return this.KontaktField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KontaktField, value) != true)) {
-                    this.KontaktField = value;
-                    this.RaisePropertyChanged("Kontakt");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Kontakt", Namespace="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Organisasjon))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Person))]
-    public partial class Kontakt : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private string navnField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EnkelAdresseListe adresserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ElektroniskAdresseListe elektroniskeAdresserField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string navn {
-            get {
-                return this.navnField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.navnField, value) != true)) {
-                    this.navnField = value;
-                    this.RaisePropertyChanged("navn");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EnkelAdresseListe adresser {
-            get {
-                return this.adresserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.adresserField, value) != true)) {
-                    this.adresserField = value;
-                    this.RaisePropertyChanged("adresser");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ElektroniskAdresseListe elektroniskeAdresser {
-            get {
-                return this.elektroniskeAdresserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.elektroniskeAdresserField, value) != true)) {
-                    this.elektroniskeAdresserField = value;
-                    this.RaisePropertyChanged("elektroniskeAdresser");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Organisasjon", Namespace="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Organisasjon : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kontakt {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string organisasjonsnummerField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string organisasjonsnummer {
-            get {
-                return this.organisasjonsnummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.organisasjonsnummerField, value) != true)) {
-                    this.organisasjonsnummerField = value;
-                    this.RaisePropertyChanged("organisasjonsnummer");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Person : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kontakt {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Personidentifikator personidField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string etternavnField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string fornavnField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Personidentifikator personid {
-            get {
-                return this.personidField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.personidField, value) != true)) {
-                    this.personidField = value;
-                    this.RaisePropertyChanged("personid");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string etternavn {
-            get {
-                return this.etternavnField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.etternavnField, value) != true)) {
-                    this.etternavnField = value;
-                    this.RaisePropertyChanged("etternavn");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string fornavn {
-            get {
-                return this.fornavnField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.fornavnField, value) != true)) {
-                    this.fornavnField = value;
-                    this.RaisePropertyChanged("fornavn");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="EnkelAdresseListe", Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class EnkelAdresseListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EnkelAdresse> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ElektroniskAdresseListe", Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class ElektroniskAdresseListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ElektroniskAdresse> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EnkelAdresse", Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class EnkelAdresse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EnkelAdressetype adressetypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string adresselinje1Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string adresselinje2Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.PostadministrativeOmraader postadresseField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Landkode landkodeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EnkelAdressetype adressetype {
-            get {
-                return this.adressetypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.adressetypeField, value) != true)) {
-                    this.adressetypeField = value;
-                    this.RaisePropertyChanged("adressetype");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string adresselinje1 {
-            get {
-                return this.adresselinje1Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.adresselinje1Field, value) != true)) {
-                    this.adresselinje1Field = value;
-                    this.RaisePropertyChanged("adresselinje1");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string adresselinje2 {
-            get {
-                return this.adresselinje2Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.adresselinje2Field, value) != true)) {
-                    this.adresselinje2Field = value;
-                    this.RaisePropertyChanged("adresselinje2");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.PostadministrativeOmraader postadresse {
-            get {
-                return this.postadresseField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.postadresseField, value) != true)) {
-                    this.postadresseField = value;
-                    this.RaisePropertyChanged("postadresse");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Landkode landkode {
-            get {
-                return this.landkodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.landkodeField, value) != true)) {
-                    this.landkodeField = value;
-                    this.RaisePropertyChanged("landkode");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PostadministrativeOmraader", Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class PostadministrativeOmraader : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string postnummerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string poststedField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string postnummer {
-            get {
-                return this.postnummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.postnummerField, value) != true)) {
-                    this.postnummerField = value;
-                    this.RaisePropertyChanged("postnummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string poststed {
-            get {
-                return this.poststedField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.poststedField, value) != true)) {
-                    this.poststedField = value;
-                    this.RaisePropertyChanged("poststed");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ElektroniskAdresse", Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Epost))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Faks))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Telefon))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Meldingsboks))]
-    public partial class ElektroniskAdresse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Epost", Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Epost : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ElektroniskAdresse {
-        
-        private string epostadresseField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string epostadresse {
-            get {
-                return this.epostadresseField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.epostadresseField, value) != true)) {
-                    this.epostadresseField = value;
-                    this.RaisePropertyChanged("epostadresse");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Faks", Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Faks : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ElektroniskAdresse {
-        
-        private string faksnummerField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string faksnummer {
-            get {
-                return this.faksnummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.faksnummerField, value) != true)) {
-                    this.faksnummerField = value;
-                    this.RaisePropertyChanged("faksnummer");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Telefon", Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Telefon : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ElektroniskAdresse {
-        
-        private string telefonnummerField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string telefonnummer {
-            get {
-                return this.telefonnummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.telefonnummerField, value) != true)) {
-                    this.telefonnummerField = value;
-                    this.RaisePropertyChanged("telefonnummer");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Meldingsboks", Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Meldingsboks : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ElektroniskAdresse {
-        
-        private string tilbyderField;
-        
-        private string meldingsboksadresseField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string tilbyder {
-            get {
-                return this.tilbyderField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tilbyderField, value) != true)) {
-                    this.tilbyderField = value;
-                    this.RaisePropertyChanged("tilbyder");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=1)]
-        public string meldingsboksadresse {
-            get {
-                return this.meldingsboksadresseField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.meldingsboksadresseField, value) != true)) {
-                    this.meldingsboksadresseField = value;
-                    this.RaisePropertyChanged("meldingsboksadresse");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Personidentifikator", Namespace="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Personidentifikator : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string personidentifikatorNrField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.PersonidentifikatorType personidentifikatorTypeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string personidentifikatorNr {
-            get {
-                return this.personidentifikatorNrField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.personidentifikatorNrField, value) != true)) {
-                    this.personidentifikatorNrField = value;
-                    this.RaisePropertyChanged("personidentifikatorNr");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.PersonidentifikatorType personidentifikatorType {
-            get {
-                return this.personidentifikatorTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.personidentifikatorTypeField, value) != true)) {
-                    this.personidentifikatorTypeField = value;
-                    this.RaisePropertyChanged("personidentifikatorType");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Avskrivning", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Avskrivning : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string systemIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime avskrivningsdatoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string avskrevetAvField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Avskrivningsmaate avskrivningsmaateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalnummer referanseAvskriverJournalnummerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalnummer referanseAvskrivesAvJournalnummerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel referanseAvskriverEksternNoekkelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel referanseAvskrivesAvEksternNoekkelField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string systemID {
-            get {
-                return this.systemIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.systemIDField, value) != true)) {
-                    this.systemIDField = value;
-                    this.RaisePropertyChanged("systemID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public System.DateTime avskrivningsdato {
-            get {
-                return this.avskrivningsdatoField;
-            }
-            set {
-                if ((this.avskrivningsdatoField.Equals(value) != true)) {
-                    this.avskrivningsdatoField = value;
-                    this.RaisePropertyChanged("avskrivningsdato");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string avskrevetAv {
-            get {
-                return this.avskrevetAvField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.avskrevetAvField, value) != true)) {
-                    this.avskrevetAvField = value;
-                    this.RaisePropertyChanged("avskrevetAv");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Avskrivningsmaate avskrivningsmaate {
-            get {
-                return this.avskrivningsmaateField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.avskrivningsmaateField, value) != true)) {
-                    this.avskrivningsmaateField = value;
-                    this.RaisePropertyChanged("avskrivningsmaate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalnummer referanseAvskriverJournalnummer {
-            get {
-                return this.referanseAvskriverJournalnummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.referanseAvskriverJournalnummerField, value) != true)) {
-                    this.referanseAvskriverJournalnummerField = value;
-                    this.RaisePropertyChanged("referanseAvskriverJournalnummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalnummer referanseAvskrivesAvJournalnummer {
-            get {
-                return this.referanseAvskrivesAvJournalnummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.referanseAvskrivesAvJournalnummerField, value) != true)) {
-                    this.referanseAvskrivesAvJournalnummerField = value;
-                    this.RaisePropertyChanged("referanseAvskrivesAvJournalnummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel referanseAvskriverEksternNoekkel {
-            get {
-                return this.referanseAvskriverEksternNoekkelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.referanseAvskriverEksternNoekkelField, value) != true)) {
-                    this.referanseAvskriverEksternNoekkelField = value;
-                    this.RaisePropertyChanged("referanseAvskriverEksternNoekkel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel referanseAvskrivesAvEksternNoekkel {
-            get {
-                return this.referanseAvskrivesAvEksternNoekkelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.referanseAvskrivesAvEksternNoekkelField, value) != true)) {
-                    this.referanseAvskrivesAvEksternNoekkelField = value;
-                    this.RaisePropertyChanged("referanseAvskrivesAvEksternNoekkel");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Merknad", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Merknad : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string systemIDField;
-        
-        private string merknadstekstField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string merknadstypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime merknadsdatoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string merknadRegistrertAvField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string merknadRegistrertAvInitField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string systemID {
-            get {
-                return this.systemIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.systemIDField, value) != true)) {
-                    this.systemIDField = value;
-                    this.RaisePropertyChanged("systemID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=1)]
-        public string merknadstekst {
-            get {
-                return this.merknadstekstField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.merknadstekstField, value) != true)) {
-                    this.merknadstekstField = value;
-                    this.RaisePropertyChanged("merknadstekst");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string merknadstype {
-            get {
-                return this.merknadstypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.merknadstypeField, value) != true)) {
-                    this.merknadstypeField = value;
-                    this.RaisePropertyChanged("merknadstype");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public System.DateTime merknadsdato {
-            get {
-                return this.merknadsdatoField;
-            }
-            set {
-                if ((this.merknadsdatoField.Equals(value) != true)) {
-                    this.merknadsdatoField = value;
-                    this.RaisePropertyChanged("merknadsdato");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string merknadRegistrertAv {
-            get {
-                return this.merknadRegistrertAvField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.merknadRegistrertAvField, value) != true)) {
-                    this.merknadRegistrertAvField = value;
-                    this.RaisePropertyChanged("merknadRegistrertAv");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string merknadRegistrertAvInit {
-            get {
-                return this.merknadRegistrertAvInitField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.merknadRegistrertAvInitField, value) != true)) {
-                    this.merknadRegistrertAvInitField = value;
-                    this.RaisePropertyChanged("merknadRegistrertAvInit");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Tilleggsinformasjon", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Tilleggsinformasjon : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string systemIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string rekkefoelgeField;
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Informasjonstype informasjonstypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Tilgangsrestriksjon tilgangsrestriksjonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime oppbevaresTilDatoField;
-        
-        private string informasjonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string tilgangsgruppeNavnField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime registrertDatoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string registrertAvField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string registrertAvInitField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string systemID {
-            get {
-                return this.systemIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.systemIDField, value) != true)) {
-                    this.systemIDField = value;
-                    this.RaisePropertyChanged("systemID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string rekkefoelge {
-            get {
-                return this.rekkefoelgeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.rekkefoelgeField, value) != true)) {
-                    this.rekkefoelgeField = value;
-                    this.RaisePropertyChanged("rekkefoelge");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=2)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Informasjonstype informasjonstype {
-            get {
-                return this.informasjonstypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.informasjonstypeField, value) != true)) {
-                    this.informasjonstypeField = value;
-                    this.RaisePropertyChanged("informasjonstype");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Tilgangsrestriksjon tilgangsrestriksjon {
-            get {
-                return this.tilgangsrestriksjonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tilgangsrestriksjonField, value) != true)) {
-                    this.tilgangsrestriksjonField = value;
-                    this.RaisePropertyChanged("tilgangsrestriksjon");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
-        public System.DateTime oppbevaresTilDato {
-            get {
-                return this.oppbevaresTilDatoField;
-            }
-            set {
-                if ((this.oppbevaresTilDatoField.Equals(value) != true)) {
-                    this.oppbevaresTilDatoField = value;
-                    this.RaisePropertyChanged("oppbevaresTilDato");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=5)]
-        public string informasjon {
-            get {
-                return this.informasjonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.informasjonField, value) != true)) {
-                    this.informasjonField = value;
-                    this.RaisePropertyChanged("informasjon");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public string tilgangsgruppeNavn {
-            get {
-                return this.tilgangsgruppeNavnField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tilgangsgruppeNavnField, value) != true)) {
-                    this.tilgangsgruppeNavnField = value;
-                    this.RaisePropertyChanged("tilgangsgruppeNavn");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=7)]
-        public System.DateTime registrertDato {
-            get {
-                return this.registrertDatoField;
-            }
-            set {
-                if ((this.registrertDatoField.Equals(value) != true)) {
-                    this.registrertDatoField = value;
-                    this.RaisePropertyChanged("registrertDato");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
-        public string registrertAv {
-            get {
-                return this.registrertAvField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.registrertAvField, value) != true)) {
-                    this.registrertAvField = value;
-                    this.RaisePropertyChanged("registrertAv");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
-        public string registrertAvInit {
-            get {
-                return this.registrertAvInitField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.registrertAvInitField, value) != true)) {
-                    this.registrertAvInitField = value;
-                    this.RaisePropertyChanged("registrertAvInit");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="SoekskriterieListe", Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class SoekskriterieListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekskriterie> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Soekskriterie", Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Soekskriterie : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekeOperatorEnum operatorField;
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kriterie KriterieField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekeOperatorEnum @operator {
-            get {
-                return this.operatorField;
-            }
-            set {
-                if ((this.operatorField.Equals(value) != true)) {
-                    this.operatorField = value;
-                    this.RaisePropertyChanged("operator");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=1)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kriterie Kriterie {
-            get {
-                return this.KriterieField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KriterieField, value) != true)) {
-                    this.KriterieField = value;
-                    this.RaisePropertyChanged("Kriterie");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Kriterie", Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.BboxKriterie))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Ansvarlig))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekefelt))]
-    public partial class Kriterie : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SoekeOperatorEnum", Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
-    public enum SoekeOperatorEnum : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        LT = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        LE = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        EQ = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GE = 3,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GT = 4,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BboxKriterie", Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class BboxKriterie : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kriterie {
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Bbox bboxField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Bbox bbox {
-            get {
-                return this.bboxField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.bboxField, value) != true)) {
-                    this.bboxField = value;
-                    this.RaisePropertyChanged("bbox");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Ansvarlig", Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Ansvarlig : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kriterie {
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.AnsvarligEnum eierField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.AnsvarligEnum eier {
-            get {
-                return this.eierField;
-            }
-            set {
-                if ((this.eierField.Equals(value) != true)) {
-                    this.eierField = value;
-                    this.RaisePropertyChanged("eier");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Soekefelt", Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Soekefelt : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kriterie {
-        
-        private string feltnavnField;
-        
-        private string feltverdiField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string feltnavn {
-            get {
-                return this.feltnavnField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.feltnavnField, value) != true)) {
-                    this.feltnavnField = value;
-                    this.RaisePropertyChanged("feltnavn");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string feltverdi {
-            get {
-                return this.feltverdiField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.feltverdiField, value) != true)) {
-                    this.feltverdiField = value;
-                    this.RaisePropertyChanged("feltverdi");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Bbox", Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Bbox : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Geometri {
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Koordinat nedreVenstreField;
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Koordinat oevreHoeyreField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Koordinat nedreVenstre {
-            get {
-                return this.nedreVenstreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nedreVenstreField, value) != true)) {
-                    this.nedreVenstreField = value;
-                    this.RaisePropertyChanged("nedreVenstre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Koordinat oevreHoeyre {
-            get {
-                return this.oevreHoeyreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.oevreHoeyreField, value) != true)) {
-                    this.oevreHoeyreField = value;
-                    this.RaisePropertyChanged("oevreHoeyre");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Geometri", Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Flate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kurve))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Punkt))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Bbox))]
-    public partial class Geometri : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KoordinatsystemKode koordinatsystemField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KoordinatsystemKode koordinatsystem {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    public partial class PlanKontekst : Kontekst {
+        
+        private KoordinatsystemKode koordinatsystemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public KoordinatsystemKode koordinatsystem {
             get {
                 return this.koordinatsystemField;
             }
             set {
-                if ((object.ReferenceEquals(this.koordinatsystemField, value) != true)) {
-                    this.koordinatsystemField = value;
-                    this.RaisePropertyChanged("koordinatsystem");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+                this.koordinatsystemField = value;
+                this.RaisePropertyChanged("koordinatsystem");
             }
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Flate", Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
     [System.SerializableAttribute()]
-    public partial class Flate : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Geometri {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.RingListe indreAvgrensningField;
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Ring ytreAvgrensningField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.RingListe indreAvgrensning {
-            get {
-                return this.indreAvgrensningField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.indreAvgrensningField, value) != true)) {
-                    this.indreAvgrensningField = value;
-                    this.RaisePropertyChanged("indreAvgrensning");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Ring ytreAvgrensning {
-            get {
-                return this.ytreAvgrensningField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ytreAvgrensningField, value) != true)) {
-                    this.ytreAvgrensningField = value;
-                    this.RaisePropertyChanged("ytreAvgrensning");
-                }
-            }
-        }
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Kurve", Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Kurve : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Geometri {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    public partial class MatrikkelKontekst : Kontekst {
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KoordinatListe linjeField;
+        private KoordinatsystemKode koordinatsystemField;
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KoordinatListe linje {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public KoordinatsystemKode koordinatsystem {
             get {
-                return this.linjeField;
+                return this.koordinatsystemField;
             }
             set {
-                if ((object.ReferenceEquals(this.linjeField, value) != true)) {
-                    this.linjeField = value;
-                    this.RaisePropertyChanged("linje");
-                }
+                this.koordinatsystemField = value;
+                this.RaisePropertyChanged("koordinatsystem");
             }
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Punkt", Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Punkt : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Geometri {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    public partial class ArkivKontekst : Kontekst {
         
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Koordinat posisjonField;
+        private KoordinatsystemKode koordinatsystemField;
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Koordinat posisjon {
+        private string referanseoppsettField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public KoordinatsystemKode koordinatsystem {
             get {
-                return this.posisjonField;
+                return this.koordinatsystemField;
             }
             set {
-                if ((object.ReferenceEquals(this.posisjonField, value) != true)) {
-                    this.posisjonField = value;
-                    this.RaisePropertyChanged("posisjon");
-                }
+                this.koordinatsystemField = value;
+                this.RaisePropertyChanged("koordinatsystem");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string referanseoppsett {
+            get {
+                return this.referanseoppsettField;
+            }
+            set {
+                this.referanseoppsettField = value;
+                this.RaisePropertyChanged("referanseoppsett");
             }
         }
     }
     
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ValidationFault))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FinderFault))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Koordinat", Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Koordinat : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private double xField;
-        
-        private double yField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double zField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public double x {
-            get {
-                return this.xField;
-            }
-            set {
-                if ((this.xField.Equals(value) != true)) {
-                    this.xField = value;
-                    this.RaisePropertyChanged("x");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public double y {
-            get {
-                return this.yField;
-            }
-            set {
-                if ((this.yField.Equals(value) != true)) {
-                    this.yField = value;
-                    this.RaisePropertyChanged("y");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double z {
-            get {
-                return this.zField;
-            }
-            set {
-                if ((this.zField.Equals(value) != true)) {
-                    this.zField = value;
-                    this.RaisePropertyChanged("z");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    public partial class ApplicationFault : GeointegrasjonFault {
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Ring", Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Ring : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KoordinatListe lukketKurveField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KoordinatListe lukketKurve {
-            get {
-                return this.lukketKurveField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.lukketKurveField, value) != true)) {
-                    this.lukketKurveField = value;
-                    this.RaisePropertyChanged("lukketKurve");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    public partial class ValidationFault : ApplicationFault {
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="RingListe", Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class RingListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Ring> {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    public partial class FinderFault : ApplicationFault {
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="KoordinatListe", Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31", ItemName="liste")]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    public partial class OperationalFault : SystemFault {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
     [System.SerializableAttribute()]
-    public class KoordinatListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Koordinat> {
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AnsvarligEnum", Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
-    public enum AnsvarligEnum : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        EGEN = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        EGENENHET = 1,
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="SaksmappeListe", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class SaksmappeListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksmappe> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Saksmappe", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Saksmappe : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string systemIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnummer saksnrField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Mappetype mappetypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime saksdatoField;
-        
-        private string tittelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string offentligTittelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool skjermetTittelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Skjerming skjermingField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksstatus saksstatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumentmedium dokumentmediumField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Arkivdel referanseArkivdelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalenhet journalenhetField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string bevaringstidField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kassasjonsvedtak kassasjonsvedtakField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime kassasjonsdatoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string prosjektField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string administrativEnhetInitField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string administrativEnhetField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string saksansvarligInitField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string saksansvarligField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string tilgangsgruppeNavnField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.MatrikkelnummerListe MatrikkelnummerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KlasseListe klasseField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SakspartListe sakspartField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.PunktListe PunktField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.TilleggsinformasjonListe tilleggsinformasjonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ByggIdentListe ByggIdentField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel referanseEksternNoekkelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.MerknadListe merknaderField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.NasjonalArealplanId planIdentField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string systemID {
-            get {
-                return this.systemIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.systemIDField, value) != true)) {
-                    this.systemIDField = value;
-                    this.RaisePropertyChanged("systemID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnummer saksnr {
-            get {
-                return this.saksnrField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.saksnrField, value) != true)) {
-                    this.saksnrField = value;
-                    this.RaisePropertyChanged("saksnr");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Mappetype mappetype {
-            get {
-                return this.mappetypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.mappetypeField, value) != true)) {
-                    this.mappetypeField = value;
-                    this.RaisePropertyChanged("mappetype");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public System.DateTime saksdato {
-            get {
-                return this.saksdatoField;
-            }
-            set {
-                if ((this.saksdatoField.Equals(value) != true)) {
-                    this.saksdatoField = value;
-                    this.RaisePropertyChanged("saksdato");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=4)]
-        public string tittel {
-            get {
-                return this.tittelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tittelField, value) != true)) {
-                    this.tittelField = value;
-                    this.RaisePropertyChanged("tittel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string offentligTittel {
-            get {
-                return this.offentligTittelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.offentligTittelField, value) != true)) {
-                    this.offentligTittelField = value;
-                    this.RaisePropertyChanged("offentligTittel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=6)]
-        public bool skjermetTittel {
-            get {
-                return this.skjermetTittelField;
-            }
-            set {
-                if ((this.skjermetTittelField.Equals(value) != true)) {
-                    this.skjermetTittelField = value;
-                    this.RaisePropertyChanged("skjermetTittel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Skjerming skjerming {
-            get {
-                return this.skjermingField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.skjermingField, value) != true)) {
-                    this.skjermingField = value;
-                    this.RaisePropertyChanged("skjerming");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksstatus saksstatus {
-            get {
-                return this.saksstatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.saksstatusField, value) != true)) {
-                    this.saksstatusField = value;
-                    this.RaisePropertyChanged("saksstatus");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumentmedium dokumentmedium {
-            get {
-                return this.dokumentmediumField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.dokumentmediumField, value) != true)) {
-                    this.dokumentmediumField = value;
-                    this.RaisePropertyChanged("dokumentmedium");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Arkivdel referanseArkivdel {
-            get {
-                return this.referanseArkivdelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.referanseArkivdelField, value) != true)) {
-                    this.referanseArkivdelField = value;
-                    this.RaisePropertyChanged("referanseArkivdel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=11)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalenhet journalenhet {
-            get {
-                return this.journalenhetField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.journalenhetField, value) != true)) {
-                    this.journalenhetField = value;
-                    this.RaisePropertyChanged("journalenhet");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=12)]
-        public string bevaringstid {
-            get {
-                return this.bevaringstidField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.bevaringstidField, value) != true)) {
-                    this.bevaringstidField = value;
-                    this.RaisePropertyChanged("bevaringstid");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=13)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kassasjonsvedtak kassasjonsvedtak {
-            get {
-                return this.kassasjonsvedtakField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.kassasjonsvedtakField, value) != true)) {
-                    this.kassasjonsvedtakField = value;
-                    this.RaisePropertyChanged("kassasjonsvedtak");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=14)]
-        public System.DateTime kassasjonsdato {
-            get {
-                return this.kassasjonsdatoField;
-            }
-            set {
-                if ((this.kassasjonsdatoField.Equals(value) != true)) {
-                    this.kassasjonsdatoField = value;
-                    this.RaisePropertyChanged("kassasjonsdato");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=15)]
-        public string prosjekt {
-            get {
-                return this.prosjektField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.prosjektField, value) != true)) {
-                    this.prosjektField = value;
-                    this.RaisePropertyChanged("prosjekt");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=16)]
-        public string administrativEnhetInit {
-            get {
-                return this.administrativEnhetInitField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.administrativEnhetInitField, value) != true)) {
-                    this.administrativEnhetInitField = value;
-                    this.RaisePropertyChanged("administrativEnhetInit");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=17)]
-        public string administrativEnhet {
-            get {
-                return this.administrativEnhetField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.administrativEnhetField, value) != true)) {
-                    this.administrativEnhetField = value;
-                    this.RaisePropertyChanged("administrativEnhet");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=18)]
-        public string saksansvarligInit {
-            get {
-                return this.saksansvarligInitField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.saksansvarligInitField, value) != true)) {
-                    this.saksansvarligInitField = value;
-                    this.RaisePropertyChanged("saksansvarligInit");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=19)]
-        public string saksansvarlig {
-            get {
-                return this.saksansvarligField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.saksansvarligField, value) != true)) {
-                    this.saksansvarligField = value;
-                    this.RaisePropertyChanged("saksansvarlig");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=20)]
-        public string tilgangsgruppeNavn {
-            get {
-                return this.tilgangsgruppeNavnField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tilgangsgruppeNavnField, value) != true)) {
-                    this.tilgangsgruppeNavnField = value;
-                    this.RaisePropertyChanged("tilgangsgruppeNavn");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=21)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.MatrikkelnummerListe Matrikkelnummer {
-            get {
-                return this.MatrikkelnummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MatrikkelnummerField, value) != true)) {
-                    this.MatrikkelnummerField = value;
-                    this.RaisePropertyChanged("Matrikkelnummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=22)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KlasseListe klasse {
-            get {
-                return this.klasseField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.klasseField, value) != true)) {
-                    this.klasseField = value;
-                    this.RaisePropertyChanged("klasse");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=23)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SakspartListe sakspart {
-            get {
-                return this.sakspartField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.sakspartField, value) != true)) {
-                    this.sakspartField = value;
-                    this.RaisePropertyChanged("sakspart");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=24)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.PunktListe Punkt {
-            get {
-                return this.PunktField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PunktField, value) != true)) {
-                    this.PunktField = value;
-                    this.RaisePropertyChanged("Punkt");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=25)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.TilleggsinformasjonListe tilleggsinformasjon {
-            get {
-                return this.tilleggsinformasjonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tilleggsinformasjonField, value) != true)) {
-                    this.tilleggsinformasjonField = value;
-                    this.RaisePropertyChanged("tilleggsinformasjon");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=26)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ByggIdentListe ByggIdent {
-            get {
-                return this.ByggIdentField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ByggIdentField, value) != true)) {
-                    this.ByggIdentField = value;
-                    this.RaisePropertyChanged("ByggIdent");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=27)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.EksternNoekkel referanseEksternNoekkel {
-            get {
-                return this.referanseEksternNoekkelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.referanseEksternNoekkelField, value) != true)) {
-                    this.referanseEksternNoekkelField = value;
-                    this.RaisePropertyChanged("referanseEksternNoekkel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=28)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.MerknadListe merknader {
-            get {
-                return this.merknaderField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.merknaderField, value) != true)) {
-                    this.merknaderField = value;
-                    this.RaisePropertyChanged("merknader");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=29)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.NasjonalArealplanId planIdent {
-            get {
-                return this.planIdentField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.planIdentField, value) != true)) {
-                    this.planIdentField = value;
-                    this.RaisePropertyChanged("planIdent");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NasjonalArealplanId", Namespace="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class NasjonalArealplanId : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Administrativenhetsnummer nummerField;
-        
-        private string planidentifikasjonField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Administrativenhetsnummer nummer {
-            get {
-                return this.nummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nummerField, value) != true)) {
-                    this.nummerField = value;
-                    this.RaisePropertyChanged("nummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string planidentifikasjon {
-            get {
-                return this.planidentifikasjonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.planidentifikasjonField, value) != true)) {
-                    this.planidentifikasjonField = value;
-                    this.RaisePropertyChanged("planidentifikasjon");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="MatrikkelnummerListe", Namespace="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class MatrikkelnummerListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Matrikkelnummer> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="KlasseListe", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class KlasseListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Klasse> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="SakspartListe", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class SakspartListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Sakspart> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="PunktListe", Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class PunktListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Punkt> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ByggIdentListe", Namespace="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class ByggIdentListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ByggIdent> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Matrikkelnummer", Namespace="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Matrikkelnummer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private string kommunenummerField;
-        
-        private long gaardsnummerField;
-        
-        private long bruksnummerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long festenummerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long seksjonsnummerField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string kommunenummer {
-            get {
-                return this.kommunenummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.kommunenummerField, value) != true)) {
-                    this.kommunenummerField = value;
-                    this.RaisePropertyChanged("kommunenummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
-        public long gaardsnummer {
-            get {
-                return this.gaardsnummerField;
-            }
-            set {
-                if ((this.gaardsnummerField.Equals(value) != true)) {
-                    this.gaardsnummerField = value;
-                    this.RaisePropertyChanged("gaardsnummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public long bruksnummer {
-            get {
-                return this.bruksnummerField;
-            }
-            set {
-                if ((this.bruksnummerField.Equals(value) != true)) {
-                    this.bruksnummerField = value;
-                    this.RaisePropertyChanged("bruksnummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public long festenummer {
-            get {
-                return this.festenummerField;
-            }
-            set {
-                if ((this.festenummerField.Equals(value) != true)) {
-                    this.festenummerField = value;
-                    this.RaisePropertyChanged("festenummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
-        public long seksjonsnummer {
-            get {
-                return this.seksjonsnummerField;
-            }
-            set {
-                if ((this.seksjonsnummerField.Equals(value) != true)) {
-                    this.seksjonsnummerField = value;
-                    this.RaisePropertyChanged("seksjonsnummer");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Klasse", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Klasse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string rekkefoelgeField;
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Klassifikasjonssystem klassifikasjonssystemField;
-        
-        private string klasseIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool skjermetKlasseField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ledetekstField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string tittelField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string rekkefoelge {
-            get {
-                return this.rekkefoelgeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.rekkefoelgeField, value) != true)) {
-                    this.rekkefoelgeField = value;
-                    this.RaisePropertyChanged("rekkefoelge");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=1)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Klassifikasjonssystem klassifikasjonssystem {
-            get {
-                return this.klassifikasjonssystemField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.klassifikasjonssystemField, value) != true)) {
-                    this.klassifikasjonssystemField = value;
-                    this.RaisePropertyChanged("klassifikasjonssystem");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=2)]
-        public string klasseID {
-            get {
-                return this.klasseIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.klasseIDField, value) != true)) {
-                    this.klasseIDField = value;
-                    this.RaisePropertyChanged("klasseID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public bool skjermetKlasse {
-            get {
-                return this.skjermetKlasseField;
-            }
-            set {
-                if ((this.skjermetKlasseField.Equals(value) != true)) {
-                    this.skjermetKlasseField = value;
-                    this.RaisePropertyChanged("skjermetKlasse");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string ledetekst {
-            get {
-                return this.ledetekstField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ledetekstField, value) != true)) {
-                    this.ledetekstField = value;
-                    this.RaisePropertyChanged("ledetekst");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string tittel {
-            get {
-                return this.tittelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tittelField, value) != true)) {
-                    this.tittelField = value;
-                    this.RaisePropertyChanged("tittel");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Sakspart", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Sakspart : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string systemIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool skjermetSakspartField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string kortnavnField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string kontaktpersonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SakspartRolle sakspartRolleField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string merknadField;
-        
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kontakt KontaktField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string systemID {
-            get {
-                return this.systemIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.systemIDField, value) != true)) {
-                    this.systemIDField = value;
-                    this.RaisePropertyChanged("systemID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public bool skjermetSakspart {
-            get {
-                return this.skjermetSakspartField;
-            }
-            set {
-                if ((this.skjermetSakspartField.Equals(value) != true)) {
-                    this.skjermetSakspartField = value;
-                    this.RaisePropertyChanged("skjermetSakspart");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string kortnavn {
-            get {
-                return this.kortnavnField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.kortnavnField, value) != true)) {
-                    this.kortnavnField = value;
-                    this.RaisePropertyChanged("kortnavn");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string kontaktperson {
-            get {
-                return this.kontaktpersonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.kontaktpersonField, value) != true)) {
-                    this.kontaktpersonField = value;
-                    this.RaisePropertyChanged("kontaktperson");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SakspartRolle sakspartRolle {
-            get {
-                return this.sakspartRolleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.sakspartRolleField, value) != true)) {
-                    this.sakspartRolleField = value;
-                    this.RaisePropertyChanged("sakspartRolle");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string merknad {
-            get {
-                return this.merknadField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.merknadField, value) != true)) {
-                    this.merknadField = value;
-                    this.RaisePropertyChanged("merknad");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=6)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kontakt Kontakt {
-            get {
-                return this.KontaktField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KontaktField, value) != true)) {
-                    this.KontaktField = value;
-                    this.RaisePropertyChanged("Kontakt");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ByggIdent", Namespace="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class ByggIdent : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private long bygningsNummerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long endringsloepenummerField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public long bygningsNummer {
-            get {
-                return this.bygningsNummerField;
-            }
-            set {
-                if ((this.bygningsNummerField.Equals(value) != true)) {
-                    this.bygningsNummerField = value;
-                    this.RaisePropertyChanged("bygningsNummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long endringsloepenummer {
-            get {
-                return this.endringsloepenummerField;
-            }
-            set {
-                if ((this.endringsloepenummerField.Equals(value) != true)) {
-                    this.endringsloepenummerField = value;
-                    this.RaisePropertyChanged("endringsloepenummer");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Administrativenhetsnummer", Namespace="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Fylke))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kommune))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Stat))]
-    public partial class Administrativenhetsnummer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Fylke", Namespace="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Fylke : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Administrativenhetsnummer {
-        
-        private string fylkesnummerField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string fylkesnummer {
-            get {
-                return this.fylkesnummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.fylkesnummerField, value) != true)) {
-                    this.fylkesnummerField = value;
-                    this.RaisePropertyChanged("fylkesnummer");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Kommune", Namespace="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Kommune : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Administrativenhetsnummer {
-        
-        private string kommunenummerField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string kommunenummer {
-            get {
-                return this.kommunenummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.kommunenummerField, value) != true)) {
-                    this.kommunenummerField = value;
-                    this.RaisePropertyChanged("kommunenummer");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Stat", Namespace="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Stat : GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Administrativenhetsnummer {
-        
-        private string landskodeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string landskode {
-            get {
-                return this.landskodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.landskodeField, value) != true)) {
-                    this.landskodeField = value;
-                    this.RaisePropertyChanged("landskode");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="DokumentListe", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31", ItemName="liste")]
-    [System.SerializableAttribute()]
-    public class DokumentListe : System.Collections.Generic.List<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokument> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Dokument", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
-    [System.SerializableAttribute()]
-    public partial class Dokument : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string systemIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string dokumentnummerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.TilknyttetRegistreringSom tilknyttetRegistreringSomField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumenttype dokumenttypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string tittelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumentstatus dokumentstatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Variantformat variantformatField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Format formatField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string referanseJournalpostSystemIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Fil FilField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string systemID {
-            get {
-                return this.systemIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.systemIDField, value) != true)) {
-                    this.systemIDField = value;
-                    this.RaisePropertyChanged("systemID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string dokumentnummer {
-            get {
-                return this.dokumentnummerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.dokumentnummerField, value) != true)) {
-                    this.dokumentnummerField = value;
-                    this.RaisePropertyChanged("dokumentnummer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.TilknyttetRegistreringSom tilknyttetRegistreringSom {
-            get {
-                return this.tilknyttetRegistreringSomField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tilknyttetRegistreringSomField, value) != true)) {
-                    this.tilknyttetRegistreringSomField = value;
-                    this.RaisePropertyChanged("tilknyttetRegistreringSom");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumenttype dokumenttype {
-            get {
-                return this.dokumenttypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.dokumenttypeField, value) != true)) {
-                    this.dokumenttypeField = value;
-                    this.RaisePropertyChanged("dokumenttype");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string tittel {
-            get {
-                return this.tittelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tittelField, value) != true)) {
-                    this.tittelField = value;
-                    this.RaisePropertyChanged("tittel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumentstatus dokumentstatus {
-            get {
-                return this.dokumentstatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.dokumentstatusField, value) != true)) {
-                    this.dokumentstatusField = value;
-                    this.RaisePropertyChanged("dokumentstatus");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Variantformat variantformat {
-            get {
-                return this.variantformatField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.variantformatField, value) != true)) {
-                    this.variantformatField = value;
-                    this.RaisePropertyChanged("variantformat");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Format format {
-            get {
-                return this.formatField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.formatField, value) != true)) {
-                    this.formatField = value;
-                    this.RaisePropertyChanged("format");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
-        public string referanseJournalpostSystemID {
-            get {
-                return this.referanseJournalpostSystemIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.referanseJournalpostSystemIDField, value) != true)) {
-                    this.referanseJournalpostSystemIDField = value;
-                    this.RaisePropertyChanged("referanseJournalpostSystemID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Fil Fil {
-            get {
-                return this.FilField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FilField, value) != true)) {
-                    this.FilField = value;
-                    this.RaisePropertyChanged("Fil");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+    public partial class ImplementationFault : SystemFault {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", ConfigurationName="ArkivInnsyn.ArkivInnsynPort")]
     public interface ArkivInnsynPort {
         
-        // CODEGEN: Generating message contract since element name kodelistenavn from namespace http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31 is not marked nillable
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayItemAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentKodeliste", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentKodeliste", Name="SystemFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ImplementationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentKodeliste", Name="ImplementationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
@@ -4783,12 +642,15 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ApplicationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentKodeliste", Name="ApplicationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinderFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentKodeliste", Name="FinderFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ValidationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentKodeliste", Name="ValidationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GeointegrasjonFault))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Kontekst))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodelisteResponse HentKodeliste(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodeliste request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentKodeliste", ReplyAction="*")]
         System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodelisteResponse> HentKodelisteAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodeliste request);
         
-        // CODEGEN: Generating message contract since element name systemid from namespace http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31 is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentFil", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentFil", Name="SystemFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ImplementationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentFil", Name="ImplementationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
@@ -4796,12 +658,17 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ApplicationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentFil", Name="ApplicationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinderFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentFil", Name="FinderFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ValidationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentFil", Name="ValidationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
-        GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilResponse HentFil(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFil request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GeointegrasjonFault))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Kontekst))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Fil HentFil(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemID systemid, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#HentFil", ReplyAction="*")]
-        System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilResponse> HentFilAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFil request);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Fil> HentFilAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemID systemid, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst);
         
-        // CODEGEN: Generating message contract since element name saksnokkel from namespace http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31 is not marked nillable
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayItemAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenttyper", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenttyper", Name="SystemFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ImplementationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenttyper", Name="ImplementationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
@@ -4809,12 +676,16 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ApplicationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenttyper", Name="ApplicationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinderFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenttyper", Name="FinderFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ValidationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenttyper", Name="ValidationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GeointegrasjonFault))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Kontekst))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyperResponse FinnDokumenttyper(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyper request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenttyper", ReplyAction="*")]
         System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyperResponse> FinnDokumenttyperAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyper request);
         
-        // CODEGEN: Generating message contract since element name nokkel from namespace http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31 is not marked nillable
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayItemAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposterG" +
             "ittNoekkel", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposterG" +
@@ -4829,13 +700,17 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             "ittNoekkel", Name="FinderFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ValidationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposterG" +
             "ittNoekkel", Name="ValidationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GeointegrasjonFault))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Kontekst))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkelResponse FinnJournalposterGittNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkel request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposterG" +
             "ittNoekkel", ReplyAction="*")]
         System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkelResponse> FinnJournalposterGittNoekkelAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkel request);
         
-        // CODEGEN: Generating message contract since element name nokkel from namespace http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31 is not marked nillable
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayItemAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposterG" +
             "ittSaksmappeNoekkel", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposterG" +
@@ -4850,13 +725,17 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             "ittSaksmappeNoekkel", Name="FinderFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ValidationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposterG" +
             "ittSaksmappeNoekkel", Name="ValidationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GeointegrasjonFault))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Kontekst))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkelResponse FinnJournalposterGittSaksmappeNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkel request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposterG" +
             "ittSaksmappeNoekkel", ReplyAction="*")]
         System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkelResponse> FinnJournalposterGittSaksmappeNoekkelAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkel request);
         
-        // CODEGEN: Generating message contract since element name sok from namespace http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31 is not marked nillable
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayItemAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposter", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposter", Name="SystemFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ImplementationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposter", Name="ImplementationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
@@ -4864,12 +743,16 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ApplicationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposter", Name="ApplicationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinderFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposter", Name="FinderFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ValidationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposter", Name="ValidationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GeointegrasjonFault))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Kontekst))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterResponse FinnJournalposter(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposter request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnJournalposter", ReplyAction="*")]
         System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterResponse> FinnJournalposterAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposter request);
         
-        // CODEGEN: Generating message contract since element name nokkel from namespace http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31 is not marked nillable
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayItemAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnSaksmapperGitt" +
             "Noekkel", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnSaksmapperGitt" +
@@ -4884,13 +767,17 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             "Noekkel", Name="FinderFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ValidationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnSaksmapperGitt" +
             "Noekkel", Name="ValidationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GeointegrasjonFault))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Kontekst))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkelResponse FinnSaksmapperGittNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkel request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnSaksmapperGitt" +
             "Noekkel", ReplyAction="*")]
         System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkelResponse> FinnSaksmapperGittNoekkelAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkel request);
         
-        // CODEGEN: Generating message contract since element name sok from namespace http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31 is not marked nillable
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayItemAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnSaksmapper", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnSaksmapper", Name="SystemFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ImplementationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnSaksmapper", Name="ImplementationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
@@ -4898,12 +785,16 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ApplicationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnSaksmapper", Name="ApplicationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinderFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnSaksmapper", Name="FinderFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ValidationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnSaksmapper", Name="ValidationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GeointegrasjonFault))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Kontekst))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperResponse FinnSaksmapper(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapper request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnSaksmapper", ReplyAction="*")]
         System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperResponse> FinnSaksmapperAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapper request);
         
-        // CODEGEN: Generating message contract since element name journpostnokkel from namespace http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31 is not marked nillable
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayItemAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenterGitt" +
             "Journalpostnoekkel", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenterGitt" +
@@ -4918,13 +809,17 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             "Journalpostnoekkel", Name="FinderFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ValidationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenterGitt" +
             "Journalpostnoekkel", Name="ValidationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GeointegrasjonFault))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Kontekst))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkelResponse FinnDokumenterGittJournalpostnoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkel request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenterGitt" +
             "Journalpostnoekkel", ReplyAction="*")]
         System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkelResponse> FinnDokumenterGittJournalpostnoekkelAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkel request);
         
-        // CODEGEN: Generating message contract since element name saksnokkel from namespace http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31 is not marked nillable
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayItemAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenterGitt" +
             "Saksnoekkel", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenterGitt" +
@@ -4939,13 +834,17 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             "Saksnoekkel", Name="FinderFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ValidationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenterGitt" +
             "Saksnoekkel", Name="ValidationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GeointegrasjonFault))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Kontekst))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkelResponse FinnDokumenterGittSaksnoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkel request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenterGitt" +
             "Saksnoekkel", ReplyAction="*")]
         System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkelResponse> FinnDokumenterGittSaksnoekkelAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkel request);
         
-        // CODEGEN: Generating message contract since element name sok from namespace http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31 is not marked nillable
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayItemAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenter", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenter", Name="SystemFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ImplementationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenter", Name="ImplementationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
@@ -4953,6 +852,10 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ApplicationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenter", Name="ApplicationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinderFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenter", Name="FinderFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
         [System.ServiceModel.FaultContractAttribute(typeof(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ValidationFault), Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenter", Name="ValidationFault", Namespace="http://rep.geointegrasjon.no/Felles/Teknisk/xml.schema/2012.01.31")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GeointegrasjonFault))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Kontekst))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterResponse FinnDokumenter(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenter request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31/#FinnDokumenter", ReplyAction="*")]
@@ -4962,36 +865,19 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="HentKodeliste", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class HentKodeliste {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HentKodeliste", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodelisteBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        public string kodelistenavn;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=1)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
         
         public HentKodeliste() {
         }
         
-        public HentKodeliste(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodelisteBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class HentKodelisteBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string kodelistenavn;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
-        
-        public HentKodelisteBody() {
-        }
-        
-        public HentKodelisteBody(string kodelistenavn, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public HentKodeliste(string kodelistenavn, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             this.kodelistenavn = kodelistenavn;
             this.kontekst = kontekst;
         }
@@ -5000,142 +886,327 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="HentKodelisteResponse", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class HentKodelisteResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HentKodelisteResponse", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodelisteResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Felles/Kodeliste/xml.schema/2012.01.31", IsNullable=false)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode[] @return;
         
         public HentKodelisteResponse() {
         }
         
-        public HentKodelisteResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodelisteResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class HentKodelisteResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KodeListe @return;
-        
-        public HentKodelisteResponseBody() {
-        }
-        
-        public HentKodelisteResponseBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KodeListe @return) {
+        public HentKodelisteResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode[] @return) {
             this.@return = @return;
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HentFil {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class SystemID : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HentFil", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilBody Body;
+        private string idField;
         
-        public HentFil() {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
         }
         
-        public HentFil(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilBody Body) {
-            this.Body = Body;
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Filreferanse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Filinnhold))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
+    public partial class Fil : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string filnavnField;
+        
+        private string mimeTypeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string filnavn {
+            get {
+                return this.filnavnField;
+            }
+            set {
+                this.filnavnField = value;
+                this.RaisePropertyChanged("filnavn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string mimeType {
+            get {
+                return this.mimeTypeField;
+            }
+            set {
+                this.mimeTypeField = value;
+                this.RaisePropertyChanged("mimeType");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
+    public partial class Filreferanse : Fil {
+        
+        private string uriField;
+        
+        private string kvitteringUriField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI", Order=0)]
+        public string uri {
+            get {
+                return this.uriField;
+            }
+            set {
+                this.uriField = value;
+                this.RaisePropertyChanged("uri");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI", Order=1)]
+        public string kvitteringUri {
+            get {
+                return this.kvitteringUriField;
+            }
+            set {
+                this.kvitteringUriField = value;
+                this.RaisePropertyChanged("kvitteringUri");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
+    public partial class Filinnhold : Fil {
+        
+        private byte[] base64Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", Order=0)]
+        public byte[] base64 {
+            get {
+                return this.base64Field;
+            }
+            set {
+                this.base64Field = value;
+                this.RaisePropertyChanged("base64");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Saksnummer))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SakSystemId))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SakEksternNoekkel))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Felles/xml.schema/2012.01.31")]
+    public partial class Saksnoekkel : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Felles/xml.schema/2012.01.31")]
+    public partial class Saksnummer : Saksnoekkel {
+        
+        private string saksaarField;
+        
+        private string sakssekvensnummerField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=0)]
+        public string saksaar {
+            get {
+                return this.saksaarField;
+            }
+            set {
+                this.saksaarField = value;
+                this.RaisePropertyChanged("saksaar");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=1)]
+        public string sakssekvensnummer {
+            get {
+                return this.sakssekvensnummerField;
+            }
+            set {
+                this.sakssekvensnummerField = value;
+                this.RaisePropertyChanged("sakssekvensnummer");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class SakSystemId : Saksnoekkel {
+        
+        private SystemID systemIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public SystemID systemID {
+            get {
+                return this.systemIDField;
+            }
+            set {
+                this.systemIDField = value;
+                this.RaisePropertyChanged("systemID");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class SakEksternNoekkel : Saksnoekkel {
+        
+        private EksternNoekkel eksternnoekkelField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public EksternNoekkel eksternnoekkel {
+            get {
+                return this.eksternnoekkelField;
+            }
+            set {
+                this.eksternnoekkelField = value;
+                this.RaisePropertyChanged("eksternnoekkel");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class EksternNoekkel : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string fagsystemField;
+        
+        private string noekkelField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string fagsystem {
+            get {
+                return this.fagsystemField;
+            }
+            set {
+                this.fagsystemField = value;
+                this.RaisePropertyChanged("fagsystem");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string noekkel {
+            get {
+                return this.noekkelField;
+            }
+            set {
+                this.noekkelField = value;
+                this.RaisePropertyChanged("noekkel");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class HentFilBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemID systemid;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
-        
-        public HentFilBody() {
-        }
-        
-        public HentFilBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemID systemid, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
-            this.systemid = systemid;
-            this.kontekst = kontekst;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HentFilResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HentFilResponse", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilResponseBody Body;
-        
-        public HentFilResponse() {
-        }
-        
-        public HentFilResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class HentFilResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Fil @return;
-        
-        public HentFilResponseBody() {
-        }
-        
-        public HentFilResponseBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Fil @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnDokumenttyper", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnDokumenttyper {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnDokumenttyper", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyperBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=1)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
         
         public FinnDokumenttyper() {
         }
         
-        public FinnDokumenttyper(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyperBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnDokumenttyperBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
-        
-        public FinnDokumenttyperBody() {
-        }
-        
-        public FinnDokumenttyperBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public FinnDokumenttyper(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             this.saksnokkel = saksnokkel;
             this.kontekst = kontekst;
         }
@@ -5144,82 +1215,1841 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnDokumenttyperResponse", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnDokumenttyperResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnDokumenttyperResponse", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyperResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31", IsNullable=false)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumenttype[] @return;
         
         public FinnDokumenttyperResponse() {
         }
         
-        public FinnDokumenttyperResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyperResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnDokumenttyperResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumenttypeListe @return;
-        
-        public FinnDokumenttyperResponseBody() {
-        }
-        
-        public FinnDokumenttyperResponseBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumenttypeListe @return) {
+        public FinnDokumenttyperResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumenttype[] @return) {
             this.@return = @return;
         }
     }
     
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(JournpostSystemID))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(JournpostEksternNoekkel))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Journalnummer))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Dokumentnummer))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Journpostnoekkel : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class JournpostSystemID : Journpostnoekkel {
+        
+        private SystemID systemIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public SystemID systemID {
+            get {
+                return this.systemIDField;
+            }
+            set {
+                this.systemIDField = value;
+                this.RaisePropertyChanged("systemID");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class JournpostEksternNoekkel : Journpostnoekkel {
+        
+        private EksternNoekkel eksternnoekkelField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public EksternNoekkel eksternnoekkel {
+            get {
+                return this.eksternnoekkelField;
+            }
+            set {
+                this.eksternnoekkelField = value;
+                this.RaisePropertyChanged("eksternnoekkel");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Journalnummer : Journpostnoekkel {
+        
+        private string journalaarField;
+        
+        private string journalsekvensnummerField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=0)]
+        public string journalaar {
+            get {
+                return this.journalaarField;
+            }
+            set {
+                this.journalaarField = value;
+                this.RaisePropertyChanged("journalaar");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=1)]
+        public string journalsekvensnummer {
+            get {
+                return this.journalsekvensnummerField;
+            }
+            set {
+                this.journalsekvensnummerField = value;
+                this.RaisePropertyChanged("journalsekvensnummer");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Dokumentnummer : Journpostnoekkel {
+        
+        private string saksaarField;
+        
+        private string sakssekvensnummerField;
+        
+        private string journalpostnummerField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=0)]
+        public string saksaar {
+            get {
+                return this.saksaarField;
+            }
+            set {
+                this.saksaarField = value;
+                this.RaisePropertyChanged("saksaar");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=1)]
+        public string sakssekvensnummer {
+            get {
+                return this.sakssekvensnummerField;
+            }
+            set {
+                this.sakssekvensnummerField = value;
+                this.RaisePropertyChanged("sakssekvensnummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=2)]
+        public string journalpostnummer {
+            get {
+                return this.journalpostnummerField;
+            }
+            set {
+                this.journalpostnummerField = value;
+                this.RaisePropertyChanged("journalpostnummer");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Journalpost : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string systemIDField;
+        
+        private Journalnummer journalnummerField;
+        
+        private string journalpostnummerField;
+        
+        private System.DateTime journaldatoField;
+        
+        private bool journaldatoFieldSpecified;
+        
+        private Journalposttype journalposttypeField;
+        
+        private System.DateTime dokumentetsDatoField;
+        
+        private bool dokumentetsDatoFieldSpecified;
+        
+        private Journalstatus journalstatusField;
+        
+        private string tittelField;
+        
+        private bool skjermetTittelField;
+        
+        private bool skjermetTittelFieldSpecified;
+        
+        private System.DateTime forfallsdatoField;
+        
+        private bool forfallsdatoFieldSpecified;
+        
+        private Skjerming skjermingField;
+        
+        private Arkivdel referanseArkivdelField;
+        
+        private string tilleggskodeField;
+        
+        private string antallVedleggField;
+        
+        private string offentligTittelField;
+        
+        private Saksnummer saksnrField;
+        
+        private string tilgangsgruppeNavnField;
+        
+        private SakSystemId referanseSakSystemIDField;
+        
+        private Korrespondansepart[] korrespondansepartField;
+        
+        private EksternNoekkel referanseEksternNoekkelField;
+        
+        private EksternNoekkel referanseMappeEksternNoekkelField;
+        
+        private Avskrivning[] referanseAvskrivningerField;
+        
+        private Merknad[] merknaderField;
+        
+        private Tilleggsinformasjon[] tilleggsinformasjonField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string systemID {
+            get {
+                return this.systemIDField;
+            }
+            set {
+                this.systemIDField = value;
+                this.RaisePropertyChanged("systemID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public Journalnummer journalnummer {
+            get {
+                return this.journalnummerField;
+            }
+            set {
+                this.journalnummerField = value;
+                this.RaisePropertyChanged("journalnummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string journalpostnummer {
+            get {
+                return this.journalpostnummerField;
+            }
+            set {
+                this.journalpostnummerField = value;
+                this.RaisePropertyChanged("journalpostnummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.DateTime journaldato {
+            get {
+                return this.journaldatoField;
+            }
+            set {
+                this.journaldatoField = value;
+                this.RaisePropertyChanged("journaldato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool journaldatoSpecified {
+            get {
+                return this.journaldatoFieldSpecified;
+            }
+            set {
+                this.journaldatoFieldSpecified = value;
+                this.RaisePropertyChanged("journaldatoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public Journalposttype journalposttype {
+            get {
+                return this.journalposttypeField;
+            }
+            set {
+                this.journalposttypeField = value;
+                this.RaisePropertyChanged("journalposttype");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public System.DateTime dokumentetsDato {
+            get {
+                return this.dokumentetsDatoField;
+            }
+            set {
+                this.dokumentetsDatoField = value;
+                this.RaisePropertyChanged("dokumentetsDato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool dokumentetsDatoSpecified {
+            get {
+                return this.dokumentetsDatoFieldSpecified;
+            }
+            set {
+                this.dokumentetsDatoFieldSpecified = value;
+                this.RaisePropertyChanged("dokumentetsDatoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public Journalstatus journalstatus {
+            get {
+                return this.journalstatusField;
+            }
+            set {
+                this.journalstatusField = value;
+                this.RaisePropertyChanged("journalstatus");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string tittel {
+            get {
+                return this.tittelField;
+            }
+            set {
+                this.tittelField = value;
+                this.RaisePropertyChanged("tittel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public bool skjermetTittel {
+            get {
+                return this.skjermetTittelField;
+            }
+            set {
+                this.skjermetTittelField = value;
+                this.RaisePropertyChanged("skjermetTittel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool skjermetTittelSpecified {
+            get {
+                return this.skjermetTittelFieldSpecified;
+            }
+            set {
+                this.skjermetTittelFieldSpecified = value;
+                this.RaisePropertyChanged("skjermetTittelSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public System.DateTime forfallsdato {
+            get {
+                return this.forfallsdatoField;
+            }
+            set {
+                this.forfallsdatoField = value;
+                this.RaisePropertyChanged("forfallsdato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool forfallsdatoSpecified {
+            get {
+                return this.forfallsdatoFieldSpecified;
+            }
+            set {
+                this.forfallsdatoFieldSpecified = value;
+                this.RaisePropertyChanged("forfallsdatoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public Skjerming skjerming {
+            get {
+                return this.skjermingField;
+            }
+            set {
+                this.skjermingField = value;
+                this.RaisePropertyChanged("skjerming");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public Arkivdel referanseArkivdel {
+            get {
+                return this.referanseArkivdelField;
+            }
+            set {
+                this.referanseArkivdelField = value;
+                this.RaisePropertyChanged("referanseArkivdel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string tilleggskode {
+            get {
+                return this.tilleggskodeField;
+            }
+            set {
+                this.tilleggskodeField = value;
+                this.RaisePropertyChanged("tilleggskode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public string antallVedlegg {
+            get {
+                return this.antallVedleggField;
+            }
+            set {
+                this.antallVedleggField = value;
+                this.RaisePropertyChanged("antallVedlegg");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public string offentligTittel {
+            get {
+                return this.offentligTittelField;
+            }
+            set {
+                this.offentligTittelField = value;
+                this.RaisePropertyChanged("offentligTittel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public Saksnummer saksnr {
+            get {
+                return this.saksnrField;
+            }
+            set {
+                this.saksnrField = value;
+                this.RaisePropertyChanged("saksnr");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public string tilgangsgruppeNavn {
+            get {
+                return this.tilgangsgruppeNavnField;
+            }
+            set {
+                this.tilgangsgruppeNavnField = value;
+                this.RaisePropertyChanged("tilgangsgruppeNavn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        public SakSystemId referanseSakSystemID {
+            get {
+                return this.referanseSakSystemIDField;
+            }
+            set {
+                this.referanseSakSystemIDField = value;
+                this.RaisePropertyChanged("referanseSakSystemID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=18)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", IsNullable=false)]
+        public Korrespondansepart[] korrespondansepart {
+            get {
+                return this.korrespondansepartField;
+            }
+            set {
+                this.korrespondansepartField = value;
+                this.RaisePropertyChanged("korrespondansepart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        public EksternNoekkel referanseEksternNoekkel {
+            get {
+                return this.referanseEksternNoekkelField;
+            }
+            set {
+                this.referanseEksternNoekkelField = value;
+                this.RaisePropertyChanged("referanseEksternNoekkel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        public EksternNoekkel referanseMappeEksternNoekkel {
+            get {
+                return this.referanseMappeEksternNoekkelField;
+            }
+            set {
+                this.referanseMappeEksternNoekkelField = value;
+                this.RaisePropertyChanged("referanseMappeEksternNoekkel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=21)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", IsNullable=false)]
+        public Avskrivning[] referanseAvskrivninger {
+            get {
+                return this.referanseAvskrivningerField;
+            }
+            set {
+                this.referanseAvskrivningerField = value;
+                this.RaisePropertyChanged("referanseAvskrivninger");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=22)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", IsNullable=false)]
+        public Merknad[] merknader {
+            get {
+                return this.merknaderField;
+            }
+            set {
+                this.merknaderField = value;
+                this.RaisePropertyChanged("merknader");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=23)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", IsNullable=false)]
+        public Tilleggsinformasjon[] tilleggsinformasjon {
+            get {
+                return this.tilleggsinformasjonField;
+            }
+            set {
+                this.tilleggsinformasjonField = value;
+                this.RaisePropertyChanged("tilleggsinformasjon");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Skjerming : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private Tilgangsrestriksjon tilgangsrestriksjonField;
+        
+        private string skjermingshjemmelField;
+        
+        private System.DateTime skjermingOpphoererDatoField;
+        
+        private bool skjermingOpphoererDatoFieldSpecified;
+        
+        private SkjermingOpphorerAksjon skjermingOpphoererAksjonField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public Tilgangsrestriksjon tilgangsrestriksjon {
+            get {
+                return this.tilgangsrestriksjonField;
+            }
+            set {
+                this.tilgangsrestriksjonField = value;
+                this.RaisePropertyChanged("tilgangsrestriksjon");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string skjermingshjemmel {
+            get {
+                return this.skjermingshjemmelField;
+            }
+            set {
+                this.skjermingshjemmelField = value;
+                this.RaisePropertyChanged("skjermingshjemmel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public System.DateTime skjermingOpphoererDato {
+            get {
+                return this.skjermingOpphoererDatoField;
+            }
+            set {
+                this.skjermingOpphoererDatoField = value;
+                this.RaisePropertyChanged("skjermingOpphoererDato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool skjermingOpphoererDatoSpecified {
+            get {
+                return this.skjermingOpphoererDatoFieldSpecified;
+            }
+            set {
+                this.skjermingOpphoererDatoFieldSpecified = value;
+                this.RaisePropertyChanged("skjermingOpphoererDatoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public SkjermingOpphorerAksjon skjermingOpphoererAksjon {
+            get {
+                return this.skjermingOpphoererAksjonField;
+            }
+            set {
+                this.skjermingOpphoererAksjonField = value;
+                this.RaisePropertyChanged("skjermingOpphoererAksjon");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Korrespondansepart : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string systemIDField;
+        
+        private Korrespondanseparttype korrespondanseparttypeField;
+        
+        private string behandlingsansvarligField;
+        
+        private bool skjermetKorrespondansepartField;
+        
+        private bool skjermetKorrespondansepartFieldSpecified;
+        
+        private string kortnavnField;
+        
+        private string deresReferanseField;
+        
+        private Journalenhet journalenhetField;
+        
+        private System.DateTime fristBesvarelseField;
+        
+        private bool fristBesvarelseFieldSpecified;
+        
+        private Forsendelsesmaate forsendelsesmaateField;
+        
+        private string administrativEnhetInitField;
+        
+        private string administrativEnhetField;
+        
+        private string saksbehandlerInitField;
+        
+        private string saksbehandlerField;
+        
+        private Kontakt kontaktField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string systemID {
+            get {
+                return this.systemIDField;
+            }
+            set {
+                this.systemIDField = value;
+                this.RaisePropertyChanged("systemID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public Korrespondanseparttype korrespondanseparttype {
+            get {
+                return this.korrespondanseparttypeField;
+            }
+            set {
+                this.korrespondanseparttypeField = value;
+                this.RaisePropertyChanged("korrespondanseparttype");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string behandlingsansvarlig {
+            get {
+                return this.behandlingsansvarligField;
+            }
+            set {
+                this.behandlingsansvarligField = value;
+                this.RaisePropertyChanged("behandlingsansvarlig");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool skjermetKorrespondansepart {
+            get {
+                return this.skjermetKorrespondansepartField;
+            }
+            set {
+                this.skjermetKorrespondansepartField = value;
+                this.RaisePropertyChanged("skjermetKorrespondansepart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool skjermetKorrespondansepartSpecified {
+            get {
+                return this.skjermetKorrespondansepartFieldSpecified;
+            }
+            set {
+                this.skjermetKorrespondansepartFieldSpecified = value;
+                this.RaisePropertyChanged("skjermetKorrespondansepartSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string kortnavn {
+            get {
+                return this.kortnavnField;
+            }
+            set {
+                this.kortnavnField = value;
+                this.RaisePropertyChanged("kortnavn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string deresReferanse {
+            get {
+                return this.deresReferanseField;
+            }
+            set {
+                this.deresReferanseField = value;
+                this.RaisePropertyChanged("deresReferanse");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public Journalenhet journalenhet {
+            get {
+                return this.journalenhetField;
+            }
+            set {
+                this.journalenhetField = value;
+                this.RaisePropertyChanged("journalenhet");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public System.DateTime fristBesvarelse {
+            get {
+                return this.fristBesvarelseField;
+            }
+            set {
+                this.fristBesvarelseField = value;
+                this.RaisePropertyChanged("fristBesvarelse");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fristBesvarelseSpecified {
+            get {
+                return this.fristBesvarelseFieldSpecified;
+            }
+            set {
+                this.fristBesvarelseFieldSpecified = value;
+                this.RaisePropertyChanged("fristBesvarelseSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public Forsendelsesmaate forsendelsesmaate {
+            get {
+                return this.forsendelsesmaateField;
+            }
+            set {
+                this.forsendelsesmaateField = value;
+                this.RaisePropertyChanged("forsendelsesmaate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string administrativEnhetInit {
+            get {
+                return this.administrativEnhetInitField;
+            }
+            set {
+                this.administrativEnhetInitField = value;
+                this.RaisePropertyChanged("administrativEnhetInit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public string administrativEnhet {
+            get {
+                return this.administrativEnhetField;
+            }
+            set {
+                this.administrativEnhetField = value;
+                this.RaisePropertyChanged("administrativEnhet");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public string saksbehandlerInit {
+            get {
+                return this.saksbehandlerInitField;
+            }
+            set {
+                this.saksbehandlerInitField = value;
+                this.RaisePropertyChanged("saksbehandlerInit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string saksbehandler {
+            get {
+                return this.saksbehandlerField;
+            }
+            set {
+                this.saksbehandlerField = value;
+                this.RaisePropertyChanged("saksbehandler");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public Kontakt Kontakt {
+            get {
+                return this.kontaktField;
+            }
+            set {
+                this.kontaktField = value;
+                this.RaisePropertyChanged("Kontakt");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Person))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Organisasjon))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31")]
+    public partial class Kontakt : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string navnField;
+        
+        private EnkelAdresse[] adresserField;
+        
+        private ElektroniskAdresse[] elektroniskeAdresserField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string navn {
+            get {
+                return this.navnField;
+            }
+            set {
+                this.navnField = value;
+                this.RaisePropertyChanged("navn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31", IsNullable=false)]
+        public EnkelAdresse[] adresser {
+            get {
+                return this.adresserField;
+            }
+            set {
+                this.adresserField = value;
+                this.RaisePropertyChanged("adresser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31", IsNullable=false)]
+        public ElektroniskAdresse[] elektroniskeAdresser {
+            get {
+                return this.elektroniskeAdresserField;
+            }
+            set {
+                this.elektroniskeAdresserField = value;
+                this.RaisePropertyChanged("elektroniskeAdresser");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
+    public partial class EnkelAdresse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private EnkelAdressetype adressetypeField;
+        
+        private string adresselinje1Field;
+        
+        private string adresselinje2Field;
+        
+        private PostadministrativeOmraader postadresseField;
+        
+        private Landkode landkodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public EnkelAdressetype adressetype {
+            get {
+                return this.adressetypeField;
+            }
+            set {
+                this.adressetypeField = value;
+                this.RaisePropertyChanged("adressetype");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string adresselinje1 {
+            get {
+                return this.adresselinje1Field;
+            }
+            set {
+                this.adresselinje1Field = value;
+                this.RaisePropertyChanged("adresselinje1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string adresselinje2 {
+            get {
+                return this.adresselinje2Field;
+            }
+            set {
+                this.adresselinje2Field = value;
+                this.RaisePropertyChanged("adresselinje2");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public PostadministrativeOmraader postadresse {
+            get {
+                return this.postadresseField;
+            }
+            set {
+                this.postadresseField = value;
+                this.RaisePropertyChanged("postadresse");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public Landkode landkode {
+            get {
+                return this.landkodeField;
+            }
+            set {
+                this.landkodeField = value;
+                this.RaisePropertyChanged("landkode");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
+    public partial class PostadministrativeOmraader : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string postnummerField;
+        
+        private string poststedField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string postnummer {
+            get {
+                return this.postnummerField;
+            }
+            set {
+                this.postnummerField = value;
+                this.RaisePropertyChanged("postnummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string poststed {
+            get {
+                return this.poststedField;
+            }
+            set {
+                this.poststedField = value;
+                this.RaisePropertyChanged("poststed");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Meldingsboks))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Telefon))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Faks))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Epost))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
+    public partial class ElektroniskAdresse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
+    public partial class Meldingsboks : ElektroniskAdresse {
+        
+        private string tilbyderField;
+        
+        private string meldingsboksadresseField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string tilbyder {
+            get {
+                return this.tilbyderField;
+            }
+            set {
+                this.tilbyderField = value;
+                this.RaisePropertyChanged("tilbyder");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string meldingsboksadresse {
+            get {
+                return this.meldingsboksadresseField;
+            }
+            set {
+                this.meldingsboksadresseField = value;
+                this.RaisePropertyChanged("meldingsboksadresse");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
+    public partial class Telefon : ElektroniskAdresse {
+        
+        private string telefonnummerField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string telefonnummer {
+            get {
+                return this.telefonnummerField;
+            }
+            set {
+                this.telefonnummerField = value;
+                this.RaisePropertyChanged("telefonnummer");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
+    public partial class Faks : ElektroniskAdresse {
+        
+        private string faksnummerField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string faksnummer {
+            get {
+                return this.faksnummerField;
+            }
+            set {
+                this.faksnummerField = value;
+                this.RaisePropertyChanged("faksnummer");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Adresse/xml.schema/2012.01.31")]
+    public partial class Epost : ElektroniskAdresse {
+        
+        private string epostadresseField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string epostadresse {
+            get {
+                return this.epostadresseField;
+            }
+            set {
+                this.epostadresseField = value;
+                this.RaisePropertyChanged("epostadresse");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31")]
+    public partial class Person : Kontakt {
+        
+        private Personidentifikator personidField;
+        
+        private string etternavnField;
+        
+        private string fornavnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public Personidentifikator personid {
+            get {
+                return this.personidField;
+            }
+            set {
+                this.personidField = value;
+                this.RaisePropertyChanged("personid");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string etternavn {
+            get {
+                return this.etternavnField;
+            }
+            set {
+                this.etternavnField = value;
+                this.RaisePropertyChanged("etternavn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string fornavn {
+            get {
+                return this.fornavnField;
+            }
+            set {
+                this.fornavnField = value;
+                this.RaisePropertyChanged("fornavn");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31")]
+    public partial class Personidentifikator : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string personidentifikatorNrField;
+        
+        private PersonidentifikatorType personidentifikatorTypeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string personidentifikatorNr {
+            get {
+                return this.personidentifikatorNrField;
+            }
+            set {
+                this.personidentifikatorNrField = value;
+                this.RaisePropertyChanged("personidentifikatorNr");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public PersonidentifikatorType personidentifikatorType {
+            get {
+                return this.personidentifikatorTypeField;
+            }
+            set {
+                this.personidentifikatorTypeField = value;
+                this.RaisePropertyChanged("personidentifikatorType");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Kontakt/xml.schema/2012.01.31")]
+    public partial class Organisasjon : Kontakt {
+        
+        private string organisasjonsnummerField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string organisasjonsnummer {
+            get {
+                return this.organisasjonsnummerField;
+            }
+            set {
+                this.organisasjonsnummerField = value;
+                this.RaisePropertyChanged("organisasjonsnummer");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Avskrivning : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string systemIDField;
+        
+        private System.DateTime avskrivningsdatoField;
+        
+        private bool avskrivningsdatoFieldSpecified;
+        
+        private string avskrevetAvField;
+        
+        private Avskrivningsmaate avskrivningsmaateField;
+        
+        private Journalnummer referanseAvskriverJournalnummerField;
+        
+        private Journalnummer referanseAvskrivesAvJournalnummerField;
+        
+        private EksternNoekkel referanseAvskriverEksternNoekkelField;
+        
+        private EksternNoekkel referanseAvskrivesAvEksternNoekkelField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string systemID {
+            get {
+                return this.systemIDField;
+            }
+            set {
+                this.systemIDField = value;
+                this.RaisePropertyChanged("systemID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.DateTime avskrivningsdato {
+            get {
+                return this.avskrivningsdatoField;
+            }
+            set {
+                this.avskrivningsdatoField = value;
+                this.RaisePropertyChanged("avskrivningsdato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool avskrivningsdatoSpecified {
+            get {
+                return this.avskrivningsdatoFieldSpecified;
+            }
+            set {
+                this.avskrivningsdatoFieldSpecified = value;
+                this.RaisePropertyChanged("avskrivningsdatoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string avskrevetAv {
+            get {
+                return this.avskrevetAvField;
+            }
+            set {
+                this.avskrevetAvField = value;
+                this.RaisePropertyChanged("avskrevetAv");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public Avskrivningsmaate avskrivningsmaate {
+            get {
+                return this.avskrivningsmaateField;
+            }
+            set {
+                this.avskrivningsmaateField = value;
+                this.RaisePropertyChanged("avskrivningsmaate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public Journalnummer referanseAvskriverJournalnummer {
+            get {
+                return this.referanseAvskriverJournalnummerField;
+            }
+            set {
+                this.referanseAvskriverJournalnummerField = value;
+                this.RaisePropertyChanged("referanseAvskriverJournalnummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public Journalnummer referanseAvskrivesAvJournalnummer {
+            get {
+                return this.referanseAvskrivesAvJournalnummerField;
+            }
+            set {
+                this.referanseAvskrivesAvJournalnummerField = value;
+                this.RaisePropertyChanged("referanseAvskrivesAvJournalnummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public EksternNoekkel referanseAvskriverEksternNoekkel {
+            get {
+                return this.referanseAvskriverEksternNoekkelField;
+            }
+            set {
+                this.referanseAvskriverEksternNoekkelField = value;
+                this.RaisePropertyChanged("referanseAvskriverEksternNoekkel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public EksternNoekkel referanseAvskrivesAvEksternNoekkel {
+            get {
+                return this.referanseAvskrivesAvEksternNoekkelField;
+            }
+            set {
+                this.referanseAvskrivesAvEksternNoekkelField = value;
+                this.RaisePropertyChanged("referanseAvskrivesAvEksternNoekkel");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Merknad : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string systemIDField;
+        
+        private string merknadstekstField;
+        
+        private string merknadstypeField;
+        
+        private System.DateTime merknadsdatoField;
+        
+        private bool merknadsdatoFieldSpecified;
+        
+        private string merknadRegistrertAvField;
+        
+        private string merknadRegistrertAvInitField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string systemID {
+            get {
+                return this.systemIDField;
+            }
+            set {
+                this.systemIDField = value;
+                this.RaisePropertyChanged("systemID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string merknadstekst {
+            get {
+                return this.merknadstekstField;
+            }
+            set {
+                this.merknadstekstField = value;
+                this.RaisePropertyChanged("merknadstekst");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string merknadstype {
+            get {
+                return this.merknadstypeField;
+            }
+            set {
+                this.merknadstypeField = value;
+                this.RaisePropertyChanged("merknadstype");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.DateTime merknadsdato {
+            get {
+                return this.merknadsdatoField;
+            }
+            set {
+                this.merknadsdatoField = value;
+                this.RaisePropertyChanged("merknadsdato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool merknadsdatoSpecified {
+            get {
+                return this.merknadsdatoFieldSpecified;
+            }
+            set {
+                this.merknadsdatoFieldSpecified = value;
+                this.RaisePropertyChanged("merknadsdatoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string merknadRegistrertAv {
+            get {
+                return this.merknadRegistrertAvField;
+            }
+            set {
+                this.merknadRegistrertAvField = value;
+                this.RaisePropertyChanged("merknadRegistrertAv");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string merknadRegistrertAvInit {
+            get {
+                return this.merknadRegistrertAvInitField;
+            }
+            set {
+                this.merknadRegistrertAvInitField = value;
+                this.RaisePropertyChanged("merknadRegistrertAvInit");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Tilleggsinformasjon : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string systemIDField;
+        
+        private string rekkefoelgeField;
+        
+        private Informasjonstype informasjonstypeField;
+        
+        private Tilgangsrestriksjon tilgangsrestriksjonField;
+        
+        private System.DateTime oppbevaresTilDatoField;
+        
+        private bool oppbevaresTilDatoFieldSpecified;
+        
+        private string informasjonField;
+        
+        private string tilgangsgruppeNavnField;
+        
+        private System.DateTime registrertDatoField;
+        
+        private bool registrertDatoFieldSpecified;
+        
+        private string registrertAvField;
+        
+        private string registrertAvInitField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string systemID {
+            get {
+                return this.systemIDField;
+            }
+            set {
+                this.systemIDField = value;
+                this.RaisePropertyChanged("systemID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string rekkefoelge {
+            get {
+                return this.rekkefoelgeField;
+            }
+            set {
+                this.rekkefoelgeField = value;
+                this.RaisePropertyChanged("rekkefoelge");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public Informasjonstype informasjonstype {
+            get {
+                return this.informasjonstypeField;
+            }
+            set {
+                this.informasjonstypeField = value;
+                this.RaisePropertyChanged("informasjonstype");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public Tilgangsrestriksjon tilgangsrestriksjon {
+            get {
+                return this.tilgangsrestriksjonField;
+            }
+            set {
+                this.tilgangsrestriksjonField = value;
+                this.RaisePropertyChanged("tilgangsrestriksjon");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.DateTime oppbevaresTilDato {
+            get {
+                return this.oppbevaresTilDatoField;
+            }
+            set {
+                this.oppbevaresTilDatoField = value;
+                this.RaisePropertyChanged("oppbevaresTilDato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool oppbevaresTilDatoSpecified {
+            get {
+                return this.oppbevaresTilDatoFieldSpecified;
+            }
+            set {
+                this.oppbevaresTilDatoFieldSpecified = value;
+                this.RaisePropertyChanged("oppbevaresTilDatoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string informasjon {
+            get {
+                return this.informasjonField;
+            }
+            set {
+                this.informasjonField = value;
+                this.RaisePropertyChanged("informasjon");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string tilgangsgruppeNavn {
+            get {
+                return this.tilgangsgruppeNavnField;
+            }
+            set {
+                this.tilgangsgruppeNavnField = value;
+                this.RaisePropertyChanged("tilgangsgruppeNavn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public System.DateTime registrertDato {
+            get {
+                return this.registrertDatoField;
+            }
+            set {
+                this.registrertDatoField = value;
+                this.RaisePropertyChanged("registrertDato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool registrertDatoSpecified {
+            get {
+                return this.registrertDatoFieldSpecified;
+            }
+            set {
+                this.registrertDatoFieldSpecified = value;
+                this.RaisePropertyChanged("registrertDatoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string registrertAv {
+            get {
+                return this.registrertAvField;
+            }
+            set {
+                this.registrertAvField = value;
+                this.RaisePropertyChanged("registrertAv");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string registrertAvInit {
+            get {
+                return this.registrertAvInitField;
+            }
+            set {
+                this.registrertAvInitField = value;
+                this.RaisePropertyChanged("registrertAvInit");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnJournalposterGittNoekkel", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnJournalposterGittNoekkel {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnJournalposterGittNoekkel", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkelBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel nokkel;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=1)]
+        public bool returnerMerknad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=2)]
+        public bool returnerTilleggsinformasjon;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=3)]
+        public bool returnerKorrespondansepart;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=4)]
+        public bool returnerAvskrivning;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=5)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
         
         public FinnJournalposterGittNoekkel() {
         }
         
-        public FinnJournalposterGittNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkelBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnJournalposterGittNoekkelBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel nokkel;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public bool returnerMerknad;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public bool returnerTilleggsinformasjon;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public bool returnerKorrespondansepart;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
-        public bool returnerAvskrivning;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
-        
-        public FinnJournalposterGittNoekkelBody() {
-        }
-        
-        public FinnJournalposterGittNoekkelBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public FinnJournalposterGittNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             this.nokkel = nokkel;
             this.returnerMerknad = returnerMerknad;
             this.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
@@ -5232,33 +3062,17 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnJournalposterGittNoekkelResponse", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnJournalposterGittNoekkelResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnJournalposterGittNoekkelResponse", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkelResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31", IsNullable=false)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalpost[] @return;
         
         public FinnJournalposterGittNoekkelResponse() {
         }
         
-        public FinnJournalposterGittNoekkelResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkelResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnJournalposterGittNoekkelResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.JournalpostListe @return;
-        
-        public FinnJournalposterGittNoekkelResponseBody() {
-        }
-        
-        public FinnJournalposterGittNoekkelResponseBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.JournalpostListe @return) {
+        public FinnJournalposterGittNoekkelResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalpost[] @return) {
             this.@return = @return;
         }
     }
@@ -5266,48 +3080,31 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnJournalposterGittSaksmappeNoekkel", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnJournalposterGittSaksmappeNoekkel {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnJournalposterGittSaksmappeNoekkel", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkelBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel nokkel;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=1)]
+        public bool returnerMerknad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=2)]
+        public bool returnerTilleggsinformasjon;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=3)]
+        public bool returnerKorrespondansepart;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=4)]
+        public bool returnerAvskrivning;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=5)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
         
         public FinnJournalposterGittSaksmappeNoekkel() {
         }
         
-        public FinnJournalposterGittSaksmappeNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkelBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnJournalposterGittSaksmappeNoekkelBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel nokkel;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public bool returnerMerknad;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public bool returnerTilleggsinformasjon;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public bool returnerKorrespondansepart;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
-        public bool returnerAvskrivning;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
-        
-        public FinnJournalposterGittSaksmappeNoekkelBody() {
-        }
-        
-        public FinnJournalposterGittSaksmappeNoekkelBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public FinnJournalposterGittSaksmappeNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             this.nokkel = nokkel;
             this.returnerMerknad = returnerMerknad;
             this.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
@@ -5320,82 +3117,500 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnJournalposterGittSaksmappeNoekkelResponse", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnJournalposterGittSaksmappeNoekkelResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnJournalposterGittSaksmappeNoekkelResponse", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkelResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31", IsNullable=false)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalpost[] @return;
         
         public FinnJournalposterGittSaksmappeNoekkelResponse() {
         }
         
-        public FinnJournalposterGittSaksmappeNoekkelResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkelResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnJournalposterGittSaksmappeNoekkelResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.JournalpostListe @return;
-        
-        public FinnJournalposterGittSaksmappeNoekkelResponseBody() {
-        }
-        
-        public FinnJournalposterGittSaksmappeNoekkelResponseBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.JournalpostListe @return) {
+        public FinnJournalposterGittSaksmappeNoekkelResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalpost[] @return) {
             this.@return = @return;
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FinnJournalposter {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
+    public partial class Soekskriterie : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnJournalposter", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterBody Body;
+        private SoekeOperatorEnum operatorField;
         
-        public FinnJournalposter() {
+        private Kriterie kriterieField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public SoekeOperatorEnum @operator {
+            get {
+                return this.operatorField;
+            }
+            set {
+                this.operatorField = value;
+                this.RaisePropertyChanged("operator");
+            }
         }
         
-        public FinnJournalposter(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterBody Body) {
-            this.Body = Body;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public Kriterie Kriterie {
+            get {
+                return this.kriterieField;
+            }
+            set {
+                this.kriterieField = value;
+                this.RaisePropertyChanged("Kriterie");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
+    public enum SoekeOperatorEnum {
+        
+        /// <remarks/>
+        LT,
+        
+        /// <remarks/>
+        LE,
+        
+        /// <remarks/>
+        EQ,
+        
+        /// <remarks/>
+        GE,
+        
+        /// <remarks/>
+        GT,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Soekefelt))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Ansvarlig))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BboxKriterie))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
+    public partial class Kriterie : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
+    public partial class Soekefelt : Kriterie {
+        
+        private string feltnavnField;
+        
+        private string feltverdiField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string feltnavn {
+            get {
+                return this.feltnavnField;
+            }
+            set {
+                this.feltnavnField = value;
+                this.RaisePropertyChanged("feltnavn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string feltverdi {
+            get {
+                return this.feltverdiField;
+            }
+            set {
+                this.feltverdiField = value;
+                this.RaisePropertyChanged("feltverdi");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
+    public partial class Ansvarlig : Kriterie {
+        
+        private AnsvarligEnum eierField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public AnsvarligEnum eier {
+            get {
+                return this.eierField;
+            }
+            set {
+                this.eierField = value;
+                this.RaisePropertyChanged("eier");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
+    public enum AnsvarligEnum {
+        
+        /// <remarks/>
+        EGEN,
+        
+        /// <remarks/>
+        EGENENHET,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31")]
+    public partial class BboxKriterie : Kriterie {
+        
+        private Bbox bboxField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public Bbox bbox {
+            get {
+                return this.bboxField;
+            }
+            set {
+                this.bboxField = value;
+                this.RaisePropertyChanged("bbox");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
+    public partial class Bbox : Geometri {
+        
+        private Koordinat nedreVenstreField;
+        
+        private Koordinat oevreHoeyreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public Koordinat nedreVenstre {
+            get {
+                return this.nedreVenstreField;
+            }
+            set {
+                this.nedreVenstreField = value;
+                this.RaisePropertyChanged("nedreVenstre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public Koordinat oevreHoeyre {
+            get {
+                return this.oevreHoeyreField;
+            }
+            set {
+                this.oevreHoeyreField = value;
+                this.RaisePropertyChanged("oevreHoeyre");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
+    public partial class Koordinat : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private double xField;
+        
+        private double yField;
+        
+        private double zField;
+        
+        private bool zFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public double x {
+            get {
+                return this.xField;
+            }
+            set {
+                this.xField = value;
+                this.RaisePropertyChanged("x");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public double y {
+            get {
+                return this.yField;
+            }
+            set {
+                this.yField = value;
+                this.RaisePropertyChanged("y");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public double z {
+            get {
+                return this.zField;
+            }
+            set {
+                this.zField = value;
+                this.RaisePropertyChanged("z");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool zSpecified {
+            get {
+                return this.zFieldSpecified;
+            }
+            set {
+                this.zFieldSpecified = value;
+                this.RaisePropertyChanged("zSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bbox))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Punkt))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Kurve))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Flate))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
+    public partial class Geometri : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private KoordinatsystemKode koordinatsystemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public KoordinatsystemKode koordinatsystem {
+            get {
+                return this.koordinatsystemField;
+            }
+            set {
+                this.koordinatsystemField = value;
+                this.RaisePropertyChanged("koordinatsystem");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
+    public partial class Punkt : Geometri {
+        
+        private Koordinat posisjonField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public Koordinat posisjon {
+            get {
+                return this.posisjonField;
+            }
+            set {
+                this.posisjonField = value;
+                this.RaisePropertyChanged("posisjon");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
+    public partial class Kurve : Geometri {
+        
+        private Koordinat[] linjeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", IsNullable=false)]
+        public Koordinat[] linje {
+            get {
+                return this.linjeField;
+            }
+            set {
+                this.linjeField = value;
+                this.RaisePropertyChanged("linje");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
+    public partial class Flate : Geometri {
+        
+        private Ring[] indreAvgrensningField;
+        
+        private Ring ytreAvgrensningField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", IsNullable=false)]
+        public Ring[] indreAvgrensning {
+            get {
+                return this.indreAvgrensningField;
+            }
+            set {
+                this.indreAvgrensningField = value;
+                this.RaisePropertyChanged("indreAvgrensning");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public Ring ytreAvgrensning {
+            get {
+                return this.ytreAvgrensningField;
+            }
+            set {
+                this.ytreAvgrensningField = value;
+                this.RaisePropertyChanged("ytreAvgrensning");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31")]
+    public partial class Ring : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private Koordinat[] lukketKurveField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", IsNullable=false)]
+        public Koordinat[] lukketKurve {
+            get {
+                return this.lukketKurveField;
+            }
+            set {
+                this.lukketKurveField = value;
+                this.RaisePropertyChanged("lukketKurve");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnJournalposterBody {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnJournalposter", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
+    public partial class FinnJournalposter {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekskriterieListe sok;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31", IsNullable=false)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekskriterie[] sok;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=1)]
         public bool returnerMerknad;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=2)]
         public bool returnerTilleggsinformasjon;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=3)]
         public bool returnerKorrespondansepart;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=4)]
         public bool returnerAvskrivning;
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=5)]
         public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
         
-        public FinnJournalposterBody() {
+        public FinnJournalposter() {
         }
         
-        public FinnJournalposterBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekskriterieListe sok, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public FinnJournalposter(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekskriterie[] sok, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             this.sok = sok;
             this.returnerMerknad = returnerMerknad;
             this.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
@@ -5408,82 +3623,1052 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnJournalposterResponse", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnJournalposterResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnJournalposterResponse", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31", IsNullable=false)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalpost[] @return;
         
         public FinnJournalposterResponse() {
         }
         
-        public FinnJournalposterResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnJournalposterResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.JournalpostListe @return;
-        
-        public FinnJournalposterResponseBody() {
-        }
-        
-        public FinnJournalposterResponseBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.JournalpostListe @return) {
+        public FinnJournalposterResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalpost[] @return) {
             this.@return = @return;
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FinnSaksmapperGittNoekkel {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Saksmappe : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnSaksmapperGittNoekkel", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkelBody Body;
+        private string systemIDField;
         
-        public FinnSaksmapperGittNoekkel() {
+        private Saksnummer saksnrField;
+        
+        private Mappetype mappetypeField;
+        
+        private System.DateTime saksdatoField;
+        
+        private bool saksdatoFieldSpecified;
+        
+        private string tittelField;
+        
+        private string offentligTittelField;
+        
+        private bool skjermetTittelField;
+        
+        private bool skjermetTittelFieldSpecified;
+        
+        private Skjerming skjermingField;
+        
+        private Saksstatus saksstatusField;
+        
+        private Dokumentmedium dokumentmediumField;
+        
+        private Arkivdel referanseArkivdelField;
+        
+        private Journalenhet journalenhetField;
+        
+        private string bevaringstidField;
+        
+        private Kassasjonsvedtak kassasjonsvedtakField;
+        
+        private System.DateTime kassasjonsdatoField;
+        
+        private bool kassasjonsdatoFieldSpecified;
+        
+        private string prosjektField;
+        
+        private string administrativEnhetInitField;
+        
+        private string administrativEnhetField;
+        
+        private string saksansvarligInitField;
+        
+        private string saksansvarligField;
+        
+        private string tilgangsgruppeNavnField;
+        
+        private Matrikkelnummer[] matrikkelnummerField;
+        
+        private Klasse[] klasseField;
+        
+        private Sakspart[] sakspartField;
+        
+        private Punkt[] punktField;
+        
+        private Tilleggsinformasjon[] tilleggsinformasjonField;
+        
+        private ByggIdent[] byggIdentField;
+        
+        private EksternNoekkel referanseEksternNoekkelField;
+        
+        private Merknad[] merknaderField;
+        
+        private NasjonalArealplanId planIdentField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string systemID {
+            get {
+                return this.systemIDField;
+            }
+            set {
+                this.systemIDField = value;
+                this.RaisePropertyChanged("systemID");
+            }
         }
         
-        public FinnSaksmapperGittNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkelBody Body) {
-            this.Body = Body;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public Saksnummer saksnr {
+            get {
+                return this.saksnrField;
+            }
+            set {
+                this.saksnrField = value;
+                this.RaisePropertyChanged("saksnr");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public Mappetype mappetype {
+            get {
+                return this.mappetypeField;
+            }
+            set {
+                this.mappetypeField = value;
+                this.RaisePropertyChanged("mappetype");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.DateTime saksdato {
+            get {
+                return this.saksdatoField;
+            }
+            set {
+                this.saksdatoField = value;
+                this.RaisePropertyChanged("saksdato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool saksdatoSpecified {
+            get {
+                return this.saksdatoFieldSpecified;
+            }
+            set {
+                this.saksdatoFieldSpecified = value;
+                this.RaisePropertyChanged("saksdatoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string tittel {
+            get {
+                return this.tittelField;
+            }
+            set {
+                this.tittelField = value;
+                this.RaisePropertyChanged("tittel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string offentligTittel {
+            get {
+                return this.offentligTittelField;
+            }
+            set {
+                this.offentligTittelField = value;
+                this.RaisePropertyChanged("offentligTittel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool skjermetTittel {
+            get {
+                return this.skjermetTittelField;
+            }
+            set {
+                this.skjermetTittelField = value;
+                this.RaisePropertyChanged("skjermetTittel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool skjermetTittelSpecified {
+            get {
+                return this.skjermetTittelFieldSpecified;
+            }
+            set {
+                this.skjermetTittelFieldSpecified = value;
+                this.RaisePropertyChanged("skjermetTittelSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public Skjerming skjerming {
+            get {
+                return this.skjermingField;
+            }
+            set {
+                this.skjermingField = value;
+                this.RaisePropertyChanged("skjerming");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public Saksstatus saksstatus {
+            get {
+                return this.saksstatusField;
+            }
+            set {
+                this.saksstatusField = value;
+                this.RaisePropertyChanged("saksstatus");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public Dokumentmedium dokumentmedium {
+            get {
+                return this.dokumentmediumField;
+            }
+            set {
+                this.dokumentmediumField = value;
+                this.RaisePropertyChanged("dokumentmedium");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public Arkivdel referanseArkivdel {
+            get {
+                return this.referanseArkivdelField;
+            }
+            set {
+                this.referanseArkivdelField = value;
+                this.RaisePropertyChanged("referanseArkivdel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public Journalenhet journalenhet {
+            get {
+                return this.journalenhetField;
+            }
+            set {
+                this.journalenhetField = value;
+                this.RaisePropertyChanged("journalenhet");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string bevaringstid {
+            get {
+                return this.bevaringstidField;
+            }
+            set {
+                this.bevaringstidField = value;
+                this.RaisePropertyChanged("bevaringstid");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public Kassasjonsvedtak kassasjonsvedtak {
+            get {
+                return this.kassasjonsvedtakField;
+            }
+            set {
+                this.kassasjonsvedtakField = value;
+                this.RaisePropertyChanged("kassasjonsvedtak");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public System.DateTime kassasjonsdato {
+            get {
+                return this.kassasjonsdatoField;
+            }
+            set {
+                this.kassasjonsdatoField = value;
+                this.RaisePropertyChanged("kassasjonsdato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool kassasjonsdatoSpecified {
+            get {
+                return this.kassasjonsdatoFieldSpecified;
+            }
+            set {
+                this.kassasjonsdatoFieldSpecified = value;
+                this.RaisePropertyChanged("kassasjonsdatoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public string prosjekt {
+            get {
+                return this.prosjektField;
+            }
+            set {
+                this.prosjektField = value;
+                this.RaisePropertyChanged("prosjekt");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public string administrativEnhetInit {
+            get {
+                return this.administrativEnhetInitField;
+            }
+            set {
+                this.administrativEnhetInitField = value;
+                this.RaisePropertyChanged("administrativEnhetInit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        public string administrativEnhet {
+            get {
+                return this.administrativEnhetField;
+            }
+            set {
+                this.administrativEnhetField = value;
+                this.RaisePropertyChanged("administrativEnhet");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public string saksansvarligInit {
+            get {
+                return this.saksansvarligInitField;
+            }
+            set {
+                this.saksansvarligInitField = value;
+                this.RaisePropertyChanged("saksansvarligInit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        public string saksansvarlig {
+            get {
+                return this.saksansvarligField;
+            }
+            set {
+                this.saksansvarligField = value;
+                this.RaisePropertyChanged("saksansvarlig");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        public string tilgangsgruppeNavn {
+            get {
+                return this.tilgangsgruppeNavnField;
+            }
+            set {
+                this.tilgangsgruppeNavnField = value;
+                this.RaisePropertyChanged("tilgangsgruppeNavn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=21)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31", IsNullable=false)]
+        public Matrikkelnummer[] Matrikkelnummer {
+            get {
+                return this.matrikkelnummerField;
+            }
+            set {
+                this.matrikkelnummerField = value;
+                this.RaisePropertyChanged("Matrikkelnummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=22)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", IsNullable=false)]
+        public Klasse[] klasse {
+            get {
+                return this.klasseField;
+            }
+            set {
+                this.klasseField = value;
+                this.RaisePropertyChanged("klasse");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=23)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", IsNullable=false)]
+        public Sakspart[] sakspart {
+            get {
+                return this.sakspartField;
+            }
+            set {
+                this.sakspartField = value;
+                this.RaisePropertyChanged("sakspart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=24)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Felles/Geometri/xml.schema/2012.01.31", IsNullable=false)]
+        public Punkt[] Punkt {
+            get {
+                return this.punktField;
+            }
+            set {
+                this.punktField = value;
+                this.RaisePropertyChanged("Punkt");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=25)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", IsNullable=false)]
+        public Tilleggsinformasjon[] tilleggsinformasjon {
+            get {
+                return this.tilleggsinformasjonField;
+            }
+            set {
+                this.tilleggsinformasjonField = value;
+                this.RaisePropertyChanged("tilleggsinformasjon");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=26)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31", IsNullable=false)]
+        public ByggIdent[] ByggIdent {
+            get {
+                return this.byggIdentField;
+            }
+            set {
+                this.byggIdentField = value;
+                this.RaisePropertyChanged("ByggIdent");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
+        public EksternNoekkel referanseEksternNoekkel {
+            get {
+                return this.referanseEksternNoekkelField;
+            }
+            set {
+                this.referanseEksternNoekkelField = value;
+                this.RaisePropertyChanged("referanseEksternNoekkel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=28)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", IsNullable=false)]
+        public Merknad[] merknader {
+            get {
+                return this.merknaderField;
+            }
+            set {
+                this.merknaderField = value;
+                this.RaisePropertyChanged("merknader");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
+        public NasjonalArealplanId planIdent {
+            get {
+                return this.planIdentField;
+            }
+            set {
+                this.planIdentField = value;
+                this.RaisePropertyChanged("planIdent");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31")]
+    public partial class Matrikkelnummer : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string kommunenummerField;
+        
+        private string gaardsnummerField;
+        
+        private string bruksnummerField;
+        
+        private string festenummerField;
+        
+        private string seksjonsnummerField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string kommunenummer {
+            get {
+                return this.kommunenummerField;
+            }
+            set {
+                this.kommunenummerField = value;
+                this.RaisePropertyChanged("kommunenummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=1)]
+        public string gaardsnummer {
+            get {
+                return this.gaardsnummerField;
+            }
+            set {
+                this.gaardsnummerField = value;
+                this.RaisePropertyChanged("gaardsnummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=2)]
+        public string bruksnummer {
+            get {
+                return this.bruksnummerField;
+            }
+            set {
+                this.bruksnummerField = value;
+                this.RaisePropertyChanged("bruksnummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=3)]
+        public string festenummer {
+            get {
+                return this.festenummerField;
+            }
+            set {
+                this.festenummerField = value;
+                this.RaisePropertyChanged("festenummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=4)]
+        public string seksjonsnummer {
+            get {
+                return this.seksjonsnummerField;
+            }
+            set {
+                this.seksjonsnummerField = value;
+                this.RaisePropertyChanged("seksjonsnummer");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Klasse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string rekkefoelgeField;
+        
+        private Klassifikasjonssystem klassifikasjonssystemField;
+        
+        private string klasseIDField;
+        
+        private bool skjermetKlasseField;
+        
+        private bool skjermetKlasseFieldSpecified;
+        
+        private string ledetekstField;
+        
+        private string tittelField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string rekkefoelge {
+            get {
+                return this.rekkefoelgeField;
+            }
+            set {
+                this.rekkefoelgeField = value;
+                this.RaisePropertyChanged("rekkefoelge");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public Klassifikasjonssystem klassifikasjonssystem {
+            get {
+                return this.klassifikasjonssystemField;
+            }
+            set {
+                this.klassifikasjonssystemField = value;
+                this.RaisePropertyChanged("klassifikasjonssystem");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string klasseID {
+            get {
+                return this.klasseIDField;
+            }
+            set {
+                this.klasseIDField = value;
+                this.RaisePropertyChanged("klasseID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool skjermetKlasse {
+            get {
+                return this.skjermetKlasseField;
+            }
+            set {
+                this.skjermetKlasseField = value;
+                this.RaisePropertyChanged("skjermetKlasse");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool skjermetKlasseSpecified {
+            get {
+                return this.skjermetKlasseFieldSpecified;
+            }
+            set {
+                this.skjermetKlasseFieldSpecified = value;
+                this.RaisePropertyChanged("skjermetKlasseSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string ledetekst {
+            get {
+                return this.ledetekstField;
+            }
+            set {
+                this.ledetekstField = value;
+                this.RaisePropertyChanged("ledetekst");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string tittel {
+            get {
+                return this.tittelField;
+            }
+            set {
+                this.tittelField = value;
+                this.RaisePropertyChanged("tittel");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31")]
+    public partial class Sakspart : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string systemIDField;
+        
+        private bool skjermetSakspartField;
+        
+        private bool skjermetSakspartFieldSpecified;
+        
+        private string kortnavnField;
+        
+        private string kontaktpersonField;
+        
+        private SakspartRolle sakspartRolleField;
+        
+        private string merknadField;
+        
+        private Kontakt kontaktField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string systemID {
+            get {
+                return this.systemIDField;
+            }
+            set {
+                this.systemIDField = value;
+                this.RaisePropertyChanged("systemID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool skjermetSakspart {
+            get {
+                return this.skjermetSakspartField;
+            }
+            set {
+                this.skjermetSakspartField = value;
+                this.RaisePropertyChanged("skjermetSakspart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool skjermetSakspartSpecified {
+            get {
+                return this.skjermetSakspartFieldSpecified;
+            }
+            set {
+                this.skjermetSakspartFieldSpecified = value;
+                this.RaisePropertyChanged("skjermetSakspartSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string kortnavn {
+            get {
+                return this.kortnavnField;
+            }
+            set {
+                this.kortnavnField = value;
+                this.RaisePropertyChanged("kortnavn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string kontaktperson {
+            get {
+                return this.kontaktpersonField;
+            }
+            set {
+                this.kontaktpersonField = value;
+                this.RaisePropertyChanged("kontaktperson");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public SakspartRolle sakspartRolle {
+            get {
+                return this.sakspartRolleField;
+            }
+            set {
+                this.sakspartRolleField = value;
+                this.RaisePropertyChanged("sakspartRolle");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string merknad {
+            get {
+                return this.merknadField;
+            }
+            set {
+                this.merknadField = value;
+                this.RaisePropertyChanged("merknad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public Kontakt Kontakt {
+            get {
+                return this.kontaktField;
+            }
+            set {
+                this.kontaktField = value;
+                this.RaisePropertyChanged("Kontakt");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Matrikkel/Felles/xml.schema/2012.01.31")]
+    public partial class ByggIdent : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string bygningsNummerField;
+        
+        private string endringsloepenummerField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=0)]
+        public string bygningsNummer {
+            get {
+                return this.bygningsNummerField;
+            }
+            set {
+                this.bygningsNummerField = value;
+                this.RaisePropertyChanged("bygningsNummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=1)]
+        public string endringsloepenummer {
+            get {
+                return this.endringsloepenummerField;
+            }
+            set {
+                this.endringsloepenummerField = value;
+                this.RaisePropertyChanged("endringsloepenummer");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31")]
+    public partial class NasjonalArealplanId : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private Administrativenhetsnummer nummerField;
+        
+        private string planidentifikasjonField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public Administrativenhetsnummer nummer {
+            get {
+                return this.nummerField;
+            }
+            set {
+                this.nummerField = value;
+                this.RaisePropertyChanged("nummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string planidentifikasjon {
+            get {
+                return this.planidentifikasjonField;
+            }
+            set {
+                this.planidentifikasjonField = value;
+                this.RaisePropertyChanged("planidentifikasjon");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Stat))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Kommune))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Fylke))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31")]
+    public partial class Administrativenhetsnummer : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31")]
+    public partial class Stat : Administrativenhetsnummer {
+        
+        private string landskodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string landskode {
+            get {
+                return this.landskodeField;
+            }
+            set {
+                this.landskodeField = value;
+                this.RaisePropertyChanged("landskode");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31")]
+    public partial class Kommune : Administrativenhetsnummer {
+        
+        private string kommunenummerField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string kommunenummer {
+            get {
+                return this.kommunenummerField;
+            }
+            set {
+                this.kommunenummerField = value;
+                this.RaisePropertyChanged("kommunenummer");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Plan/Felles/xml.schema/2012.01.31")]
+    public partial class Fylke : Administrativenhetsnummer {
+        
+        private string fylkesnummerField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string fylkesnummer {
+            get {
+                return this.fylkesnummerField;
+            }
+            set {
+                this.fylkesnummerField = value;
+                this.RaisePropertyChanged("fylkesnummer");
+            }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnSaksmapperGittNoekkelBody {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnSaksmapperGittNoekkel", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
+    public partial class FinnSaksmapperGittNoekkel {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
         public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel nokkel;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=1)]
         public bool returnerMerknad;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=2)]
         public bool returnerTilleggsinformasjon;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=3)]
         public bool returnerSakspart;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=4)]
         public bool returnerKlasse;
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=5)]
         public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
         
-        public FinnSaksmapperGittNoekkelBody() {
+        public FinnSaksmapperGittNoekkel() {
         }
         
-        public FinnSaksmapperGittNoekkelBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerSakspart, bool returnerKlasse, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public FinnSaksmapperGittNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerSakspart, bool returnerKlasse, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             this.nokkel = nokkel;
             this.returnerMerknad = returnerMerknad;
             this.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
@@ -5496,33 +4681,17 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnSaksmapperGittNoekkelResponse", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnSaksmapperGittNoekkelResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnSaksmapperGittNoekkelResponse", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkelResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31", IsNullable=false)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksmappe[] @return;
         
         public FinnSaksmapperGittNoekkelResponse() {
         }
         
-        public FinnSaksmapperGittNoekkelResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkelResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnSaksmapperGittNoekkelResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SaksmappeListe @return;
-        
-        public FinnSaksmapperGittNoekkelResponseBody() {
-        }
-        
-        public FinnSaksmapperGittNoekkelResponseBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SaksmappeListe @return) {
+        public FinnSaksmapperGittNoekkelResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksmappe[] @return) {
             this.@return = @return;
         }
     }
@@ -5530,48 +4699,32 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnSaksmapper", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnSaksmapper {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnSaksmapper", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31", IsNullable=false)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekskriterie[] sok;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=1)]
+        public bool returnerMerknad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=2)]
+        public bool returnerTilleggsinformasjon;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=3)]
+        public bool returnerSakspart;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=4)]
+        public bool returnerKlasse;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=5)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
         
         public FinnSaksmapper() {
         }
         
-        public FinnSaksmapper(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnSaksmapperBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekskriterieListe sok;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public bool returnerMerknad;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public bool returnerTilleggsinformasjon;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public bool returnerSakspart;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
-        public bool returnerKlasse;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
-        
-        public FinnSaksmapperBody() {
-        }
-        
-        public FinnSaksmapperBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekskriterieListe sok, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerSakspart, bool returnerKlasse, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public FinnSaksmapper(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekskriterie[] sok, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerSakspart, bool returnerKlasse, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             this.sok = sok;
             this.returnerMerknad = returnerMerknad;
             this.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
@@ -5584,73 +4737,198 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnSaksmapperResponse", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnSaksmapperResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnSaksmapperResponse", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Arkiv/Kjerne/xml.schema/2012.01.31", IsNullable=false)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksmappe[] @return;
         
         public FinnSaksmapperResponse() {
         }
         
-        public FinnSaksmapperResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnSaksmapperResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SaksmappeListe @return;
-        
-        public FinnSaksmapperResponseBody() {
-        }
-        
-        public FinnSaksmapperResponseBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SaksmappeListe @return) {
+        public FinnSaksmapperResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksmappe[] @return) {
             this.@return = @return;
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FinnDokumenterGittJournalpostnoekkel {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31")]
+    public partial class Dokument : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnDokumenterGittJournalpostnoekkel", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkelBody Body;
+        private string systemIDField;
         
-        public FinnDokumenterGittJournalpostnoekkel() {
+        private string dokumentnummerField;
+        
+        private TilknyttetRegistreringSom tilknyttetRegistreringSomField;
+        
+        private Dokumenttype dokumenttypeField;
+        
+        private string tittelField;
+        
+        private Dokumentstatus dokumentstatusField;
+        
+        private Variantformat variantformatField;
+        
+        private Format formatField;
+        
+        private string referanseJournalpostSystemIDField;
+        
+        private Fil filField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string systemID {
+            get {
+                return this.systemIDField;
+            }
+            set {
+                this.systemIDField = value;
+                this.RaisePropertyChanged("systemID");
+            }
         }
         
-        public FinnDokumenterGittJournalpostnoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkelBody Body) {
-            this.Body = Body;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string dokumentnummer {
+            get {
+                return this.dokumentnummerField;
+            }
+            set {
+                this.dokumentnummerField = value;
+                this.RaisePropertyChanged("dokumentnummer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public TilknyttetRegistreringSom tilknyttetRegistreringSom {
+            get {
+                return this.tilknyttetRegistreringSomField;
+            }
+            set {
+                this.tilknyttetRegistreringSomField = value;
+                this.RaisePropertyChanged("tilknyttetRegistreringSom");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public Dokumenttype dokumenttype {
+            get {
+                return this.dokumenttypeField;
+            }
+            set {
+                this.dokumenttypeField = value;
+                this.RaisePropertyChanged("dokumenttype");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string tittel {
+            get {
+                return this.tittelField;
+            }
+            set {
+                this.tittelField = value;
+                this.RaisePropertyChanged("tittel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public Dokumentstatus dokumentstatus {
+            get {
+                return this.dokumentstatusField;
+            }
+            set {
+                this.dokumentstatusField = value;
+                this.RaisePropertyChanged("dokumentstatus");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public Variantformat variantformat {
+            get {
+                return this.variantformatField;
+            }
+            set {
+                this.variantformatField = value;
+                this.RaisePropertyChanged("variantformat");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public Format format {
+            get {
+                return this.formatField;
+            }
+            set {
+                this.formatField = value;
+                this.RaisePropertyChanged("format");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string referanseJournalpostSystemID {
+            get {
+                return this.referanseJournalpostSystemIDField;
+            }
+            set {
+                this.referanseJournalpostSystemIDField = value;
+                this.RaisePropertyChanged("referanseJournalpostSystemID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public Fil Fil {
+            get {
+                return this.filField;
+            }
+            set {
+                this.filField = value;
+                this.RaisePropertyChanged("Fil");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnDokumenterGittJournalpostnoekkelBody {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnDokumenterGittJournalpostnoekkel", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
+    public partial class FinnDokumenterGittJournalpostnoekkel {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
         public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel journpostnokkel;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=1)]
         public bool returnerFil;
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=2)]
         public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
         
-        public FinnDokumenterGittJournalpostnoekkelBody() {
+        public FinnDokumenterGittJournalpostnoekkel() {
         }
         
-        public FinnDokumenterGittJournalpostnoekkelBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel journpostnokkel, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public FinnDokumenterGittJournalpostnoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel journpostnokkel, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             this.journpostnokkel = journpostnokkel;
             this.returnerFil = returnerFil;
             this.kontekst = kontekst;
@@ -5660,33 +4938,17 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnDokumenterGittJournalpostnoekkelResponse", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnDokumenterGittJournalpostnoekkelResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnDokumenterGittJournalpostnoekkelResponse", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkelResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31", IsNullable=false)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokument[] @return;
         
         public FinnDokumenterGittJournalpostnoekkelResponse() {
         }
         
-        public FinnDokumenterGittJournalpostnoekkelResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkelResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnDokumenterGittJournalpostnoekkelResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumentListe @return;
-        
-        public FinnDokumenterGittJournalpostnoekkelResponseBody() {
-        }
-        
-        public FinnDokumenterGittJournalpostnoekkelResponseBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumentListe @return) {
+        public FinnDokumenterGittJournalpostnoekkelResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokument[] @return) {
             this.@return = @return;
         }
     }
@@ -5694,39 +4956,22 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnDokumenterGittSaksnoekkel", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnDokumenterGittSaksnoekkel {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnDokumenterGittSaksnoekkel", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkelBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=1)]
+        public bool returnerFil;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=2)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
         
         public FinnDokumenterGittSaksnoekkel() {
         }
         
-        public FinnDokumenterGittSaksnoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkelBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnDokumenterGittSaksnoekkelBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public bool returnerFil;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
-        
-        public FinnDokumenterGittSaksnoekkelBody() {
-        }
-        
-        public FinnDokumenterGittSaksnoekkelBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public FinnDokumenterGittSaksnoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             this.saksnokkel = saksnokkel;
             this.returnerFil = returnerFil;
             this.kontekst = kontekst;
@@ -5736,33 +4981,17 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnDokumenterGittSaksnoekkelResponse", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnDokumenterGittSaksnoekkelResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnDokumenterGittSaksnoekkelResponse", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkelResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31", IsNullable=false)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokument[] @return;
         
         public FinnDokumenterGittSaksnoekkelResponse() {
         }
         
-        public FinnDokumenterGittSaksnoekkelResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkelResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnDokumenterGittSaksnoekkelResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumentListe @return;
-        
-        public FinnDokumenterGittSaksnoekkelResponseBody() {
-        }
-        
-        public FinnDokumenterGittSaksnoekkelResponseBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumentListe @return) {
+        public FinnDokumenterGittSaksnoekkelResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokument[] @return) {
             this.@return = @return;
         }
     }
@@ -5770,39 +4999,23 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnDokumenter", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnDokumenter {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnDokumenter", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Felles/Filter/xml.schema/2012.01.31", IsNullable=false)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekskriterie[] sok;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=1)]
+        public bool returnerFil;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=2)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
         
         public FinnDokumenter() {
         }
         
-        public FinnDokumenter(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnDokumenterBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekskriterieListe sok;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public bool returnerFil;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst;
-        
-        public FinnDokumenterBody() {
-        }
-        
-        public FinnDokumenterBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekskriterieListe sok, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public FinnDokumenter(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekskriterie[] sok, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             this.sok = sok;
             this.returnerFil = returnerFil;
             this.kontekst = kontekst;
@@ -5812,33 +5025,17 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FinnDokumenterResponse", WrapperNamespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", IsWrapped=true)]
     public partial class FinnDokumenterResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FinnDokumenterResponse", Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("liste", Namespace="http://rep.geointegrasjon.no/Arkiv/Dokument/xml.schema/2012.01.31", IsNullable=false)]
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokument[] @return;
         
         public FinnDokumenterResponse() {
         }
         
-        public FinnDokumenterResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://rep.geointegrasjon.no/Arkiv/Innsyn/xml.wsdl/2012.01.31")]
-    public partial class FinnDokumenterResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumentListe @return;
-        
-        public FinnDokumenterResponseBody() {
-        }
-        
-        public FinnDokumenterResponseBody(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumentListe @return) {
+        public FinnDokumenterResponse(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokument[] @return) {
             this.@return = @return;
         }
     }
@@ -5875,13 +5072,12 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             return base.Channel.HentKodeliste(request);
         }
         
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.KodeListe HentKodeliste(string kodelistenavn, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Kode[] HentKodeliste(string kodelistenavn, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodeliste inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodeliste();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodelisteBody();
-            inValue.Body.kodelistenavn = kodelistenavn;
-            inValue.Body.kontekst = kontekst;
+            inValue.kodelistenavn = kodelistenavn;
+            inValue.kontekst = kontekst;
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodelisteResponse retVal = ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).HentKodeliste(inValue);
-            return retVal.Body.@return;
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5891,37 +5087,17 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         
         public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodelisteResponse> HentKodelisteAsync(string kodelistenavn, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodeliste inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodeliste();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentKodelisteBody();
-            inValue.Body.kodelistenavn = kodelistenavn;
-            inValue.Body.kontekst = kontekst;
+            inValue.kodelistenavn = kodelistenavn;
+            inValue.kontekst = kontekst;
             return ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).HentKodelisteAsync(inValue);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilResponse GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort.HentFil(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFil request) {
-            return base.Channel.HentFil(request);
-        }
-        
         public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Fil HentFil(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemID systemid, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
-            GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFil inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFil();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilBody();
-            inValue.Body.systemid = systemid;
-            inValue.Body.kontekst = kontekst;
-            GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilResponse retVal = ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).HentFil(inValue);
-            return retVal.Body.@return;
+            return base.Channel.HentFil(systemid, kontekst);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilResponse> GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort.HentFilAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFil request) {
-            return base.Channel.HentFilAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilResponse> HentFilAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemID systemid, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
-            GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFil inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFil();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.HentFilBody();
-            inValue.Body.systemid = systemid;
-            inValue.Body.kontekst = kontekst;
-            return ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).HentFilAsync(inValue);
+        public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Fil> HentFilAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SystemID systemid, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+            return base.Channel.HentFilAsync(systemid, kontekst);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5929,13 +5105,12 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             return base.Channel.FinnDokumenttyper(request);
         }
         
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumenttypeListe FinnDokumenttyper(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokumenttype[] FinnDokumenttyper(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyper inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyper();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyperBody();
-            inValue.Body.saksnokkel = saksnokkel;
-            inValue.Body.kontekst = kontekst;
+            inValue.saksnokkel = saksnokkel;
+            inValue.kontekst = kontekst;
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyperResponse retVal = ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnDokumenttyper(inValue);
-            return retVal.Body.@return;
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5945,9 +5120,8 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         
         public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyperResponse> FinnDokumenttyperAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyper inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyper();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenttyperBody();
-            inValue.Body.saksnokkel = saksnokkel;
-            inValue.Body.kontekst = kontekst;
+            inValue.saksnokkel = saksnokkel;
+            inValue.kontekst = kontekst;
             return ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnDokumenttyperAsync(inValue);
         }
         
@@ -5956,17 +5130,16 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             return base.Channel.FinnJournalposterGittNoekkel(request);
         }
         
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.JournalpostListe FinnJournalposterGittNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalpost[] FinnJournalposterGittNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkel inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkel();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkelBody();
-            inValue.Body.nokkel = nokkel;
-            inValue.Body.returnerMerknad = returnerMerknad;
-            inValue.Body.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
-            inValue.Body.returnerKorrespondansepart = returnerKorrespondansepart;
-            inValue.Body.returnerAvskrivning = returnerAvskrivning;
-            inValue.Body.kontekst = kontekst;
+            inValue.nokkel = nokkel;
+            inValue.returnerMerknad = returnerMerknad;
+            inValue.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
+            inValue.returnerKorrespondansepart = returnerKorrespondansepart;
+            inValue.returnerAvskrivning = returnerAvskrivning;
+            inValue.kontekst = kontekst;
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkelResponse retVal = ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnJournalposterGittNoekkel(inValue);
-            return retVal.Body.@return;
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5976,13 +5149,12 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         
         public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkelResponse> FinnJournalposterGittNoekkelAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkel inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkel();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittNoekkelBody();
-            inValue.Body.nokkel = nokkel;
-            inValue.Body.returnerMerknad = returnerMerknad;
-            inValue.Body.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
-            inValue.Body.returnerKorrespondansepart = returnerKorrespondansepart;
-            inValue.Body.returnerAvskrivning = returnerAvskrivning;
-            inValue.Body.kontekst = kontekst;
+            inValue.nokkel = nokkel;
+            inValue.returnerMerknad = returnerMerknad;
+            inValue.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
+            inValue.returnerKorrespondansepart = returnerKorrespondansepart;
+            inValue.returnerAvskrivning = returnerAvskrivning;
+            inValue.kontekst = kontekst;
             return ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnJournalposterGittNoekkelAsync(inValue);
         }
         
@@ -5991,17 +5163,16 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             return base.Channel.FinnJournalposterGittSaksmappeNoekkel(request);
         }
         
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.JournalpostListe FinnJournalposterGittSaksmappeNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalpost[] FinnJournalposterGittSaksmappeNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkel inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkel();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkelBody();
-            inValue.Body.nokkel = nokkel;
-            inValue.Body.returnerMerknad = returnerMerknad;
-            inValue.Body.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
-            inValue.Body.returnerKorrespondansepart = returnerKorrespondansepart;
-            inValue.Body.returnerAvskrivning = returnerAvskrivning;
-            inValue.Body.kontekst = kontekst;
+            inValue.nokkel = nokkel;
+            inValue.returnerMerknad = returnerMerknad;
+            inValue.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
+            inValue.returnerKorrespondansepart = returnerKorrespondansepart;
+            inValue.returnerAvskrivning = returnerAvskrivning;
+            inValue.kontekst = kontekst;
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkelResponse retVal = ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnJournalposterGittSaksmappeNoekkel(inValue);
-            return retVal.Body.@return;
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6011,13 +5182,12 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         
         public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkelResponse> FinnJournalposterGittSaksmappeNoekkelAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkel inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkel();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterGittSaksmappeNoekkelBody();
-            inValue.Body.nokkel = nokkel;
-            inValue.Body.returnerMerknad = returnerMerknad;
-            inValue.Body.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
-            inValue.Body.returnerKorrespondansepart = returnerKorrespondansepart;
-            inValue.Body.returnerAvskrivning = returnerAvskrivning;
-            inValue.Body.kontekst = kontekst;
+            inValue.nokkel = nokkel;
+            inValue.returnerMerknad = returnerMerknad;
+            inValue.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
+            inValue.returnerKorrespondansepart = returnerKorrespondansepart;
+            inValue.returnerAvskrivning = returnerAvskrivning;
+            inValue.kontekst = kontekst;
             return ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnJournalposterGittSaksmappeNoekkelAsync(inValue);
         }
         
@@ -6026,17 +5196,16 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             return base.Channel.FinnJournalposter(request);
         }
         
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.JournalpostListe FinnJournalposter(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekskriterieListe sok, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journalpost[] FinnJournalposter(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekskriterie[] sok, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposter inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposter();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterBody();
-            inValue.Body.sok = sok;
-            inValue.Body.returnerMerknad = returnerMerknad;
-            inValue.Body.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
-            inValue.Body.returnerKorrespondansepart = returnerKorrespondansepart;
-            inValue.Body.returnerAvskrivning = returnerAvskrivning;
-            inValue.Body.kontekst = kontekst;
+            inValue.sok = sok;
+            inValue.returnerMerknad = returnerMerknad;
+            inValue.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
+            inValue.returnerKorrespondansepart = returnerKorrespondansepart;
+            inValue.returnerAvskrivning = returnerAvskrivning;
+            inValue.kontekst = kontekst;
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterResponse retVal = ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnJournalposter(inValue);
-            return retVal.Body.@return;
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6044,15 +5213,14 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             return base.Channel.FinnJournalposterAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterResponse> FinnJournalposterAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekskriterieListe sok, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterResponse> FinnJournalposterAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekskriterie[] sok, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerKorrespondansepart, bool returnerAvskrivning, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposter inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposter();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnJournalposterBody();
-            inValue.Body.sok = sok;
-            inValue.Body.returnerMerknad = returnerMerknad;
-            inValue.Body.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
-            inValue.Body.returnerKorrespondansepart = returnerKorrespondansepart;
-            inValue.Body.returnerAvskrivning = returnerAvskrivning;
-            inValue.Body.kontekst = kontekst;
+            inValue.sok = sok;
+            inValue.returnerMerknad = returnerMerknad;
+            inValue.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
+            inValue.returnerKorrespondansepart = returnerKorrespondansepart;
+            inValue.returnerAvskrivning = returnerAvskrivning;
+            inValue.kontekst = kontekst;
             return ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnJournalposterAsync(inValue);
         }
         
@@ -6061,17 +5229,16 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             return base.Channel.FinnSaksmapperGittNoekkel(request);
         }
         
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SaksmappeListe FinnSaksmapperGittNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerSakspart, bool returnerKlasse, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksmappe[] FinnSaksmapperGittNoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerSakspart, bool returnerKlasse, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkel inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkel();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkelBody();
-            inValue.Body.nokkel = nokkel;
-            inValue.Body.returnerMerknad = returnerMerknad;
-            inValue.Body.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
-            inValue.Body.returnerSakspart = returnerSakspart;
-            inValue.Body.returnerKlasse = returnerKlasse;
-            inValue.Body.kontekst = kontekst;
+            inValue.nokkel = nokkel;
+            inValue.returnerMerknad = returnerMerknad;
+            inValue.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
+            inValue.returnerSakspart = returnerSakspart;
+            inValue.returnerKlasse = returnerKlasse;
+            inValue.kontekst = kontekst;
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkelResponse retVal = ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnSaksmapperGittNoekkel(inValue);
-            return retVal.Body.@return;
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6081,13 +5248,12 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         
         public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkelResponse> FinnSaksmapperGittNoekkelAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel nokkel, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerSakspart, bool returnerKlasse, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkel inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkel();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperGittNoekkelBody();
-            inValue.Body.nokkel = nokkel;
-            inValue.Body.returnerMerknad = returnerMerknad;
-            inValue.Body.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
-            inValue.Body.returnerSakspart = returnerSakspart;
-            inValue.Body.returnerKlasse = returnerKlasse;
-            inValue.Body.kontekst = kontekst;
+            inValue.nokkel = nokkel;
+            inValue.returnerMerknad = returnerMerknad;
+            inValue.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
+            inValue.returnerSakspart = returnerSakspart;
+            inValue.returnerKlasse = returnerKlasse;
+            inValue.kontekst = kontekst;
             return ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnSaksmapperGittNoekkelAsync(inValue);
         }
         
@@ -6096,17 +5262,16 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             return base.Channel.FinnSaksmapper(request);
         }
         
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SaksmappeListe FinnSaksmapper(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekskriterieListe sok, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerSakspart, bool returnerKlasse, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksmappe[] FinnSaksmapper(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekskriterie[] sok, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerSakspart, bool returnerKlasse, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapper inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapper();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperBody();
-            inValue.Body.sok = sok;
-            inValue.Body.returnerMerknad = returnerMerknad;
-            inValue.Body.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
-            inValue.Body.returnerSakspart = returnerSakspart;
-            inValue.Body.returnerKlasse = returnerKlasse;
-            inValue.Body.kontekst = kontekst;
+            inValue.sok = sok;
+            inValue.returnerMerknad = returnerMerknad;
+            inValue.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
+            inValue.returnerSakspart = returnerSakspart;
+            inValue.returnerKlasse = returnerKlasse;
+            inValue.kontekst = kontekst;
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperResponse retVal = ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnSaksmapper(inValue);
-            return retVal.Body.@return;
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6114,15 +5279,14 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             return base.Channel.FinnSaksmapperAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperResponse> FinnSaksmapperAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekskriterieListe sok, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerSakspart, bool returnerKlasse, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperResponse> FinnSaksmapperAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekskriterie[] sok, bool returnerMerknad, bool returnerTilleggsinformasjon, bool returnerSakspart, bool returnerKlasse, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapper inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapper();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnSaksmapperBody();
-            inValue.Body.sok = sok;
-            inValue.Body.returnerMerknad = returnerMerknad;
-            inValue.Body.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
-            inValue.Body.returnerSakspart = returnerSakspart;
-            inValue.Body.returnerKlasse = returnerKlasse;
-            inValue.Body.kontekst = kontekst;
+            inValue.sok = sok;
+            inValue.returnerMerknad = returnerMerknad;
+            inValue.returnerTilleggsinformasjon = returnerTilleggsinformasjon;
+            inValue.returnerSakspart = returnerSakspart;
+            inValue.returnerKlasse = returnerKlasse;
+            inValue.kontekst = kontekst;
             return ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnSaksmapperAsync(inValue);
         }
         
@@ -6131,14 +5295,13 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             return base.Channel.FinnDokumenterGittJournalpostnoekkel(request);
         }
         
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumentListe FinnDokumenterGittJournalpostnoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel journpostnokkel, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokument[] FinnDokumenterGittJournalpostnoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel journpostnokkel, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkel inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkel();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkelBody();
-            inValue.Body.journpostnokkel = journpostnokkel;
-            inValue.Body.returnerFil = returnerFil;
-            inValue.Body.kontekst = kontekst;
+            inValue.journpostnokkel = journpostnokkel;
+            inValue.returnerFil = returnerFil;
+            inValue.kontekst = kontekst;
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkelResponse retVal = ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnDokumenterGittJournalpostnoekkel(inValue);
-            return retVal.Body.@return;
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6148,10 +5311,9 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         
         public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkelResponse> FinnDokumenterGittJournalpostnoekkelAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Journpostnoekkel journpostnokkel, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkel inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkel();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittJournalpostnoekkelBody();
-            inValue.Body.journpostnokkel = journpostnokkel;
-            inValue.Body.returnerFil = returnerFil;
-            inValue.Body.kontekst = kontekst;
+            inValue.journpostnokkel = journpostnokkel;
+            inValue.returnerFil = returnerFil;
+            inValue.kontekst = kontekst;
             return ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnDokumenterGittJournalpostnoekkelAsync(inValue);
         }
         
@@ -6160,14 +5322,13 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             return base.Channel.FinnDokumenterGittSaksnoekkel(request);
         }
         
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumentListe FinnDokumenterGittSaksnoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokument[] FinnDokumenterGittSaksnoekkel(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkel inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkel();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkelBody();
-            inValue.Body.saksnokkel = saksnokkel;
-            inValue.Body.returnerFil = returnerFil;
-            inValue.Body.kontekst = kontekst;
+            inValue.saksnokkel = saksnokkel;
+            inValue.returnerFil = returnerFil;
+            inValue.kontekst = kontekst;
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkelResponse retVal = ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnDokumenterGittSaksnoekkel(inValue);
-            return retVal.Body.@return;
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6177,10 +5338,9 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
         
         public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkelResponse> FinnDokumenterGittSaksnoekkelAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Saksnoekkel saksnokkel, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkel inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkel();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterGittSaksnoekkelBody();
-            inValue.Body.saksnokkel = saksnokkel;
-            inValue.Body.returnerFil = returnerFil;
-            inValue.Body.kontekst = kontekst;
+            inValue.saksnokkel = saksnokkel;
+            inValue.returnerFil = returnerFil;
+            inValue.kontekst = kontekst;
             return ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnDokumenterGittSaksnoekkelAsync(inValue);
         }
         
@@ -6189,14 +5349,13 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             return base.Channel.FinnDokumenter(request);
         }
         
-        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.DokumentListe FinnDokumenter(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekskriterieListe sok, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Dokument[] FinnDokumenter(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekskriterie[] sok, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenter inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenter();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterBody();
-            inValue.Body.sok = sok;
-            inValue.Body.returnerFil = returnerFil;
-            inValue.Body.kontekst = kontekst;
+            inValue.sok = sok;
+            inValue.returnerFil = returnerFil;
+            inValue.kontekst = kontekst;
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterResponse retVal = ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnDokumenter(inValue);
-            return retVal.Body.@return;
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6204,12 +5363,11 @@ namespace GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn {
             return base.Channel.FinnDokumenterAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterResponse> FinnDokumenterAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.SoekskriterieListe sok, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
+        public System.Threading.Tasks.Task<GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterResponse> FinnDokumenterAsync(GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.Soekskriterie[] sok, bool returnerFil, GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivKontekst kontekst) {
             GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenter inValue = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenter();
-            inValue.Body = new GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.FinnDokumenterBody();
-            inValue.Body.sok = sok;
-            inValue.Body.returnerFil = returnerFil;
-            inValue.Body.kontekst = kontekst;
+            inValue.sok = sok;
+            inValue.returnerFil = returnerFil;
+            inValue.kontekst = kontekst;
             return ((GeoIntegrasjon.Arkiv.Eksempel.ArkivInnsyn.ArkivInnsynPort)(this)).FinnDokumenterAsync(inValue);
         }
     }
