@@ -14,7 +14,7 @@ namespace GeoIntegrasjon.Arkiv.Eksempel
         static void Main(string[] args)
         {
 
-            ArkivInnsynEksempler.TestInnsyn();
+            //ArkivInnsynEksempler.TestInnsyn();
 
             //************************************************************
             //Oppsett og autentisering
@@ -50,6 +50,13 @@ namespace GeoIntegrasjon.Arkiv.Eksempel
             //Registrere internt notat
             Journalpost nyttNotat = RegistrerInterntNotat(arkivClient, kontekst, nyEnkelmappe);
             NyttDokument(arkivClient, kontekst, nyttNotat);
+            Journalpost nyJpUOff = RegistrerSøknadUntattOffentlighet(arkivClient, kontekst, nyEnkelmappe);
+
+            // Hent egne journalposter under arbeid
+            var underarbeid = arkivClient.FinnJournalposterUnderArbeid(new Ansvarlig() { eier = AnsvarligEnum.EGEN }, false, false, true, false, kontekst);
+
+            // Hent egne restanser (ubesvarte)
+            var restanser = arkivClient.FinnJournalpostRestanser(new Ansvarlig() { eier = AnsvarligEnum.EGEN }, false, false, true, false, kontekst);
 
         }
 
@@ -65,7 +72,7 @@ namespace GeoIntegrasjon.Arkiv.Eksempel
             Journalpost jpU = new Journalpost();
             //Referanse til saksmappe
             jpU.referanseSakSystemID = new SakSystemId() { systemID = new SystemID() { id = referanseMappe.systemID } };
-
+            jpU.saksnr = referanseMappe.saksnr; //Feil i journalpost "Ny journalpost": Feltet sak-ID må ha verdi
             jpU.journalposttype = new Journalposttype() { kodeverdi = "U" }; //Konfigureres og hentes fra kodeliste
             jpU.tittel = "Tittel på det utgående brevet";
 
@@ -88,11 +95,12 @@ namespace GeoIntegrasjon.Arkiv.Eksempel
             KorrespondansepartListe.Add(mott);
             jpU.korrespondansepart = KorrespondansepartListe.ToArray();
 
-            //jpU.referanseAvskrivninger = new AvskrivningListe();
-            //Avskrivning avskrUtg = new Avskrivning();
-            //avskrUtg.avskrivningsmaate = new Avskrivningsmaate() { kodeverdi = "BU" , kodebeskrivelse = "Besvart med brev" };//Konfigureres og hentes fra kodeliste
-            //avskrUtg.referanseAvskriverJournalnummer = inngJournalpost.journalnummer;
-            //jpU.referanseAvskrivninger.Add(avskrUtg);
+            List<Avskrivning> avskrivninger = new List<Avskrivning>();
+            Avskrivning avskrUtg = new Avskrivning();
+            avskrUtg.avskrivningsmaate = new Avskrivningsmaate() { kodeverdi = "BU", kodebeskrivelse = "Besvart med brev" };//Konfigureres og hentes fra kodeliste
+            avskrUtg.referanseAvskriverJournalnummer = inngJournalpost.journalnummer;
+            avskrivninger.Add(avskrUtg);
+            jpU.referanseAvskrivninger = avskrivninger.ToArray();
 
 
             var nyUtgJournalpost = arkivClient.NyJournalpost(jpU, kontekst);
@@ -153,7 +161,7 @@ namespace GeoIntegrasjon.Arkiv.Eksempel
             
 
             // Legge til arkivdel referanse og mappetype hvis dette ikke kan gis av referanseoppsett eller pålogget bruker
-            mappe2.mappetype = new Mappetype() { kodeverdi = "BYG.enkel" }; //Hent lovlige kodeverdier fra HentKodeliste
+            mappe2.mappetype = new Mappetype() { kodeverdi = "BYG.ENKEL" }; //Hent lovlige kodeverdier fra HentKodeliste
             mappe2.referanseArkivdel = new Arkivdel() { kodeverdi = "BYGG" }; //Hent lovlige kodeverdier fra HentKodeliste
 
             var nyMappe2 = arkivClient.NySaksmappe(mappe2, kontekst);
@@ -166,10 +174,56 @@ namespace GeoIntegrasjon.Arkiv.Eksempel
 
             //Ny saksmappe, minimumsdata
             Saksmappe mappe = new Saksmappe();
-            mappe.tittel = "Tittel på saken";
+            mappe.tittel = "Tittel på enkel notat sak";
        
             var nyMappe = arkivClient.NySaksmappe(mappe, kontekst);
             return nyMappe;
+        }
+
+        private static Journalpost RegistrerSøknadUntattOffentlighet(SakArkivOppdateringPortClient arkivClient, ArkivKontekst kontekst, Saksmappe mappeReferanse)
+        {
+            // Ny journalpost, Inngående dokument
+            Journalpost jp = new Journalpost();
+            //Referanse til saksmappe
+            jp.referanseSakSystemID = new SakSystemId() { systemID = new SystemID() { id = mappeReferanse.systemID } };
+
+            jp.journalposttype = new Journalposttype() { kodeverdi = "I" }; //Konfigureres og hentes fra kodeliste
+            jp.tittel = "Søknad om hjelpemidler Kari Nordmann";
+            jp.offentligTittel = "Søknad om hjelpemidler";
+            jp.skjermetTittel = true; // NB! Må settes for å skjerme tittel
+            jp.skjermetTittelSpecified = true;
+            Skjerming skjerming = new Skjerming();
+            skjerming.tilgangsrestriksjon = new Tilgangsrestriksjon() { kodeverdi = "13" }; //Konfigureres og hentes fra kodeliste
+            skjerming.skjermingshjemmel = "Opplysningar som er underlagde teieplikt";
+            skjerming.skjermingOpphoererAksjon = new SkjermingOpphorerAksjon() { kodeverdi = "G" }; //Konfigureres og hentes fra kodeliste
+            skjerming.skjermingOpphoererDato = DateTime.Now.AddYears(60); // Dagens dato + 60 år
+            jp.skjerming = skjerming;
+            
+            List<Korrespondansepart> KorrespondansepartListe = new List<Korrespondansepart>();
+
+            Korrespondansepart avs = new Korrespondansepart();
+            avs.korrespondanseparttype = new Korrespondanseparttype() { kodeverdi = "Avsender", kodebeskrivelse = "Avsender" };//Konfigureres og hentes fra kodeliste
+            avs.skjermetKorrespondansepart = true; // Avsender skal skjermes
+            avs.skjermetKorrespondansepartSpecified = true;
+            Person p = new Person();
+            p.personid = new Personidentifikator();
+            p.personid.personidentifikatorNr = "12345678910";
+            p.personid.personidentifikatorType = new PersonidentifikatorType() { kodeverdi = "F" };
+            p.navn = "Kari Nordmann";
+            List<EnkelAdresse> EnkelAdresseListe = new List<EnkelAdresse>();
+            EnkelAdresse adresse = new EnkelAdresse();
+            adresse.adresselinje1 = "Storgata 4A";
+            adresse.postadresse = new PostadministrativeOmraader() { postnummer = "3801", poststed = "Bø" };
+            adresse.landkode = new Landkode() { kodeverdi = "NO" };
+            EnkelAdresseListe.Add(adresse);
+            p.adresser = EnkelAdresseListe.ToArray();
+
+            avs.Kontakt = p;
+            KorrespondansepartListe.Add(avs);
+            jp.korrespondansepart = KorrespondansepartListe.ToArray();
+
+            var nyInngJournalpost = arkivClient.NyJournalpost(jp, kontekst);
+            return nyInngJournalpost;
         }
 
         private static Journalpost RegistrerInngåendeJournalpost(SakArkivOppdateringPortClient arkivClient, ArkivKontekst kontekst, Saksmappe mappeReferanse)
@@ -207,7 +261,7 @@ namespace GeoIntegrasjon.Arkiv.Eksempel
             mott.korrespondanseparttype = new Korrespondanseparttype() { kodeverdi = "Mottaker", kodebeskrivelse = "Mottaker" }; //Konfigureres og hentes fra kodeliste
             mott.behandlingsansvarlig = "1"; // Behandlingsansvarlig
             //mott.administrativEnhetInit = "TEKN.BYG"; //Enhetsforkortelse - Konfigureres og hentes fra kodeliste Mangler?
-            mott.saksbehandlerInit = "ar1"; // Initialer saksbehandler - Konfigureres og hentes fra kodeliste Mangler?
+            mott.saksbehandlerInit = "LIV"; // Initialer saksbehandler - Konfigureres og hentes fra kodeliste Mangler?
             KorrespondansepartListe.Add(mott);
             jp.korrespondansepart = KorrespondansepartListe.ToArray();
 
@@ -222,24 +276,26 @@ namespace GeoIntegrasjon.Arkiv.Eksempel
             Journalpost jp = new Journalpost();
             //Referanse til saksmappe 
             jp.referanseSakSystemID = new SakSystemId() { systemID = new SystemID() { id = mappeReferanse.systemID } };
+            jp.saksnr = mappeReferanse.saksnr; //Feil i journalpost "Ny journalpost": Feltet sak-ID må ha verdi
 
             jp.journalposttype = new Journalposttype() { kodeverdi = "N" }; //Konfigureres og hentes fra kodeliste
             jp.tittel = "Innholdsbeskrivelse internt notat med oppfølging";
 
             List<Korrespondansepart> KorrespondansepartListe = new List<Korrespondansepart>();
 
-            //jp.referanseAvskrivninger = new AvskrivningListe();
-            //Avskrivning avskr = new Avskrivning();
-            //avskr.avskrivningsmaate = new Avskrivningsmaate() { kodeverdi = "TE" };//Konfigureres og hentes fra kodeliste
-            //jp.referanseAvskrivninger.Add(avskr);
-
+            //Fra saksbehandler - kunnde vært pålogget bruker?
+            Korrespondansepart avs = new Korrespondansepart();
+            avs.korrespondanseparttype = new Korrespondanseparttype() { kodeverdi = "Avsender", kodebeskrivelse = "Avsender" }; //Konfigureres og hentes fra kodeliste
+            avs.behandlingsansvarlig = "1"; // Behandlingsansvarlig
+            avs.saksbehandlerInit = "ar1"; // Initialer saksbehandler - Konfigureres
+            KorrespondansepartListe.Add(avs);
 
             //Til saksbehandler som skal følge opp saken
             Korrespondansepart mott = new Korrespondansepart();
             mott.korrespondanseparttype = new Korrespondanseparttype() { kodeverdi = "Mottaker", kodebeskrivelse = "Mottaker" }; //Konfigureres og hentes fra kodeliste
-            mott.behandlingsansvarlig = "1"; // Behandlingsansvarlig
-            mott.administrativEnhetInit = "TEKN.BYG"; //Enhetsforkortelse - Konfigureres og hentes fra kodeliste 
-            mott.saksbehandlerInit = "SB"; // Initialer saksbehandler - Konfigureres og hentes fra kodeliste 
+            
+            //mott.administrativEnhetInit = "TEKN.BYG"; //Enhetsforkortelse - Konfigureres 
+            mott.saksbehandlerInit = "LIV"; // Initialer saksbehandler - Konfigureres 
             KorrespondansepartListe.Add(mott);
             jp.korrespondansepart = KorrespondansepartListe.ToArray();
 
